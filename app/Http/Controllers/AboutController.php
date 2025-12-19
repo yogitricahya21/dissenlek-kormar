@@ -20,7 +20,7 @@ class AboutController extends Controller
         $about = About::first() ?? new About();
 
         $request->validate([
-            'logo' => 'nullable|image|max:2048',
+            'logo' => 'nullable|image|max:10240',
             'visi' => 'required',
             'misi' => 'required',
         ]);

@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\MainController;
 use App\Http\Controllers\AboutController;
 use App\Http\Controllers\LeaderController;
 use App\Http\Controllers\ProfileController;
@@ -8,9 +9,10 @@ use App\Http\Controllers\ActivityController;
 use App\Http\Controllers\ComplaintController;
 use App\Http\Controllers\PersonnelController;
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Ubah route '/' agar melewati MainController
+Route::get('/', [MainController::class, 'index'])->name('home');
+// Route untuk publik kirim aduan
+Route::post('/kirim-pengaduan', [App\Http\Controllers\MainController::class, 'storeComplaint'])->name('public.complaint.store');
 
 Route::get('/dashboard', function () {
     return view('dashboard');
