@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\AboutController;
 use App\Http\Controllers\LeaderController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\ActivityController;
@@ -27,7 +28,9 @@ Route::middleware('auth')->group(function () {
         Route::resource('activities', ActivityController::class);
         Route::resource('leaders', LeaderController::class);
         Route::resource('complaints', ComplaintController::class);
+        Route::get('/about', [AboutController::class, 'index'])->name('about.index');
+        Route::post('/about', [AboutController::class, 'update'])->name('about.update');
     });
 });
 
-require __DIR__.'/auth.php';
+require __DIR__ . '/auth.php';

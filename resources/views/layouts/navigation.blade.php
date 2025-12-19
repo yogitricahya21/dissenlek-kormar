@@ -13,6 +13,10 @@
                         {{ __('Dashboard') }}
                     </x-nav-link>
 
+                    <x-nav-link :href="route('about.index')" :active="request()->routeIs('about.*')">
+                        {{ __('Profil Satuan') }}
+                    </x-nav-link>
+
                     <x-nav-link :href="route('personnels.index')" :active="request()->routeIs('personnels.*')">
                         {{ __('Data Personel') }}
                     </x-nav-link>

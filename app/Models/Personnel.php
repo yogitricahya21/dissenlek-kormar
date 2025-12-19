@@ -12,6 +12,7 @@ class Personnel extends Model
         'nrp',
         'rank',
         'position',
+        'subdis',
         'image'
     ];
 }

@@ -12,6 +12,7 @@ class Leader extends Model
         'rank',
         'period',
         'image',
+        'message',
         'is_current'
     ];
 }
