@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Complaint;
 use Illuminate\Http\Request;
 
 class ComplaintController extends Controller
@@ -11,7 +12,9 @@ class ComplaintController extends Controller
      */
     public function index()
     {
-        //
+        // Urutkan dari yang terbaru dan status pending di atas
+        $all_complaints = Complaint::orderBy('status', 'asc')->latest()->get();
+        return view('admin.complaints.index', compact('all_complaints'));
     }
 
     /**
@@ -49,16 +52,26 @@ class ComplaintController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id)
+    // Fungsi untuk mengubah status (misal: dari pending ke process)
+    public function update(Request $request, Complaint $complaint)
     {
-        //
+        $request->validate([
+            'status' => 'required|in:pending,process,resolved'
+        ]);
+
+        $complaint->update([
+            'status' => $request->status
+        ]);
+
+        return redirect()->back()->with('success', 'Status pengaduan berhasil diperbarui!');
     }
 
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(string $id)
+    public function destroy(Complaint $complaint)
     {
-        //
+        $complaint->delete();
+        return redirect()->back()->with('success', 'Aduan berhasil dihapus!');
     }
 }

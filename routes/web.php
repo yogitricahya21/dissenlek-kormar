@@ -1,8 +1,11 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\PersonnelController;
+use App\Http\Controllers\LeaderController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\ActivityController;
+use App\Http\Controllers\ComplaintController;
+use App\Http\Controllers\PersonnelController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -21,6 +24,9 @@ Route::middleware('auth')->group(function () {
     // Rute Admin
     Route::middleware(['role:admin'])->prefix('admin')->group(function () {
         Route::resource('personnels', PersonnelController::class);
+        Route::resource('activities', ActivityController::class);
+        Route::resource('leaders', LeaderController::class);
+        Route::resource('complaints', ComplaintController::class);
     });
 });
 

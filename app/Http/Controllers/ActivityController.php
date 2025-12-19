@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Activity;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 
 class ActivityController extends Controller
 {
@@ -13,10 +14,10 @@ class ActivityController extends Controller
     public function index()
     {
         // Mengambil semua data kegiatan dari database
-        $activities = Activity::all();
+        $all_activities = Activity::latest()->get();
 
-        // Mengirim data tersebut ke halaman (view) yang akan kita buat nanti
-        return view('activities.index', compact('activities'));
+        // Maka di dalam compact harus: 'all_activities'
+        return view('admin.activities.index', compact('all_activities'));
     }
 
     /**
@@ -24,7 +25,7 @@ class ActivityController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.activities.create');
     }
 
     /**
@@ -32,7 +33,46 @@ class ActivityController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            'title' => 'required|string|max:255',
+            'date' => 'required|date',
+            'description' => 'required',
+            'image' => 'nullable|image|mimes:jpg,png,jpeg|max:2048',
+        ]);
+
+        $imagePath = null;
+        if ($request->hasFile('image')) {
+            $imagePath = $request->file('image')->store('activities', 'public');
+        }
+
+        Activity::create([
+            'title' => $request->title,
+            'date' => $request->date,
+            'description' => $request->description,
+            'image' => $imagePath,
+        ]);
+
+        return redirect()->route('activities.index')->with('success', 'Kegiatan berhasil disimpan!');
+        $request->validate([
+            'title' => 'required|string|max:255',
+            'date' => 'required|date',
+            'description' => 'required',
+            'image' => 'nullable|image|mimes:jpg,png,jpeg|max:2048',
+        ]);
+
+        $imagePath = null;
+        if ($request->hasFile('image')) {
+            $imagePath = $request->file('image')->store('activities', 'public');
+        }
+
+        Activity::create([
+            'title' => $request->title,
+            'date' => $request->date,
+            'description' => $request->description,
+            'image' => $imagePath,
+        ]);
+
+        return redirect()->route('activities.index')->with('success', 'Kegiatan berhasil disimpan!');
     }
 
     /**
@@ -46,24 +86,48 @@ class ActivityController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(string $id)
+    public function edit(Activity $activity)
     {
-        //
+        return view('admin.activities.edit', compact('activity'));
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id)
+    public function update(Request $request, Activity $activity)
     {
-        //
+        $request->validate([
+            'title' => 'required|string|max:255',
+            'date' => 'required|date',
+            'description' => 'required',
+            'image' => 'nullable|image|mimes:jpg,png,jpeg|max:2048',
+        ]);
+
+        $data = $request->all();
+
+        if ($request->hasFile('image')) {
+            // Hapus foto lama
+            if ($activity->image) {
+                Storage::disk('public')->delete($activity->image);
+            }
+            $data['image'] = $request->file('image')->store('activities', 'public');
+        }
+
+        $activity->update($data);
+
+        return redirect()->route('activities.index')->with('success', 'Kegiatan berhasil diperbarui!');
     }
 
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(string $id)
+    public function destroy(Activity $activity)
     {
-        //
+        if ($activity->image) {
+            Storage::disk('public')->delete($activity->image);
+        }
+        $activity->delete();
+
+        return redirect()->route('activities.index')->with('success', 'Kegiatan berhasil dihapus!');
     }
 }
