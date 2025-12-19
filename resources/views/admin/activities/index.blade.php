@@ -46,6 +46,11 @@
                                         @csrf @method('DELETE')
                                         <button class="font-bold text-red-600">Hapus</button>
                                     </form>
+                                    <button
+                                        onclick="openActivityModal('{{ $act->title }}', '{{ $act->date }}', '{{ asset('storage/' . $act->image) }}', '{{ addslashes($act->description) }}')"
+                                        class="mr-3 font-bold text-green-600 hover:text-green-900">
+                                        Lihat
+                                    </button>
                                 </td>
                             </tr>
                         @empty
@@ -58,4 +63,38 @@
             </div>
         </div>
     </div>
+    <div id="activityModal" class="fixed inset-0 z-50 hidden overflow-y-auto">
+        <div class="flex items-center justify-center min-h-screen px-4">
+            <div class="fixed inset-0 bg-gray-500 opacity-75"></div>
+            <div class="overflow-hidden transition-all transform bg-white rounded-lg shadow-xl sm:max-w-2xl sm:w-full">
+                <div class="p-6 bg-white">
+                    <h3 class="pb-2 mb-4 text-lg font-bold border-b" id="actTitle"></h3>
+                    <img id="actImg" src="" class="object-cover w-full h-64 mb-4 rounded">
+                    <p class="mb-2 text-sm text-gray-500">Tanggal Pelaksanaan: <span id="actDate"></span></p>
+                    <div class="prose text-gray-700 max-w-none">
+                        <strong>Deskripsi:</strong>
+                        <p id="actDesc" class="mt-1"></p>
+                    </div>
+                </div>
+                <div class="px-4 py-3 text-right bg-gray-50">
+                    <button onclick="closeActivityModal()"
+                        class="px-4 py-2 text-white bg-blue-600 rounded">Tutup</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function openActivityModal(title, date, img, desc) {
+            document.getElementById('actTitle').innerText = title;
+            document.getElementById('actDate').innerText = date;
+            document.getElementById('actDesc').innerText = desc;
+            document.getElementById('actImg').src = img;
+            document.getElementById('activityModal').classList.remove('hidden');
+        }
+
+        function closeActivityModal() {
+            document.getElementById('activityModal').classList.add('hidden');
+        }
+    </script>
 </x-app-layout>

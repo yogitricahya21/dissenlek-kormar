@@ -1,5 +1,7 @@
 <x-app-layout>
-    <x-slot name="header"><h2 class="text-xl font-semibold text-gray-800">Tambah Pimpinan</h2></x-slot>
+    <x-slot name="header">
+        <h2 class="text-xl font-semibold text-gray-800">Tambah Pimpinan</h2>
+    </x-slot>
 
     <div class="py-12">
         <div class="max-w-4xl mx-auto sm:px-6 lg:px-8">
@@ -12,11 +14,20 @@
                     </div>
                     <div class="mb-4">
                         <label class="block font-bold">Pangkat:</label>
-                        <input type="text" name="rank" class="w-full p-2 border rounded" placeholder="Kolonel Laut..." required>
+                        <input type="text" name="rank" class="w-full p-2 border rounded"
+                            placeholder="Kolonel Laut..." required>
                     </div>
                     <div class="mb-4">
                         <label class="block font-bold">Masa Jabatan:</label>
-                        <input type="text" name="period" class="w-full p-2 border rounded" placeholder="Contoh: 2021 - 2023" required>
+                        <input type="text" name="period" class="w-full p-2 border rounded"
+                            placeholder="Contoh: 2021 - 2023" required>
+                    </div>
+                    <div class="mb-4">
+                        <x-input-label for="message" :value="__('Kata Sambutan / Quote')"/>
+                        <textarea id="message" name="message"
+                            class="block w-full mt-1 border-gray-300 rounded-md shadow-sm focus:border-indigo-500 focus:ring-indigo-500"
+                            rows="4" placeholder="Masukkan kata sambutan pimpinan di sini...">{{ old('message', $leader->message ?? '') }}</textarea>
+                        <x-input-error :messages="$errors->get('message')" class="mt-2" />
                     </div>
                     <div class="mb-4">
                         <label class="block font-bold">Foto:</label>
@@ -24,7 +35,8 @@
                     </div>
                     <div class="mb-4">
                         <label class="inline-flex items-center">
-                            <input type="checkbox" name="is_current" value="1" class="text-indigo-600 border-gray-300 rounded shadow-sm">
+                            <input type="checkbox" name="is_current" value="1"
+                                class="text-indigo-600 border-gray-300 rounded shadow-sm">
                             <span class="ml-2 font-bold">Tandai sebagai Pimpinan Saat Ini (Sedang Menjabat)</span>
                         </label>
                     </div>

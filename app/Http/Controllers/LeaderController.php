@@ -34,6 +34,7 @@ class LeaderController extends Controller
             'name' => 'required',
             'rank' => 'required',
             'period' => 'required',
+            'message', 'nullable|string',
             'image' => 'required|image|max:2048',
         ]);
 
@@ -49,6 +50,7 @@ class LeaderController extends Controller
             'name' => $request->name,
             'rank' => $request->rank,
             'period' => $request->period,
+            'message' => $request->message,
             'image' => $imagePath,
             'is_current' => $request->has('is_current') ? true : false,
         ]);
@@ -81,6 +83,7 @@ class LeaderController extends Controller
             'name' => 'required',
             'rank' => 'required',
             'period' => 'required',
+            'message' => 'nullable|string',
             'image' => 'nullable|image|max:2048',
         ]);
 

@@ -37,6 +37,7 @@ class PersonnelController extends Controller
             'nrp' => 'required|string|unique:personnels,nrp',
             'rank' => 'required|string',
             'position' => 'required|string',
+            'subdis' => 'required|string',
             'image' => 'nullable|image|mimes:jpeg,png,jpg|max:2048',
         ]);
 
@@ -52,6 +53,7 @@ class PersonnelController extends Controller
             'nrp' => $request->nrp,
             'rank' => $request->rank,
             'position' => $request->position,
+            'subdis' => $request->subdis,
             'image' => $imagePath,
         ]);
 
@@ -91,6 +93,7 @@ class PersonnelController extends Controller
             'nrp' => 'required|string|unique:personnels,nrp,' . $personnel->id, // NRP unik kecuali untuk dirinya sendiri
             'rank' => 'required|string',
             'position' => 'required|string',
+            'subdis' => 'required|string',
             'image' => 'nullable|image|mimes:jpeg,png,jpg|max:2048',
         ]);
 

@@ -64,6 +64,11 @@
                                             Hapus
                                         </button>
                                     </form>
+                                    <button
+                                        onclick="openModal('{{ $person->name }}', '{{ $person->position }}', '{{ $person->subdis }}', '{{ asset('storage/' . $person->image) }}', '{{ $person->nrp }}')"
+                                        class="mr-3 font-bold text-green-600 hover:text-green-900">
+                                        Lihat
+                                    </button>
                                 </td>
                             </tr>
                         @empty
@@ -78,4 +83,62 @@
             </div>
         </div>
     </div>
+    <div id="viewModal" class="fixed inset-0 z-50 hidden overflow-y-auto">
+        <div class="flex items-center justify-center min-h-screen px-4 pt-4 pb-20 text-center sm:block sm:p-0">
+            <div class="fixed inset-0 transition-opacity" aria-hidden="true">
+                <div class="absolute inset-0 bg-gray-500 opacity-75"></div>
+            </div>
+
+            <div
+                class="inline-block overflow-hidden text-left align-bottom transition-all transform bg-white rounded-lg shadow-xl sm:my-8 sm:align-middle sm:max-w-lg sm:w-full">
+                <div class="px-4 pt-5 pb-4 bg-white sm:p-6 sm:pb-4">
+                    <div class="sm:flex sm:items-start">
+                        <div class="w-full mt-3 text-center sm:mt-0 sm:ml-4 sm:text-left">
+                            <h3 class="pb-2 mb-4 text-lg font-bold leading-6 text-gray-900 border-b" id="modalTitle">
+                                Detail Personel</h3>
+                            <div class="flex flex-col items-center mb-4">
+                                <img id="modalImage" src=""
+                                    class="object-cover w-32 h-40 mb-4 rounded shadow-md">
+                            </div>
+                            <div class="space-y-2">
+                                <p><strong>Nama:</strong> <span id="modalName"></span></p>
+                                <p><strong>NRP:</strong> <span id="modalNrp"></span></p>
+                                <p><strong>Jabatan:</strong> <span id="modalPosition"></span></p>
+                                <p><strong>Bagian (Subdis):</strong> <span id="modalSubdis"></span></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="px-4 py-3 bg-gray-50 sm:px-6 sm:flex sm:flex-row-reverse">
+                    <button type="button" onclick="closeModal()"
+                        class="inline-flex justify-center w-full px-4 py-2 text-base font-medium text-white bg-blue-600 border border-transparent rounded-md shadow-sm hover:bg-blue-700 focus:outline-none sm:ml-3 sm:w-auto sm:text-sm">
+                        Tutup
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        function openModal(name, position, subdis, image, nrp) {
+            document.getElementById('modalName').innerText = name;
+            document.getElementById('modalPosition').innerText = position;
+            document.getElementById('modalSubdis').innerText = subdis;
+            document.getElementById('modalNrp').innerText = nrp;
+            document.getElementById('modalImage').src = image;
+
+            document.getElementById('viewModal').classList.remove('hidden');
+        }
+
+        function closeModal() {
+            document.getElementById('viewModal').classList.add('hidden');
+        }
+
+        // Menutup modal jika klik di luar kotak modal
+        window.onclick = function(event) {
+            let modal = document.getElementById('viewModal');
+            if (event.target == modal) {
+                closeModal();
+            }
+        }
+    </script>
 </x-app-layout>
