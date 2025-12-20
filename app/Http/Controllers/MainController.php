@@ -14,14 +14,16 @@ class MainController extends Controller
     public function index()
     {
         $about = About::first();
-        // Ambil pimpinan yang is_current = true
+        // Khusus pimpinan saat ini
         $current_leader = Leader::where('is_current', true)->first();
-        // Ambil 3 kegiatan terbaru
-        $activities = Activity::latest()->take(3)->get();
+        // Khusus mantan pimpinan
+        $old_leaders = Leader::where('is_current', false)->get();
+        // Ambil 4 kegiatan terbaru
+        $activities = Activity::latest()->take(4)->get();
         // Ambil semua personel
         $personnels = Personnel::all();
 
-        return view('welcome', compact('about', 'current_leader', 'activities', 'personnels'));
+        return view('welcome', compact('about', 'current_leader', 'old_leaders', 'activities', 'personnels'));
     }
 
     public function storeComplaint(Request $request)
