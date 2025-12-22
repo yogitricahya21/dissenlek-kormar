@@ -8,6 +8,7 @@ use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\ActivityController;
 use App\Http\Controllers\ComplaintController;
 use App\Http\Controllers\PersonnelController;
+use App\Http\Controllers\Admin\BannerController;
 
 // Ubah route '/' agar melewati MainController
 Route::get('/', [MainController::class, 'index'])->name('home');
@@ -30,6 +31,7 @@ Route::middleware('auth')->group(function () {
         Route::resource('activities', ActivityController::class);
         Route::resource('leaders', LeaderController::class);
         Route::resource('complaints', ComplaintController::class);
+        Route::resource('banners', BannerController::class);
         Route::get('/about', [AboutController::class, 'index'])->name('about.index');
         Route::post('/about', [AboutController::class, 'update'])->name('about.update');
     });

@@ -29,6 +29,10 @@
                         {{ __('Pimpinan') }}
                     </x-nav-link>
 
+                    <x-nav-link :href="route('banners.index')" :active="request()->routeIs('banners.*')">
+                        {{ __('Manajemen Banner') }}
+                    </x-nav-link>
+
                     <x-nav-link :href="route('complaints.index')" :active="request()->routeIs('complaints.*')">
                         {{ __('Pengaduan') }}
                     </x-nav-link>

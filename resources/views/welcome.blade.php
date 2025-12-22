@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Armado - Military Service HTML Template</title>
+    <title>Dissenlek Kormar</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Place favicon.ico in the root directory -->
@@ -27,6 +27,7 @@
 </head>
 
 <body>
+    <!-- Tips untuk kamu: Jika kamu ingin mengubah warnanya, cari kelas header-main1 di file CSS kamu. Jika ingin mengganti menu, cukup tambah/kurangi tag <li> di dalam <ul>. -->
     <!-- [if lte IE 9]>
     <p class="browserupgrade">
         You are using an <strong>outdated</strong> browser. Please
@@ -45,13 +46,16 @@
                 <div class="row align-items-center">
                     <div class="col-xl-12 col-lg-12">
                         <div class="header-main-content-wrapper">
+                            <!-- header left logo-->
                             <div class="header-main-left header-main-left-header1">
                                 <div class="header-logo header1-logo">
                                     <a href="index.html" class="logo-white"><img
                                             src="{{ 'armado/' }}assets/img/logo/logo-white.png" alt="logo-img"></a>
                                 </div>
                             </div>
+                            <!-- header left logo -->
                             <div class="header-main-right header-main-right-header1">
+                                <!-- main menu start -->
                                 <div class="main-menu main-menu1 d-none d-xl-block">
                                     <nav id="mobile-menu">
                                         <ul>
@@ -110,6 +114,9 @@
                                         </ul>
                                     </nav>
                                 </div>
+                                <!-- main menu end -->
+
+                                <!-- mobile menu area start -->
                                 <div class="menu-bar d-xl-none">
                                     <a class="side-toggle" href="javascript:void(0)">
                                         <div class="dot-icon">
@@ -118,6 +125,9 @@
                                         </div>
                                     </a>
                                 </div>
+                                <!-- mobile menu area end -->
+
+                                <!--contact info-->
                                 <div class="meta-items meta-items-header1 d-none d-lg-inline-flex">
                                     <div class="meta-item header-meta-item">
                                         <a href="tel:+91036259003">
@@ -131,6 +141,7 @@
                                         </div>
                                     </div>
                                 </div>
+                                <!--contact info end-->
                             </div>
                         </div>
                     </div>
@@ -209,12 +220,11 @@
     <!-- Add your site or application content here -->
     <main>
 
-
-
-        <!-- banner-area-start -->
+        <!-- home-area-start -->
         <div class="banner-area banner-area3 pos-rel z-index-2">
             <div class="swiper-container slider__active">
                 <div class="swiper-wrapper">
+                    <!-- slide 1 video background -->
                     <div class="swiper-slide">
                         <div class="single-banner single-banner-3 banner-1080 p-relative d-flex align-items-center">
                             <div class="banner-bg banner-bg3 banner-bg3-1 d-none" data-background="">
@@ -282,6 +292,7 @@
                             </div>
                         </div>
                     </div>
+                    <!-- end of slide 1 video background -->
                     <div class="swiper-slide">
                         <div class="single-banner single-banner-3 banner-1080 p-relative d-flex align-items-center">
                             <div class="banner-bg banner-bg3 banner-bg3-1"
@@ -407,22 +418,42 @@
             </div>
             <div class="slider-pagination slider-3-pagination"></div>
         </div>
-        <!-- banner-area-end -->
+        <!-- home-area-end -->
 
         <!-- about area start  -->
         <section class="about-area pt-130 pb-65 p-relative">
             <div class="container">
+                <div class="row align-items-end wow fadeInUp" data-wow-delay=".3s">
+                    <div class="col-lg-6">
+                        <div class="bd-section-title-wrapper">
+                            <div class="bd-section-subtitle st-b">
+                                dissenlek <span>kormar</span>
+                            </div>
+                            <h3 class="bd-section-title mb-35">
+                                tentang kami
+                            </h3>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="service-btn d-flex justify-content-lg-end mb-60">
+                            <a href="services.html" class="arrow-text-btn">
+                                <i class="flaticon-042-arrow-right"></i>
+                                <span>View All Services</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
                 <div class="row">
                     <div class="col-xl-6">
                         <div class="about-thumb-1-area">
                             <div class="about-thumb-1-wrapper mb-65 p-relative z-index-1">
                                 <div class="about-thumb about-thumb-1 p-relative wow fadeInLeft" data-wow-delay=".3s">
-                                    <img src="{{'armado/'}}assets/img/about/img-2.png" alt="img not found">
+                                    <img src="{{ 'armado/' }}assets/img/about/img-2.png" alt="img not found">
                                     <div class="panel wow"></div>
                                 </div>
                                 <div class="facility-shape-wrapper">
-                                    <img class="about-shape about-img" src="{{'armado/'}}assets/img/about/img-1.jpg"
-                                        alt="img not found">
+                                    <img class="about-shape about-img"
+                                        src="{{ 'armado/' }}assets/img/about/img-1.jpg" alt="img not found">
                                 </div>
                             </div>
                         </div>
@@ -433,6 +464,9 @@
                                 <div class="about-tab-nav mb-80">
                                     <nav>
                                         <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                                            <button class="nav-link" id="nav-3-tab" data-bs-toggle="tab"
+                                                data-bs-target="#nav-4" type="button" role="tab"
+                                                aria-controls="nav-3" aria-selected="false">Our history</button>
                                             <button class="nav-link active" id="nav-1-tab" data-bs-toggle="tab"
                                                 data-bs-target="#nav-1" type="button" role="tab"
                                                 aria-controls="nav-1" aria-selected="true">Our Mission</button>
@@ -613,6 +647,67 @@
                                                 </div>
                                             </div>
                                         </div>
+                                        <div class="tab-pane fade" id="nav-4" role="tabpanel"
+                                            aria-labelledby="nav-3-tab">
+                                            <div class="bd-section-title-wrapper">
+                                                <h3 class="mb-40 bd-section-title">About Our History</h3>
+                                            </div>
+                                            <div class="about-content">
+                                                <p>
+                                                    Armado weapon often resembles real firearms, but the replicas shoot
+                                                    small plastic
+                                                    6mm BBs. In its nature, airsoft is similar to first-person shooting
+                                                    video games, and
+                                                    it allows experiencing realistic battle and tactical scenario
+                                                    gameplay.
+                                                </p>
+                                            </div>
+                                            <div class="border-box">
+                                                <div class="row">
+                                                    <div class="col-xl-6">
+                                                        <div class="about-info">
+                                                            <div class="about-info-icon">
+                                                                <i class="flaticon-032-riot-police"></i>
+                                                            </div>
+                                                            <div class="about-info-text">
+                                                                <span>1250 +</span>
+                                                                <p>total Team members</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-xl-6">
+                                                        <div class="about-info">
+                                                            <div class="about-info-icon">
+                                                                <i class="flaticon-027-check"></i>
+                                                            </div>
+                                                            <div class="about-info-text">
+                                                                <span>350 +</span>
+                                                                <p>Operations Completed</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="about-content">
+                                                <p>
+                                                    Contrary to popular belief, Lorem Ipsum is not simply random text.
+                                                    It has roots in a
+                                                    piece of classical Latin literature from 45 BC, making it over 2000
+                                                    years old.
+                                                    Richard McClintock, a Latin professor at Hampden-Sydney College in
+                                                    Virginia, looked
+                                                    up
+                                                    one of the more obscure.
+                                                </p>
+                                                <div class="about-btn mt-50">
+                                                    <a href="contact.html" class="arm-btn"><span
+                                                            class="circle-btn"><i
+                                                                class="fal fa-long-arrow-right"></i></span>Contact
+                                                        Us
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -625,107 +720,7 @@
         </section>
         <!-- about area end  -->
 
-        <!-- service area start  -->
-        <section class="bg-white service-area pt-130 pb-130 p-relative fix z-index-2">
-            <div class="service-shapes">
-                <img class="service-area-shape-1" src="{{ 'armado/' }}assets/img/shape/cube-shape-2.png"
-                    alt="img not found">
-            </div>
-            <div class="container">
-                <div class="row align-items-end wow fadeInUp" data-wow-delay=".3s">
-                    <div class="col-lg-6">
-                        <div class="bd-section-title-wrapper">
-                            <div class="bd-section-subtitle st-b">
-                                armado <span>services</span>
-                            </div>
-                            <h3 class="bd-section-title mb-35">
-                                Services & Facilities
-                            </h3>
-                        </div>
-                    </div>
-                    <div class="col-lg-6">
-                        <div class="service-btn d-flex justify-content-lg-end mb-60">
-                            <a href="services.html" class="arrow-text-btn">
-                                <i class="flaticon-042-arrow-right"></i>
-                                <span>View All Services</span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="services-inner wow fadeInUp" data-wow-delay=".3s">
-                    <div class="services-wrapper services-3-wrapper">
-                        <div class="single-service">
-                            <h4 class="service-title stroke-text">
-                                <span class="service-number">01</span><a href="service-details.html">Operation
-                                    Force</a>
-                            </h4>
-                            <div class="service-img">
-                                <img src="{{ 'armado/' }}assets/img/service/service13.jpg" alt="img not found">
-                                <div class="service-img-btn">
-                                    <a href="service-details.html" class="circle-btn"><i
-                                            class="flaticon-097-right-down-2"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="single-service active">
-                            <h4 class="service-title stroke-text">
-                                <span class="service-number">02</span><a href="service-details.html">
-                                    Fire Suppression</a>
-                            </h4>
-                            <div class="service-img">
-                                <img src="{{ 'armado/' }}assets/img/service/service11.jpg" alt="img not found">
-                                <div class="service-img-btn">
-                                    <a href="service-details.html" class="circle-btn"><i
-                                            class="flaticon-097-right-down-2"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="single-service">
-                            <h4 class="service-title stroke-text">
-                                <span class="service-number">03</span><a href="service-details.html">
-                                    Rescue Services</a>
-                            </h4>
-                            <div class="service-img">
-                                <img src="{{ 'armado/' }}assets/img/service/service14.jpg" alt="img not found">
-                                <div class="service-img-btn">
-                                    <a href="service-details.html" class="circle-btn"><i
-                                            class="flaticon-097-right-down-2"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="single-service">
-                            <h4 class="service-title stroke-text">
-                                <span class="service-number">04</span><a href="service-details.html">
-                                    Fire Investigation</a>
-                            </h4>
-                            <div class="service-img">
-                                <img src="{{ 'armado/' }}assets/img/service/service15.jpg" alt="img not found">
-                                <div class="service-img-btn">
-                                    <a href="service-details.html" class="circle-btn"><i
-                                            class="flaticon-097-right-down-2"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="single-service">
-                            <h4 class="service-title stroke-text">
-                                <span class="service-number">05</span><a href="service-details.html">
-                                    Fire Fighting</a>
-                            </h4>
-                            <div class="service-img">
-                                <img src="{{ 'armado/' }}assets/img/service/service16.jpg" alt="img not found">
-                                <div class="service-img-btn">
-                                    <a href="service-details.html" class="circle-btn"><i
-                                            class="flaticon-097-right-down-2"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- service area end  -->
-
-        <!-- about area start  -->
+        <!-- kepala dinas area start  -->
         <section class="bg-white about-area pt-130 pb-65 p-relative fix z-index-2">
             <div class="about-area-3-bg area-absolute" data-background=""></div>
             <div class="about-area-shapes">
@@ -785,9 +780,9 @@
                 </div>
             </div>
         </section>
-        <!-- about area end  -->
+        <!-- kepala dinas area end  -->
 
-        <!-- feature area start  -->
+        <!-- kepala dinas dari masa ke masa area start  -->
         <section class="bg-white features-area pt-130 pb-70 p-relative z-index-2">
             <div class="container">
                 <div class="row justify-content-center wow fadeInUp" data-wow-delay=".3s">
@@ -801,231 +796,158 @@
                         </div>
                     </div>
                 </div>
-                <div class="features-inner p-relative">
-                    <div class="row">
-                        <div class="col-lg-3 col-md-6">
-                            <div class="single-feature st-c mb-30 wow fadeInUp" data-wow-delay=".3s">
-                                <div class="border-animation"></div>
-                                <div class="single-feature-inner">
-                                    <div class="feature-icon">
-                                        <i class="flaticon-114-firefighter-1"></i>
-                                    </div>
-                                    <div class="feature-content">
-                                        <h4 class="feature-title"><a href="service-details.html">emargency help
-                                            </a></h4>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-md-6">
-                            <div class="single-feature st-c mb-30 wow fadeInUp" data-wow-delay=".4s">
-                                <div class="border-animation"></div>
-                                <div class="single-feature-inner">
-                                    <div class="feature-icon">
-                                        <i class="flaticon-106-bell"></i>
-                                    </div>
-                                    <div class="feature-content">
-                                        <h4 class="feature-title"><a href="service-details.html">smoke alarmes
-                                            </a></h4>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-md-6">
-                            <div class="single-feature st-c mb-30 wow fadeInUp" data-wow-delay=".5s">
-                                <div class="border-animation"></div>
-                                <div class="single-feature-inner">
-                                    <div class="feature-icon">
-                                        <i class="flaticon-111-smoke-detector-3"></i>
-                                    </div>
-                                    <div class="feature-content">
-                                        <h4 class="feature-title"><a href="service-details.html">fire statements
-                                            </a></h4>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-md-6">
-                            <div class="single-feature st-c mb-30 wow fadeInUp" data-wow-delay=".6s">
-                                <div class="border-animation"></div>
-                                <div class="single-feature-inner">
-                                    <div class="feature-icon">
-                                        <i class="flaticon-112-fire-station"></i>
-                                    </div>
-                                    <div class="feature-content">
-                                        <h4 class="feature-title"><a href="service-details.html">fire station
-                                            </a></h4>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- feature area end  -->
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="team-wrapper">
+                            <div class="team-slider swiper-container">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <div class="team-card team-special">
+                                            <div class="team-thumb">
+                                                <div class="panel wow"></div>
+                                                <div class="team-thumb-bg">
+                                                    <svg width="389" height="444" viewBox="0 0 389 444"
+                                                        fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <mask fill="white">
+                                                            <path
+                                                                d="M150.006 24.9562L171.639 37.1185L193.272 49.2807L214.667 36.8026L236.063 24.3244L214.429 12.1622L192.796 0L171.401 12.4781L150.006 24.9562ZM86.6117 185.829L86.7702 210.47L86.9287 235.11L87.0872 259.75L87.2457 284.391L108.879 296.553L130.512 308.715L152.145 320.877L173.778 333.04L195.411 345.202L216.807 332.724L238.202 320.245L259.598 307.767L280.993 295.289L302.388 282.811L302.23 258.171L302.071 233.53L301.913 208.89L301.754 184.25L323.15 171.772L344.545 159.293L344.704 183.934L344.862 208.574L345.021 233.215L345.179 257.855L345.338 282.495L345.496 307.136L324.101 319.614L302.705 332.092L281.31 344.57L259.914 357.048L238.519 369.526L217.124 382.004L195.728 394.482L174.095 382.32L152.462 370.158L130.829 357.996L109.354 345.991L87.7211 333.829L66.088 321.667L44.4549 309.505L44.2964 284.864L44.1379 260.224L43.9794 235.584L43.8209 210.943L43.5832 186.145L43.4247 161.505L64.9786 173.588L86.6117 185.829ZM44.8511 358.785L66.4842 370.948L88.1173 383.11L109.75 395.272L131.384 407.434L153.017 419.597L174.65 431.759L196.283 443.921L217.678 431.443L239.074 418.965L260.469 406.487L281.865 394.009L303.26 381.53L324.655 369.052L346.051 356.574L367.446 344.096L388.842 331.618L388.683 306.978L388.525 282.337L388.366 257.697L388.208 233.057L388.049 208.416L387.891 183.776L387.732 159.136L387.574 134.495L387.415 109.855L365.782 97.6926L344.387 110.171L322.991 122.649L301.596 135.127L280.2 147.605L258.567 135.443L236.934 123.281L258.33 110.803L279.725 98.3244L301.12 85.8463L322.516 73.3682L300.883 61.206L279.25 49.0438L257.854 61.5219L236.459 74L215.063 86.4781L193.668 98.9563L171.956 86.4781L150.322 74.3159L128.689 62.1537L107.056 49.9915L85.6608 62.4696L64.2654 74.9477L85.8986 87.1099L107.532 99.2721L129.165 111.434L150.798 123.597L172.431 135.759L194.064 147.921L215.697 160.083L237.33 172.245L258.964 184.408L259.122 209.048L259.281 233.688L259.439 258.329L238.044 270.807L216.648 283.285L195.253 295.763L173.62 283.601L151.828 271.676L130.195 259.513L130.036 234.873L129.878 210.233L151.511 222.395L173.144 234.557L194.777 246.719L216.173 234.241L216.014 209.601L194.381 197.439L172.748 185.276L151.115 172.956L129.482 160.794L107.849 148.632L86.2155 136.47L64.5824 124.307L43.0285 112.145L21.3954 99.9829L0 112.461L0.158484 137.101L0.316969 161.742L0.475453 186.382L0.633938 211.022L0.792422 235.663L0.950907 260.303L1.26788 285.101L1.42636 309.742L1.58484 334.382L23.218 346.544L44.8511 358.785Z" />
+                                                        </mask>
+                                                        <path
+                                                            d="M150.006 24.9562L171.639 37.1185L193.272 49.2807L214.667 36.8026L236.063 24.3244L214.429 12.1622L192.796 0L171.401 12.4781L150.006 24.9562ZM86.6117 185.829L86.7702 210.47L86.9287 235.11L87.0872 259.75L87.2457 284.391L108.879 296.553L130.512 308.715L152.145 320.877L173.778 333.04L195.411 345.202L216.807 332.724L238.202 320.245L259.598 307.767L280.993 295.289L302.388 282.811L302.23 258.171L302.071 233.53L301.913 208.89L301.754 184.25L323.15 171.772L344.545 159.293L344.704 183.934L344.862 208.574L345.021 233.215L345.179 257.855L345.338 282.495L345.496 307.136L324.101 319.614L302.705 332.092L281.31 344.57L259.914 357.048L238.519 369.526L217.124 382.004L195.728 394.482L174.095 382.32L152.462 370.158L130.829 357.996L109.354 345.991L87.7211 333.829L66.088 321.667L44.4549 309.505L44.2964 284.864L44.1379 260.224L43.9794 235.584L43.8209 210.943L43.5832 186.145L43.4247 161.505L64.9786 173.588L86.6117 185.829ZM44.8511 358.785L66.4842 370.948L88.1173 383.11L109.75 395.272L131.384 407.434L153.017 419.597L174.65 431.759L196.283 443.921L217.678 431.443L239.074 418.965L260.469 406.487L281.865 394.009L303.26 381.53L324.655 369.052L346.051 356.574L367.446 344.096L388.842 331.618L388.683 306.978L388.525 282.337L388.366 257.697L388.208 233.057L388.049 208.416L387.891 183.776L387.732 159.136L387.574 134.495L387.415 109.855L365.782 97.6926L344.387 110.171L322.991 122.649L301.596 135.127L280.2 147.605L258.567 135.443L236.934 123.281L258.33 110.803L279.725 98.3244L301.12 85.8463L322.516 73.3682L300.883 61.206L279.25 49.0438L257.854 61.5219L236.459 74L215.063 86.4781L193.668 98.9563L171.956 86.4781L150.322 74.3159L128.689 62.1537L107.056 49.9915L85.6608 62.4696L64.2654 74.9477L85.8986 87.1099L107.532 99.2721L129.165 111.434L150.798 123.597L172.431 135.759L194.064 147.921L215.697 160.083L237.33 172.245L258.964 184.408L259.122 209.048L259.281 233.688L259.439 258.329L238.044 270.807L216.648 283.285L195.253 295.763L173.62 283.601L151.828 271.676L130.195 259.513L130.036 234.873L129.878 210.233L151.511 222.395L173.144 234.557L194.777 246.719L216.173 234.241L216.014 209.601L194.381 197.439L172.748 185.276L151.115 172.956L129.482 160.794L107.849 148.632L86.2155 136.47L64.5824 124.307L43.0285 112.145L21.3954 99.9829L0 112.461L0.158484 137.101L0.316969 161.742L0.475453 186.382L0.633938 211.022L0.792422 235.663L0.950907 260.303L1.26788 285.101L1.42636 309.742L1.58484 334.382L23.218 346.544L44.8511 358.785Z"
+                                                            stroke="#575757" stroke-width="4"
+                                                            mask="url(#path-1-inside-1_62_3102)" />
+                                                    </svg>
 
-        <!-- question area start  -->
-        <section class="bg-white question-area pt-30 pb-65 x-clip p-relative z-index-2">
-            <img class="question-inner-shape-2" src="{{ 'armado/' }}assets/img/shape/cube-shape-2.png"
-                alt="img not found">
-            <div class="container">
-                <div class="question-inner p-relative">
-                    <div class="row align-items-xxl-center">
-                        <div class="col-xl-6">
-                            <div class="question-content-wrapper mb-65 wow fadeInLeft" data-wow-delay=".3s">
-                                <div class="bd-section-title-wrapper">
-                                    <div class="bd-section-subtitle st-b">
-                                        Armado <span>Save peoples</span>
+                                                </div>
+                                                <a href="team-details.html"><img src="{{'armado/'}}assets/img/team/team-1.png"
+                                                        alt="img not found"></a>
+                                            </div>
+                                            <div class="team-content">
+                                                <h4 class="member-name"><a href="team-details.html">Andrew Walker</a>
+                                                </h4>
+                                                <span class="member-designation">SECURITY AGENT</span>
+                                                <div class="social-links team-social">
+                                                    <ul>
+                                                        <li><a href="https://facebook.com
+                                    "
+                                                                target="_blank"><i class="fab fa-facebook"></i></a>
+                                                        </li>
+                                                        <li><a href="https://twitter.com
+                                    "
+                                                                target="_blank"><i class="fab fa-twitter"></i></a>
+                                                        </li>
+                                                        <li><a href="https://linkedin.com" target="_blank"><i
+                                                                    class="fab fa-linkedin-in"></i></a></li>
+                                                        <li><a href="https://youtube.com
+                                    "
+                                                                target="_blank"><i class="fab fa-youtube"></i></a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
-                                    <h3 class="mb-40 bd-section-title">
-                                        We help our citizens avoid fire accidents
-                                    </h3>
-                                </div>
-                                <p class="">Armado weapon often resembles real
-                                    firearms, but the replicas shoot
-                                    small plastic 6mm BBs. In its nature, airsoft is similar to first-person shooting
-                                    video games, and it allows experiencing realistic battle and tactical
-                                    scenario gameplay.</p>
-                                <div class="mt-40 about-question-wrapper">
-                                    <div class="mb-0 faq-wrapper">
-                                        <div class="arm-faq">
-                                            <div class="accordion" id="accordionExample-st-1">
-                                                <div class="arm-faq-group">
-                                                    <div class="accordion-item">
-                                                        <h2 class="accordion-header" id="headingOne-st-1">
-                                                            <button class="accordion-button collapsed" type="button"
-                                                                data-bs-toggle="collapse"
-                                                                data-bs-target="#collapseOne-st-1"
-                                                                aria-expanded="false"
-                                                                aria-controls="collapseOne-st-1">
-                                                                In quaintly wiped some unexpectedly dimly?
-                                                            </button>
-                                                        </h2>
-                                                        <div id="collapseOne-st-1" class="accordion-collapse collapse"
-                                                            aria-labelledby="headingOne-st-1"
-                                                            data-bs-parent="#accordionExample-st-1">
-                                                            <div class="accordion-body">
-                                                                Teachings of the great explorer of the truth, the
-                                                                master-builder of human happiness. No one rejects,
-                                                                dislikes, or avoids
-                                                                pleasure itself, because it is who do not know how to
-                                                                pursue pleasure.
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="accordion-item">
-                                                        <h2 class="accordion-header" id="headingTwo-st-1">
-                                                            <button class="accordion-button" type="button"
-                                                                data-bs-toggle="collapse"
-                                                                data-bs-target="#collapseTwo-st-1"
-                                                                aria-expanded="true" aria-controls="collapseTwo-st-1">
-                                                                Dealt dragonfly wombat gosh vulture less scorpion?
-                                                            </button>
-                                                        </h2>
-                                                        <div id="collapseTwo-st-1"
-                                                            class="accordion-collapse collapse show"
-                                                            aria-labelledby="headingTwo-st-1"
-                                                            data-bs-parent="#accordionExample-st-1">
-                                                            <div class="accordion-body">
-                                                                Teachings of the great explorer of the truth, the
-                                                                master-builder of human happiness. No one rejects,
-                                                                dislikes, or avoids pleasure itself, because it is who
-                                                                do not know how to pursue pleasure.
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="accordion-item">
-                                                        <h2 class="accordion-header" id="headingThree-st-1">
-                                                            <button class="accordion-button collapsed" type="button"
-                                                                data-bs-toggle="collapse"
-                                                                data-bs-target="#collapseThree-st-1"
-                                                                aria-expanded="false"
-                                                                aria-controls="collapseThree-st-1">
-                                                                In quaintly wiped some unexpectedly dimly?
-                                                            </button>
-                                                        </h2>
-                                                        <div id="collapseThree-st-1"
-                                                            class="accordion-collapse collapse"
-                                                            aria-labelledby="headingThree-st-1"
-                                                            data-bs-parent="#accordionExample-st-1">
-                                                            <div class="accordion-body">
-                                                                Teachings of the great explorer of the truth, the
-                                                                master-builder of human happiness. No one rejects,
-                                                                dislikes, or avoids pleasure itself, because it is who
-                                                                do not know how to pursue pleasure.
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="accordion-item">
-                                                        <h2 class="accordion-header" id="headingFour-st-1">
-                                                            <button class="accordion-button collapsed" type="button"
-                                                                data-bs-toggle="collapse"
-                                                                data-bs-target="#collapseFour-st-1"
-                                                                aria-expanded="false"
-                                                                aria-controls="collapseFour-st-1">
-                                                                In quaintly wiped some unexpectedly dimly?
-                                                            </button>
-                                                        </h2>
-                                                        <div id="collapseFour-st-1"
-                                                            class="accordion-collapse collapse"
-                                                            aria-labelledby="headingFour-st-1"
-                                                            data-bs-parent="#accordionExample-st-1">
-                                                            <div class="accordion-body">
-                                                                Teachings of the great explorer of the truth, the
-                                                                master-builder of human happiness. No one rejects,
-                                                                dislikes, or avoids pleasure itself, because it is who
-                                                                do not know how to pursue pleasure.
-                                                            </div>
-                                                        </div>
-                                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="team-card team-special">
+                                            <div class="team-thumb">
+                                                <div class="panel wow"></div>
+                                                <div class="team-thumb-bg">
+                                                    <svg width="389" height="444" viewBox="0 0 389 444"
+                                                        fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <mask fill="white">
+                                                            <path
+                                                                d="M150.006 24.9562L171.639 37.1185L193.272 49.2807L214.667 36.8026L236.063 24.3244L214.429 12.1622L192.796 0L171.401 12.4781L150.006 24.9562ZM86.6117 185.829L86.7702 210.47L86.9287 235.11L87.0872 259.75L87.2457 284.391L108.879 296.553L130.512 308.715L152.145 320.877L173.778 333.04L195.411 345.202L216.807 332.724L238.202 320.245L259.598 307.767L280.993 295.289L302.388 282.811L302.23 258.171L302.071 233.53L301.913 208.89L301.754 184.25L323.15 171.772L344.545 159.293L344.704 183.934L344.862 208.574L345.021 233.215L345.179 257.855L345.338 282.495L345.496 307.136L324.101 319.614L302.705 332.092L281.31 344.57L259.914 357.048L238.519 369.526L217.124 382.004L195.728 394.482L174.095 382.32L152.462 370.158L130.829 357.996L109.354 345.991L87.7211 333.829L66.088 321.667L44.4549 309.505L44.2964 284.864L44.1379 260.224L43.9794 235.584L43.8209 210.943L43.5832 186.145L43.4247 161.505L64.9786 173.588L86.6117 185.829ZM44.8511 358.785L66.4842 370.948L88.1173 383.11L109.75 395.272L131.384 407.434L153.017 419.597L174.65 431.759L196.283 443.921L217.678 431.443L239.074 418.965L260.469 406.487L281.865 394.009L303.26 381.53L324.655 369.052L346.051 356.574L367.446 344.096L388.842 331.618L388.683 306.978L388.525 282.337L388.366 257.697L388.208 233.057L388.049 208.416L387.891 183.776L387.732 159.136L387.574 134.495L387.415 109.855L365.782 97.6926L344.387 110.171L322.991 122.649L301.596 135.127L280.2 147.605L258.567 135.443L236.934 123.281L258.33 110.803L279.725 98.3244L301.12 85.8463L322.516 73.3682L300.883 61.206L279.25 49.0438L257.854 61.5219L236.459 74L215.063 86.4781L193.668 98.9563L171.956 86.4781L150.322 74.3159L128.689 62.1537L107.056 49.9915L85.6608 62.4696L64.2654 74.9477L85.8986 87.1099L107.532 99.2721L129.165 111.434L150.798 123.597L172.431 135.759L194.064 147.921L215.697 160.083L237.33 172.245L258.964 184.408L259.122 209.048L259.281 233.688L259.439 258.329L238.044 270.807L216.648 283.285L195.253 295.763L173.62 283.601L151.828 271.676L130.195 259.513L130.036 234.873L129.878 210.233L151.511 222.395L173.144 234.557L194.777 246.719L216.173 234.241L216.014 209.601L194.381 197.439L172.748 185.276L151.115 172.956L129.482 160.794L107.849 148.632L86.2155 136.47L64.5824 124.307L43.0285 112.145L21.3954 99.9829L0 112.461L0.158484 137.101L0.316969 161.742L0.475453 186.382L0.633938 211.022L0.792422 235.663L0.950907 260.303L1.26788 285.101L1.42636 309.742L1.58484 334.382L23.218 346.544L44.8511 358.785Z" />
+                                                        </mask>
+                                                        <path
+                                                            d="M150.006 24.9562L171.639 37.1185L193.272 49.2807L214.667 36.8026L236.063 24.3244L214.429 12.1622L192.796 0L171.401 12.4781L150.006 24.9562ZM86.6117 185.829L86.7702 210.47L86.9287 235.11L87.0872 259.75L87.2457 284.391L108.879 296.553L130.512 308.715L152.145 320.877L173.778 333.04L195.411 345.202L216.807 332.724L238.202 320.245L259.598 307.767L280.993 295.289L302.388 282.811L302.23 258.171L302.071 233.53L301.913 208.89L301.754 184.25L323.15 171.772L344.545 159.293L344.704 183.934L344.862 208.574L345.021 233.215L345.179 257.855L345.338 282.495L345.496 307.136L324.101 319.614L302.705 332.092L281.31 344.57L259.914 357.048L238.519 369.526L217.124 382.004L195.728 394.482L174.095 382.32L152.462 370.158L130.829 357.996L109.354 345.991L87.7211 333.829L66.088 321.667L44.4549 309.505L44.2964 284.864L44.1379 260.224L43.9794 235.584L43.8209 210.943L43.5832 186.145L43.4247 161.505L64.9786 173.588L86.6117 185.829ZM44.8511 358.785L66.4842 370.948L88.1173 383.11L109.75 395.272L131.384 407.434L153.017 419.597L174.65 431.759L196.283 443.921L217.678 431.443L239.074 418.965L260.469 406.487L281.865 394.009L303.26 381.53L324.655 369.052L346.051 356.574L367.446 344.096L388.842 331.618L388.683 306.978L388.525 282.337L388.366 257.697L388.208 233.057L388.049 208.416L387.891 183.776L387.732 159.136L387.574 134.495L387.415 109.855L365.782 97.6926L344.387 110.171L322.991 122.649L301.596 135.127L280.2 147.605L258.567 135.443L236.934 123.281L258.33 110.803L279.725 98.3244L301.12 85.8463L322.516 73.3682L300.883 61.206L279.25 49.0438L257.854 61.5219L236.459 74L215.063 86.4781L193.668 98.9563L171.956 86.4781L150.322 74.3159L128.689 62.1537L107.056 49.9915L85.6608 62.4696L64.2654 74.9477L85.8986 87.1099L107.532 99.2721L129.165 111.434L150.798 123.597L172.431 135.759L194.064 147.921L215.697 160.083L237.33 172.245L258.964 184.408L259.122 209.048L259.281 233.688L259.439 258.329L238.044 270.807L216.648 283.285L195.253 295.763L173.62 283.601L151.828 271.676L130.195 259.513L130.036 234.873L129.878 210.233L151.511 222.395L173.144 234.557L194.777 246.719L216.173 234.241L216.014 209.601L194.381 197.439L172.748 185.276L151.115 172.956L129.482 160.794L107.849 148.632L86.2155 136.47L64.5824 124.307L43.0285 112.145L21.3954 99.9829L0 112.461L0.158484 137.101L0.316969 161.742L0.475453 186.382L0.633938 211.022L0.792422 235.663L0.950907 260.303L1.26788 285.101L1.42636 309.742L1.58484 334.382L23.218 346.544L44.8511 358.785Z"
+                                                            stroke="#575757" stroke-width="4"
+                                                            mask="url(#path-1-inside-1_62_3102)" />
+                                                    </svg>
 
+                                                </div>
+                                                <a href="team-details.html"><img src="{{'armado/'}}assets/img/team/team-2.png"
+                                                        alt="img not found"></a>
+                                            </div>
+                                            <div class="team-content">
+                                                <h4 class="member-name"><a href="team-details.html">Andrew Walker</a>
+                                                </h4>
+                                                <span class="member-designation">SECURITY AGENT</span>
+                                                <div class="social-links team-social">
+                                                    <ul>
+                                                        <li><a href="https://facebook.com
+                                    "
+                                                                target="_blank"><i class="fab fa-facebook"></i></a>
+                                                        </li>
+                                                        <li><a href="https://twitter.com
+                                    "
+                                                                target="_blank"><i class="fab fa-twitter"></i></a>
+                                                        </li>
+                                                        <li><a href="https://linkedin.com" target="_blank"><i
+                                                                    class="fab fa-linkedin-in"></i></a></li>
+                                                        <li><a href="https://youtube.com
+                                    "
+                                                                target="_blank"><i class="fab fa-youtube"></i></a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="team-card team-special">
+                                            <div class="team-thumb">
+                                                <div class="panel wow"></div>
+                                                <div class="team-thumb-bg">
+                                                    <svg width="389" height="444" viewBox="0 0 389 444"
+                                                        fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <mask fill="white">
+                                                            <path
+                                                                d="M150.006 24.9562L171.639 37.1185L193.272 49.2807L214.667 36.8026L236.063 24.3244L214.429 12.1622L192.796 0L171.401 12.4781L150.006 24.9562ZM86.6117 185.829L86.7702 210.47L86.9287 235.11L87.0872 259.75L87.2457 284.391L108.879 296.553L130.512 308.715L152.145 320.877L173.778 333.04L195.411 345.202L216.807 332.724L238.202 320.245L259.598 307.767L280.993 295.289L302.388 282.811L302.23 258.171L302.071 233.53L301.913 208.89L301.754 184.25L323.15 171.772L344.545 159.293L344.704 183.934L344.862 208.574L345.021 233.215L345.179 257.855L345.338 282.495L345.496 307.136L324.101 319.614L302.705 332.092L281.31 344.57L259.914 357.048L238.519 369.526L217.124 382.004L195.728 394.482L174.095 382.32L152.462 370.158L130.829 357.996L109.354 345.991L87.7211 333.829L66.088 321.667L44.4549 309.505L44.2964 284.864L44.1379 260.224L43.9794 235.584L43.8209 210.943L43.5832 186.145L43.4247 161.505L64.9786 173.588L86.6117 185.829ZM44.8511 358.785L66.4842 370.948L88.1173 383.11L109.75 395.272L131.384 407.434L153.017 419.597L174.65 431.759L196.283 443.921L217.678 431.443L239.074 418.965L260.469 406.487L281.865 394.009L303.26 381.53L324.655 369.052L346.051 356.574L367.446 344.096L388.842 331.618L388.683 306.978L388.525 282.337L388.366 257.697L388.208 233.057L388.049 208.416L387.891 183.776L387.732 159.136L387.574 134.495L387.415 109.855L365.782 97.6926L344.387 110.171L322.991 122.649L301.596 135.127L280.2 147.605L258.567 135.443L236.934 123.281L258.33 110.803L279.725 98.3244L301.12 85.8463L322.516 73.3682L300.883 61.206L279.25 49.0438L257.854 61.5219L236.459 74L215.063 86.4781L193.668 98.9563L171.956 86.4781L150.322 74.3159L128.689 62.1537L107.056 49.9915L85.6608 62.4696L64.2654 74.9477L85.8986 87.1099L107.532 99.2721L129.165 111.434L150.798 123.597L172.431 135.759L194.064 147.921L215.697 160.083L237.33 172.245L258.964 184.408L259.122 209.048L259.281 233.688L259.439 258.329L238.044 270.807L216.648 283.285L195.253 295.763L173.62 283.601L151.828 271.676L130.195 259.513L130.036 234.873L129.878 210.233L151.511 222.395L173.144 234.557L194.777 246.719L216.173 234.241L216.014 209.601L194.381 197.439L172.748 185.276L151.115 172.956L129.482 160.794L107.849 148.632L86.2155 136.47L64.5824 124.307L43.0285 112.145L21.3954 99.9829L0 112.461L0.158484 137.101L0.316969 161.742L0.475453 186.382L0.633938 211.022L0.792422 235.663L0.950907 260.303L1.26788 285.101L1.42636 309.742L1.58484 334.382L23.218 346.544L44.8511 358.785Z" />
+                                                        </mask>
+                                                        <path
+                                                            d="M150.006 24.9562L171.639 37.1185L193.272 49.2807L214.667 36.8026L236.063 24.3244L214.429 12.1622L192.796 0L171.401 12.4781L150.006 24.9562ZM86.6117 185.829L86.7702 210.47L86.9287 235.11L87.0872 259.75L87.2457 284.391L108.879 296.553L130.512 308.715L152.145 320.877L173.778 333.04L195.411 345.202L216.807 332.724L238.202 320.245L259.598 307.767L280.993 295.289L302.388 282.811L302.23 258.171L302.071 233.53L301.913 208.89L301.754 184.25L323.15 171.772L344.545 159.293L344.704 183.934L344.862 208.574L345.021 233.215L345.179 257.855L345.338 282.495L345.496 307.136L324.101 319.614L302.705 332.092L281.31 344.57L259.914 357.048L238.519 369.526L217.124 382.004L195.728 394.482L174.095 382.32L152.462 370.158L130.829 357.996L109.354 345.991L87.7211 333.829L66.088 321.667L44.4549 309.505L44.2964 284.864L44.1379 260.224L43.9794 235.584L43.8209 210.943L43.5832 186.145L43.4247 161.505L64.9786 173.588L86.6117 185.829ZM44.8511 358.785L66.4842 370.948L88.1173 383.11L109.75 395.272L131.384 407.434L153.017 419.597L174.65 431.759L196.283 443.921L217.678 431.443L239.074 418.965L260.469 406.487L281.865 394.009L303.26 381.53L324.655 369.052L346.051 356.574L367.446 344.096L388.842 331.618L388.683 306.978L388.525 282.337L388.366 257.697L388.208 233.057L388.049 208.416L387.891 183.776L387.732 159.136L387.574 134.495L387.415 109.855L365.782 97.6926L344.387 110.171L322.991 122.649L301.596 135.127L280.2 147.605L258.567 135.443L236.934 123.281L258.33 110.803L279.725 98.3244L301.12 85.8463L322.516 73.3682L300.883 61.206L279.25 49.0438L257.854 61.5219L236.459 74L215.063 86.4781L193.668 98.9563L171.956 86.4781L150.322 74.3159L128.689 62.1537L107.056 49.9915L85.6608 62.4696L64.2654 74.9477L85.8986 87.1099L107.532 99.2721L129.165 111.434L150.798 123.597L172.431 135.759L194.064 147.921L215.697 160.083L237.33 172.245L258.964 184.408L259.122 209.048L259.281 233.688L259.439 258.329L238.044 270.807L216.648 283.285L195.253 295.763L173.62 283.601L151.828 271.676L130.195 259.513L130.036 234.873L129.878 210.233L151.511 222.395L173.144 234.557L194.777 246.719L216.173 234.241L216.014 209.601L194.381 197.439L172.748 185.276L151.115 172.956L129.482 160.794L107.849 148.632L86.2155 136.47L64.5824 124.307L43.0285 112.145L21.3954 99.9829L0 112.461L0.158484 137.101L0.316969 161.742L0.475453 186.382L0.633938 211.022L0.792422 235.663L0.950907 260.303L1.26788 285.101L1.42636 309.742L1.58484 334.382L23.218 346.544L44.8511 358.785Z"
+                                                            stroke="#575757" stroke-width="4"
+                                                            mask="url(#path-1-inside-1_62_3102)" />
+                                                    </svg>
+
+                                                </div>
+                                                <a href="team-details.html"><img src="{{'armado/'}}assets/img/team/team-3.png"
+                                                        alt="img not found"></a>
+                                            </div>
+                                            <div class="team-content">
+                                                <h4 class="member-name"><a href="team-details.html">Andrew Walker</a>
+                                                </h4>
+                                                <span class="member-designation">SECURITY AGENT</span>
+                                                <div class="social-links team-social">
+                                                    <ul>
+                                                        <li><a href="https://facebook.com
+                                    "
+                                                                target="_blank"><i class="fab fa-facebook"></i></a>
+                                                        </li>
+                                                        <li><a href="https://twitter.com
+                                    "
+                                                                target="_blank"><i class="fab fa-twitter"></i></a>
+                                                        </li>
+                                                        <li><a href="https://linkedin.com" target="_blank"><i
+                                                                    class="fab fa-linkedin-in"></i></a></li>
+                                                        <li><a href="https://youtube.com
+                                    "
+                                                                target="_blank"><i class="fab fa-youtube"></i></a>
+                                                        </li>
+                                                    </ul>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="col-xl-6">
-                            <div class="question-thumb-wrapper mb-35 wow fadeInRight" data-wow-delay=".3s">
-                                <div class="row">
-                                    <div class="col-sm-12 mb-30">
-                                        <div class="p-relative">
-                                            <img src="{{ 'armado/' }}assets/img/service/service9.jpg"
-                                                alt="img not found">
-                                            <div class="panel wow"></div>
-                                        </div>
-                                    </div>
-                                    <div class="col-sm-6 mb-30">
-                                        <div class="question-thumb-meta-box p-relative">
-                                            <div class="question-thumb-meta">
-                                                <h4 class="meta-title">Firefighters</h4>
-                                                <span class="meta-number">450+</span>
-                                            </div>
-                                            <div class="question-thumb-meta">
-                                                <h4 class="meta-title">Fire Stations</h4>
-                                                <span class="meta-number">120+</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-sm-6 mb-30">
-                                        <div class="p-relative">
-                                            <img src="{{ 'armado/' }}assets/img/service/service10.jpg"
-                                                alt="img not found">
-                                            <div class="panel-top wow"></div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+
                         </div>
                     </div>
-                </div>
-            </div>
         </section>
-        <!-- question area end  -->
+        <!-- kepala dinas dari masa ke masa area end  -->
 
-        <!-- team area start  -->
+        <!-- personel area start  -->
         <section class="bg-white team-area pt-130 pb-130 p-relative fix z-index-2">
             <div class="team-overlay area-absolute" data-background="assets/img/bg/team.jpg"></div>
             <div class="container">
@@ -1198,305 +1120,9 @@
                 </div>
             </div>
         </section>
-        <!-- team area end  -->
+        <!-- personel area end  -->
 
-        <!-- facility-area-start -->
-        <section class="bg-white facility-area pt-130 pb-65 fix p-relative z-index-2">
-            <div class="container">
-                <div class="facility-inner p-relative">
-                    <div class="facility-shape-wrapper">
-                        <img class="facility-shape-5" src="{{ 'armado/' }}assets/img/shape/arrow-curve-cl-2.png"
-                            alt="img not found">
-                    </div>
-                    <div class="row align-items-center">
-                        <div class="col-xl-6 col-lg-10">
-                            <div class="facility-thumb-wrapper p-relative mb-65 wow fadeInUp" data-wow-delay=".3s">
-                                <div class="facility-thumb p-relative">
-                                    <img src="{{ 'armado/' }}assets/img/facility/img-2.jpg" alt="img not found">
-                                    <div class="panel wow"></div>
-                                </div>
-                                <div class="facility-shape-wrapper">
-                                    <div class="facility-shape-1 d-none"></div>
-                                    <div class="facility-shape-2 d-none">armado</div>
-                                    <img class="facility-shape-3 d-none"
-                                        src="{{ 'armado/' }}assets/img/shape/radius-border.png"
-                                        alt="img not found">
-                                    <img class="facility-shape-4"
-                                        src="{{ 'armado/' }}assets/img/shape/round-1.png" alt="img not found">
-                                    <div class="facility-shape-6"></div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-xl-6 col-lg-10">
-                            <div class="facility-content mb-25 wow fadeInUp" data-wow-delay=".3s">
-                                <div class="bd-section-title-wrapper">
-                                    <div class="bd-section-subtitle st-b">
-                                        PREVENTION <span>SERVICES</span>
-                                    </div>
-                                    <h3 class="mb-40 bd-section-title">
-                                        Promoting safety at your home & office
-                                    </h3>
-                                </div>
-                                <p class="">Armado weapon often resembles real
-                                    firearms, but the replicas shoot
-                                    small plastic 6mm BBs. In its nature, airsoft is similar to first-person
-                                    shooting
-                                    video games, and it allows experiencing realistic battle and tactical
-                                    scenario gameplay.
-                                </p>
-                                <p class="">Airsoft is similar to first-person
-                                    shooting
-                                    video games, and it allows experiencing realistic battle and tactical
-                                    scenario gameplay.
-                                </p>
-                                <div class="mt-40 mb-40 facility-info-list st-bg">
-                                    <ul>
-                                        <li class="">
-                                            <div class="facility-info">
-                                                <div class="info-icon">
-                                                    <i class="flaticon-044-check-2"></i>
-                                                </div>
-                                                <div class="info-text">
-                                                    <p>Dedicated to Save Lives</p>
-                                                </div>
-                                            </div>
-                                        </li>
-                                        <li class="">
-                                            <div class="facility-info">
-                                                <div class="info-icon">
-                                                    <i class="flaticon-044-check-2"></i>
-                                                </div>
-                                                <div class="info-text">
-                                                    <p>24/7 Available to Save</p>
-                                                </div>
-                                            </div>
-                                        </li>
-                                        <li class="">
-                                            <div class="facility-info">
-                                                <div class="info-icon">
-                                                    <i class="flaticon-044-check-2"></i>
-                                                </div>
-                                                <div class="info-text">
-                                                    <p>95% Life saving rate</p>
-                                                </div>
-                                            </div>
-                                        </li>
-
-                                        <li class="">
-                                            <div class="facility-info">
-                                                <div class="info-icon">
-                                                    <i class="flaticon-044-check-2"></i>
-                                                </div>
-                                                <div class="info-text">
-                                                    <p>Latest Sequrity Technique</p>
-                                                </div>
-                                            </div>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <div class="arm-counter-item-wrapper mt-50" id="percentage">
-                                    <div class="counter_item mb-30">
-                                        <div class="counter_canvas">
-                                            <div class="circle_counter" data-count="95">
-                                                <span class="counter_percentage"></span>
-                                            </div>
-                                        </div>
-                                        <p class="arm-counter-title">Families Saved</p>
-                                    </div>
-                                    <div class="counter_item mb-30">
-                                        <div class="counter_canvas">
-                                            <div class="circle_counter" data-count="65">
-                                                <span class="counter_percentage"></span>
-                                            </div>
-                                        </div>
-                                        <p class="arm-counter-title">Property Saved</p>
-                                    </div>
-                                    <div class="counter_item mb-30">
-                                        <div class="counter_canvas">
-                                            <div class="circle_counter" data-count="85">
-                                                <span class="counter_percentage"></span>
-                                            </div>
-                                        </div>
-                                        <p class="arm-counter-title">World War</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- facility-area-end -->
-
-        <!-- testimonial area start  -->
-        <section class="bg-white testimonial-area pt-130 pb-65 vertical-testimonial-area p-relative z-index-2">
-            <div class="testimonial-bg">
-                <img src="{{ 'armado/' }}assets/img/bg/testimonial-bg.png" alt="img not found">
-            </div>
-            <div class="testimonial-shape">
-                <img class="testimonial-shape-1" src="{{ 'armado/' }}assets/img/shape/cube-shape.png"
-                    alt="img not found">
-                <img class="testimonial-shape-2" src="{{ 'armado/' }}assets/img/shape/cube-shape.png"
-                    alt="img not found">
-            </div>
-            <div class="container">
-                <div class="row align-items-center">
-                    <div class="col-lg-5">
-                        <div class="bd-section-title-wrapper mb-50 wow fadeInUp" data-wow-delay=".3s">
-                            <div class="bd-section-subtitle st-b title-text-white">
-                                Clients <span>feedbacks</span>
-                            </div>
-                            <h3 class="bd-section-title title-text-white">satisfied
-                                peoples
-                                are saying</h3>
-                        </div>
-                        <div class="testimonial-thumb mb-65">
-                            <div class="author-image">
-                                <img src="{{ 'armado/' }}assets/img/testimonial/test-thumb-1.png"
-                                    alt="img not found">
-                            </div>
-                            <div class="author-image">
-                                <img src="{{ 'armado/' }}assets/img/testimonial/test-thumb-2.png"
-                                    alt="img not found">
-                            </div>
-                            <div class="author-image">
-                                <img src="{{ 'armado/' }}assets/img/testimonial/test-thumb-3.png"
-                                    alt="img not found">
-                            </div>
-                            <div class="author-image">
-                                <img src="{{ 'armado/' }}assets/img/testimonial/test-thumb-3.png"
-                                    alt="img not found">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-7">
-                        <div class="test-vertical-wrapper mb-65 wow fadeInUp" data-wow-delay=".3s">
-                            <div class="vertical-testimonial-navigation wow fadeIn" data-wow-delay=".5s"></div>
-                            <div class="test-vertical-shape">
-                                <span class="test-rec-shape-1"></span>
-                                <span class="test-rec-shape-2"></span>
-                            </div>
-                            <div class="vertical-testimonial-slider">
-                                <div class="single-testimonial test-vertical">
-                                    <div class="testimonial-icon">
-                                        <i class="flaticon-100-right-quote"></i>
-                                    </div>
-                                    <div class="author-text">
-                                        <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It
-                                            has
-                                            roots in a piece of classical Latin literature
-                                            from 45 BC, making it over 2000 years old. Richard McClintock</p>
-                                    </div>
-                                    <div class="testimonial-author-meta">
-                                        <span class="author-name">Firingo Kong</span>
-                                        <span class="author-designation">Managing Director</span>
-                                    </div>
-                                </div>
-                                <div class="single-testimonial test-vertical">
-                                    <div class="testimonial-icon">
-                                        <i class="flaticon-100-right-quote"></i>
-                                    </div>
-                                    <div class="author-text">
-                                        <p>It
-                                            has
-                                            roots in a piece of classical Latin literature
-                                            from 45 BC, making it over 2000 years old. Contrary to popular belief, Lorem
-                                            Ipsum is not simply random text. Richard McClintock</p>
-                                    </div>
-                                    <div class="testimonial-author-meta">
-                                        <span class="author-name">Firingo Kong</span>
-                                        <span class="author-designation">Managing Director</span>
-                                    </div>
-                                </div>
-                                <div class="single-testimonial test-vertical">
-                                    <div class="testimonial-icon">
-                                        <i class="flaticon-100-right-quote"></i>
-                                    </div>
-                                    <div class="author-text">
-                                        <p>It
-                                            has
-                                            roots in a piece of classical Latin literature
-                                            from 45 BC, making it over 2000 years old. Contrary to popular belief, Lorem
-                                            Ipsum is not simply random text. Richard McClintock</p>
-                                    </div>
-                                    <div class="testimonial-author-meta">
-                                        <span class="author-name">Firingo Kong</span>
-                                        <span class="author-designation">Managing Director</span>
-                                    </div>
-                                </div>
-                                <div class="single-testimonial test-vertical">
-                                    <div class="testimonial-icon">
-                                        <i class="flaticon-100-right-quote"></i>
-                                    </div>
-                                    <div class="author-text">
-                                        <p>It
-                                            has
-                                            roots in a piece of classical Latin literature
-                                            from 45 BC, making it over 2000 years old. Contrary to popular belief, Lorem
-                                            Ipsum is not simply random text. Richard McClintock</p>
-                                    </div>
-                                    <div class="testimonial-author-meta">
-                                        <span class="author-name">Firingo Kong</span>
-                                        <span class="author-designation">Managing Director</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- testimonial area end  -->
-
-        <!-- fact area start  -->
-        <div class="bg-white fact-area fact-style-2 p-relative z-index-2">
-            <div class="container">
-                <div class="fact-wrapper">
-                    <div class="row">
-                        <div class="col-lg-3 col-md-6">
-                            <div class="fact-single style-2">
-                                <div class="fact-content">
-                                    <span class="fact-number"><span class="odometer" data-count="2">0</span>K<span
-                                            class="plus">+</span></span>
-                                    <span class="fact-title">EVENTS SERVED</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-md-6">
-                            <div class="fact-single style-2">
-                                <div class="fact-content">
-                                    <span class="fact-number"><span class="odometer" data-count="460">0</span><span
-                                            class="plus">+</span></span>
-                                    <span class="fact-title">QUA LIFIED STAFF</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-md-6">
-                            <div class="fact-single style-2">
-                                <div class="fact-content">
-                                    <span class="fact-number"><span class="odometer"
-                                            data-count="120">0</span><span class="plus">+</span></span>
-                                    <span class="fact-title">OUR LOCATIONS</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-md-6">
-                            <div class="fact-single style-2">
-                                <div class="fact-content">
-                                    <span class="fact-number"><span class="odometer"
-                                            data-count="550">0</span><span class="plus">+</span></span>
-                                    <span class="fact-title">AREAS SERVING</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- fact area end  -->
-
-        <!-- operations area start  -->
+        <!-- kegiatan area start  -->
         <section class="bg-white operations-area pt-80 pb-130 p-relative z-index-2">
             <div class="container">
                 <div class="row justify-content-center wow fadeInUp" data-wow-delay=".3s">
@@ -1510,66 +1136,628 @@
                         </div>
                     </div>
                 </div>
-                <div class="operation-gallery-wrapper wow fadeInUp" data-wow-delay=".3s">
-                    <div class="operation-gallery-slider swiper-container">
-                        <div class="swiper-wrapper">
-                            <div class="swiper-slide">
-                                <div class="operation-gallery-thumb">
-                                    <a class="popup-image"
-                                        href="{{ 'armado/' }}assets/img/operations/operation-1.jpg">
-                                        <img src="{{ 'armado/' }}assets/img/operations/operation-1.jpg"
-                                            alt="img not found">
-                                        <span class="plus-icon"><i class="fal fa-plus"></i></span>
-                                    </a>
+                <div class="container">
+                    <div class="gallery-tab-wrapper">
+                        <div class="gallery-tab-nav mb-65">
+                            <nav>
+                                <div class="nav nav-tabs masonary-menu">
+                                    <button class="nav-link active" data-filter=".c-1">ARMY</button>
+                                    <button class="nav-link" data-filter=".c-2">NAVY</button>
+                                    <button class="nav-link" data-filter=".c-3">POLICE</button>
+                                    <button class="nav-link" data-filter=".c-4">AIR FORCE</button>
+                                    <button class="nav-link" data-filter=".c-5">FIRE FIGHTER</button>
                                 </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="operation-gallery-thumb">
-                                    <a class="popup-image"
-                                        href="{{ 'armado/' }}assets/img/operations/operation-2.jpg">
-                                        <img src="{{ 'armado/' }}assets/img/operations/operation-2.jpg"
-                                            alt="img not found">
-                                        <span class="plus-icon"><i class="fal fa-plus"></i></span>
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="operation-gallery-thumb">
-                                    <a class="popup-image"
-                                        href="{{ 'armado/' }}assets/img/operations/operation-3.jpg">
-                                        <img src="{{ 'armado/' }}assets/img/operations/operation-3.jpg"
-                                            alt="img not found">
-                                        <span class="plus-icon"><i class="fal fa-plus"></i></span>
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="operation-gallery-thumb">
-                                    <a class="popup-image"
-                                        href="{{ 'armado/' }}assets/img/operations/operation-4.jpg">
-                                        <img src="{{ 'armado/' }}assets/img/operations/operation-4.jpg"
-                                            alt="img not found">
-                                        <span class="plus-icon"><i class="fal fa-plus"></i></span>
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="operation-gallery-thumb">
-                                    <a class="popup-image"
-                                        href="{{ 'armado/' }}assets/img/operations/operation-5.jpg">
-                                        <img src="{{ 'armado/' }}assets/img/operations/operation-5.jpg"
-                                            alt="img not found">
-                                        <span class="plus-icon"><i class="fal fa-plus"></i></span>
-                                    </a>
+                            </nav>
+                        </div>
+                        <div class="gallery-tab-content">
+                            <div class="tab-content">
+                                <div class="">
+                                    <div class="grid gallery-wrapper row">
+                                        <div class="col-lg-4 col-md-6 grid-item c-1">
+                                            <div class="gallery-single mb-30">
+                                                <div class="gallery-thumb-wrapper">
+                                                    <div class="gallery-thumb">
+                                                        <img src="{{'armado/'}}assets/img/gallery/army/gallery1.jpg"
+                                                            alt="img not found">
+                                                        <div class="gallery-overlay"></div>
+                                                    </div>
+                                                    <div class="gallery-thumb-action">
+                                                        <a class="action-plus-btn popup-image"
+                                                            href="assets/img/gallery/army/gallery1.jpg"><i
+                                                                class="fa fa-plus"></i></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4 col-md-6 grid-item c-1">
+                                            <div class="gallery-single mb-30">
+                                                <div class="gallery-thumb-wrapper">
+                                                    <div class="gallery-thumb">
+                                                        <img src="{{'armado/'}}assets/img/gallery/army/gallery2.jpg"
+                                                            alt="img not found">
+                                                        <div class="gallery-overlay"></div>
+                                                    </div>
+                                                    <div class="gallery-thumb-action">
+                                                        <a class="action-plus-btn popup-image"
+                                                            href="assets/img/gallery/army/gallery2.jpg"><i
+                                                                class="fa fa-plus"></i></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4 col-md-6 grid-item c-1">
+                                            <div class="gallery-single mb-30">
+                                                <div class="gallery-thumb-wrapper">
+                                                    <div class="gallery-thumb">
+                                                        <img src="{{'armado/'}}assets/img/gallery/army/gallery3.jpg"
+                                                            alt="img not found">
+                                                        <div class="gallery-overlay"></div>
+                                                    </div>
+                                                    <div class="gallery-thumb-action">
+                                                        <a class="action-plus-btn popup-image"
+                                                            href="assets/img/gallery/army/gallery3.jpg"><i
+                                                                class="fa fa-plus"></i></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4 col-md-6 grid-item c-1">
+                                            <div class="gallery-single mb-30">
+                                                <div class="gallery-thumb-wrapper">
+                                                    <div class="gallery-thumb">
+                                                        <img src="{{'armado/'}}assets/img/gallery/army/gallery4.jpg"
+                                                            alt="img not found">
+                                                        <div class="gallery-overlay"></div>
+                                                    </div>
+                                                    <div class="gallery-thumb-action">
+                                                        <a class="action-plus-btn popup-image"
+                                                            href="assets/img/gallery/army/gallery4.jpg"><i
+                                                                class="fa fa-plus"></i></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4 col-md-6 grid-item c-1">
+                                            <div class="gallery-single mb-30">
+                                                <div class="gallery-thumb-wrapper">
+                                                    <div class="gallery-thumb">
+                                                        <img src="{{'armado/'}}assets/img/gallery/army/gallery5.jpg"
+                                                            alt="img not found">
+                                                        <div class="gallery-overlay"></div>
+                                                    </div>
+                                                    <div class="gallery-thumb-action">
+                                                        <a class="action-plus-btn popup-image"
+                                                            href="assets/img/gallery/army/gallery5.jpg"><i
+                                                                class="fa fa-plus"></i></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4 col-md-6 grid-item c-1">
+                                            <div class="gallery-single mb-30">
+                                                <div class="gallery-thumb-wrapper">
+                                                    <div class="gallery-thumb">
+                                                        <img src="{{'armado/'}}assets/img/gallery/army/gallery6.jpg"
+                                                            alt="img not found">
+                                                        <div class="gallery-overlay"></div>
+                                                    </div>
+                                                    <div class="gallery-thumb-action">
+                                                        <a class="action-plus-btn popup-image"
+                                                            href="assets/img/gallery/army/gallery6.jpg"><i
+                                                                class="fa fa-plus"></i></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4 col-md-6 grid-item c-1">
+                                            <div class="gallery-single mb-30">
+                                                <div class="gallery-thumb-wrapper">
+                                                    <div class="gallery-thumb">
+                                                        <img src="{{'armado/'}}assets/img/gallery/army/gallery7.jpg"
+                                                            alt="img not found">
+                                                        <div class="gallery-overlay"></div>
+                                                    </div>
+                                                    <div class="gallery-thumb-action">
+                                                        <a class="action-plus-btn popup-image"
+                                                            href="assets/img/gallery/army/gallery7.jpg"><i
+                                                                class="fa fa-plus"></i></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4 col-md-6 grid-item c-1">
+                                            <div class="gallery-single mb-30">
+                                                <div class="gallery-thumb-wrapper">
+                                                    <div class="gallery-thumb">
+                                                        <img src="{{'armado/'}}assets/img/gallery/army/gallery8.jpg"
+                                                            alt="img not found">
+                                                        <div class="gallery-overlay"></div>
+                                                    </div>
+                                                    <div class="gallery-thumb-action">
+                                                        <a class="action-plus-btn popup-image"
+                                                            href="assets/img/gallery/army/gallery8.jpg"><i
+                                                                class="fa fa-plus"></i></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4 col-md-6 grid-item c-2">
+                                            <div class="gallery-single mb-30">
+                                                <div class="gallery-thumb-wrapper">
+                                                    <div class="gallery-thumb">
+                                                        <img src="{{'armado/'}}assets/img/gallery/navy/gallery1.jpg"
+                                                            alt="img not found">
+                                                        <div class="gallery-overlay"></div>
+                                                    </div>
+                                                    <div class="gallery-thumb-action">
+                                                        <a class="action-plus-btn popup-image"
+                                                            href="assets/img/gallery/navy/gallery1.jpg"><i
+                                                                class="fa fa-plus"></i></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4 col-md-6 grid-item c-2">
+                                            <div class="gallery-single mb-30">
+                                                <div class="gallery-thumb-wrapper">
+                                                    <div class="gallery-thumb">
+                                                        <img src="{{'armado/'}}assets/img/gallery/navy/gallery2.jpg"
+                                                            alt="img not found">
+                                                        <div class="gallery-overlay"></div>
+                                                    </div>
+                                                    <div class="gallery-thumb-action">
+                                                        <a class="action-plus-btn popup-image"
+                                                            href="assets/img/gallery/navy/gallery2.jpg"><i
+                                                                class="fa fa-plus"></i></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4 col-md-6 grid-item c-2">
+                                            <div class="gallery-single mb-30">
+                                                <div class="gallery-thumb-wrapper">
+                                                    <div class="gallery-thumb">
+                                                        <img src="{{'armado/'}}assets/img/gallery/navy/gallery3.jpg"
+                                                            alt="img not found">
+                                                        <div class="gallery-overlay"></div>
+                                                    </div>
+                                                    <div class="gallery-thumb-action">
+                                                        <a class="action-plus-btn popup-image"
+                                                            href="assets/img/gallery/navy/gallery3.jpg"><i
+                                                                class="fa fa-plus"></i></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4 col-md-6 grid-item c-2">
+                                            <div class="gallery-single mb-30">
+                                                <div class="gallery-thumb-wrapper">
+                                                    <div class="gallery-thumb">
+                                                        <img src="{{'armado/'}}assets/img/gallery/navy/gallery4.jpg"
+                                                            alt="img not found">
+                                                        <div class="gallery-overlay"></div>
+                                                    </div>
+                                                    <div class="gallery-thumb-action">
+                                                        <a class="action-plus-btn popup-image"
+                                                            href="assets/img/gallery/navy/gallery4.jpg"><i
+                                                                class="fa fa-plus"></i></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4 col-md-6 grid-item c-2">
+                                            <div class="gallery-single mb-30">
+                                                <div class="gallery-thumb-wrapper">
+                                                    <div class="gallery-thumb">
+                                                        <img src="{{'armado/'}}assets/img/gallery/navy/gallery5.jpg"
+                                                            alt="img not found">
+                                                        <div class="gallery-overlay"></div>
+                                                    </div>
+                                                    <div class="gallery-thumb-action">
+                                                        <a class="action-plus-btn popup-image"
+                                                            href="assets/img/gallery/navy/gallery5.jpg"><i
+                                                                class="fa fa-plus"></i></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4 col-md-6 grid-item c-2">
+                                            <div class="gallery-single mb-30">
+                                                <div class="gallery-thumb-wrapper">
+                                                    <div class="gallery-thumb">
+                                                        <img src="{{'armado/'}}assets/img/gallery/navy/gallery6.jpg"
+                                                            alt="img not found">
+                                                        <div class="gallery-overlay"></div>
+                                                    </div>
+                                                    <div class="gallery-thumb-action">
+                                                        <a class="action-plus-btn popup-image"
+                                                            href="assets/img/gallery/navy/gallery6.jpg"><i
+                                                                class="fa fa-plus"></i></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4 col-md-6 grid-item c-2">
+                                            <div class="gallery-single mb-30">
+                                                <div class="gallery-thumb-wrapper">
+                                                    <div class="gallery-thumb">
+                                                        <img src="{{'armado/'}}assets/img/gallery/navy/gallery7.jpg"
+                                                            alt="img not found">
+                                                        <div class="gallery-overlay"></div>
+                                                    </div>
+                                                    <div class="gallery-thumb-action">
+                                                        <a class="action-plus-btn popup-image"
+                                                            href="assets/img/gallery/navy/gallery7.jpg"><i
+                                                                class="fa fa-plus"></i></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4 col-md-6 grid-item c-3">
+                                            <div class="gallery-single mb-30">
+                                                <div class="gallery-thumb-wrapper">
+                                                    <div class="gallery-thumb">
+                                                        <img src="{{'armado/'}}assets/img/gallery/police/gallery1.jpg"
+                                                            alt="img not found">
+                                                        <div class="gallery-overlay"></div>
+                                                    </div>
+                                                    <div class="gallery-thumb-action">
+                                                        <a class="action-plus-btn popup-image"
+                                                            href="assets/img/gallery/police/gallery1.jpg"><i
+                                                                class="fa fa-plus"></i></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4 col-md-6 grid-item c-3">
+                                            <div class="gallery-single mb-30">
+                                                <div class="gallery-thumb-wrapper">
+                                                    <div class="gallery-thumb">
+                                                        <img src="{{'armado/'}}assets/img/gallery/police/gallery2.jpg"
+                                                            alt="img not found">
+                                                        <div class="gallery-overlay"></div>
+                                                    </div>
+                                                    <div class="gallery-thumb-action">
+                                                        <a class="action-plus-btn popup-image"
+                                                            href="assets/img/gallery/police/gallery2.jpg"><i
+                                                                class="fa fa-plus"></i></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4 col-md-6 grid-item c-3">
+                                            <div class="gallery-single mb-30">
+                                                <div class="gallery-thumb-wrapper">
+                                                    <div class="gallery-thumb">
+                                                        <img src="{{'armado/'}}assets/img/gallery/police/gallery3.jpg"
+                                                            alt="img not found">
+                                                        <div class="gallery-overlay"></div>
+                                                    </div>
+                                                    <div class="gallery-thumb-action">
+                                                        <a class="action-plus-btn popup-image"
+                                                            href="assets/img/gallery/police/gallery3.jpg"><i
+                                                                class="fa fa-plus"></i></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4 col-md-6 grid-item c-3">
+                                            <div class="gallery-single mb-30">
+                                                <div class="gallery-thumb-wrapper">
+                                                    <div class="gallery-thumb">
+                                                        <img src="{{'armado/'}}assets/img/gallery/police/gallery4.jpg"
+                                                            alt="img not found">
+                                                        <div class="gallery-overlay"></div>
+                                                    </div>
+                                                    <div class="gallery-thumb-action">
+                                                        <a class="action-plus-btn popup-image"
+                                                            href="assets/img/gallery/police/gallery4.jpg"><i
+                                                                class="fa fa-plus"></i></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4 col-md-6 grid-item c-3">
+                                            <div class="gallery-single mb-30">
+                                                <div class="gallery-thumb-wrapper">
+                                                    <div class="gallery-thumb">
+                                                        <img src="{{'armado/'}}assets/img/gallery/police/gallery5.jpg"
+                                                            alt="img not found">
+                                                        <div class="gallery-overlay"></div>
+                                                    </div>
+                                                    <div class="gallery-thumb-action">
+                                                        <a class="action-plus-btn popup-image"
+                                                            href="assets/img/gallery/police/gallery5.jpg"><i
+                                                                class="fa fa-plus"></i></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4 col-md-6 grid-item c-3">
+                                            <div class="gallery-single mb-30">
+                                                <div class="gallery-thumb-wrapper">
+                                                    <div class="gallery-thumb">
+                                                        <img src="{{'armado/'}}assets/img/gallery/police/gallery6.jpg"
+                                                            alt="img not found">
+                                                        <div class="gallery-overlay"></div>
+                                                    </div>
+                                                    <div class="gallery-thumb-action">
+                                                        <a class="action-plus-btn popup-image"
+                                                            href="assets/img/gallery/police/gallery6.jpg"><i
+                                                                class="fa fa-plus"></i></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4 col-md-6 grid-item c-4">
+                                            <div class="gallery-single mb-30">
+                                                <div class="gallery-thumb-wrapper">
+                                                    <div class="gallery-thumb">
+                                                        <img src="{{'armado/'}}assets/img/gallery/air-force/gallery1.jpg"
+                                                            alt="img not found">
+                                                        <div class="gallery-overlay"></div>
+                                                    </div>
+                                                    <div class="gallery-thumb-action">
+                                                        <a class="action-plus-btn popup-image"
+                                                            href="assets/img/gallery/air-force/gallery1.jpg"><i
+                                                                class="fa fa-plus"></i></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4 col-md-6 grid-item c-4">
+                                            <div class="gallery-single mb-30">
+                                                <div class="gallery-thumb-wrapper">
+                                                    <div class="gallery-thumb">
+                                                        <img src="{{'armado/'}}assets/img/gallery/air-force/gallery2.jpg"
+                                                            alt="img not found">
+                                                        <div class="gallery-overlay"></div>
+                                                    </div>
+                                                    <div class="gallery-thumb-action">
+                                                        <a class="action-plus-btn popup-image"
+                                                            href="assets/img/gallery/air-force/gallery2.jpg"><i
+                                                                class="fa fa-plus"></i></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4 col-md-6 grid-item c-4">
+                                            <div class="gallery-single mb-30">
+                                                <div class="gallery-thumb-wrapper">
+                                                    <div class="gallery-thumb">
+                                                        <img src="{{'armado/'}}assets/img/gallery/air-force/gallery3.jpg"
+                                                            alt="img not found">
+                                                        <div class="gallery-overlay"></div>
+                                                    </div>
+                                                    <div class="gallery-thumb-action">
+                                                        <a class="action-plus-btn popup-image"
+                                                            href="assets/img/gallery/air-force/gallery3.jpg"><i
+                                                                class="fa fa-plus"></i></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4 col-md-6 grid-item c-4">
+                                            <div class="gallery-single mb-30">
+                                                <div class="gallery-thumb-wrapper">
+                                                    <div class="gallery-thumb">
+                                                        <img src="{{'armado/'}}assets/img/gallery/air-force/gallery4.jpg"
+                                                            alt="img not found">
+                                                        <div class="gallery-overlay"></div>
+                                                    </div>
+                                                    <div class="gallery-thumb-action">
+                                                        <a class="action-plus-btn popup-image"
+                                                            href="assets/img/gallery/air-force/gallery4.jpg"><i
+                                                                class="fa fa-plus"></i></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4 col-md-6 grid-item c-4">
+                                            <div class="gallery-single mb-30">
+                                                <div class="gallery-thumb-wrapper">
+                                                    <div class="gallery-thumb">
+                                                        <img src="{{'armado/'}}assets/img/gallery/air-force/gallery5.jpg"
+                                                            alt="img not found">
+                                                        <div class="gallery-overlay"></div>
+                                                    </div>
+                                                    <div class="gallery-thumb-action">
+                                                        <a class="action-plus-btn popup-image"
+                                                            href="assets/img/gallery/air-force/gallery5.jpg"><i
+                                                                class="fa fa-plus"></i></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4 col-md-6 grid-item c-4">
+                                            <div class="gallery-single mb-30">
+                                                <div class="gallery-thumb-wrapper">
+                                                    <div class="gallery-thumb">
+                                                        <img src="{{'armado/'}}assets/img/gallery/air-force/gallery6.jpg"
+                                                            alt="img not found">
+                                                        <div class="gallery-overlay"></div>
+                                                    </div>
+                                                    <div class="gallery-thumb-action">
+                                                        <a class="action-plus-btn popup-image"
+                                                            href="assets/img/gallery/air-force/gallery6.jpg"><i
+                                                                class="fa fa-plus"></i></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4 col-md-6 grid-item c-4">
+                                            <div class="gallery-single mb-30">
+                                                <div class="gallery-thumb-wrapper">
+                                                    <div class="gallery-thumb">
+                                                        <img src="{{'armado/'}}assets/img/gallery/air-force/gallery7.jpg"
+                                                            alt="img not found">
+                                                        <div class="gallery-overlay"></div>
+                                                    </div>
+                                                    <div class="gallery-thumb-action">
+                                                        <a class="action-plus-btn popup-image"
+                                                            href="assets/img/gallery/air-force/gallery7.jpg"><i
+                                                                class="fa fa-plus"></i></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4 col-md-6 grid-item c-4">
+                                            <div class="gallery-single mb-30">
+                                                <div class="gallery-thumb-wrapper">
+                                                    <div class="gallery-thumb">
+                                                        <img src="{{'armado/'}}assets/img/gallery/air-force/gallery8.jpg"
+                                                            alt="img not found">
+                                                        <div class="gallery-overlay"></div>
+                                                    </div>
+                                                    <div class="gallery-thumb-action">
+                                                        <a class="action-plus-btn popup-image"
+                                                            href="assets/img/gallery/air-force/gallery8.jpg"><i
+                                                                class="fa fa-plus"></i></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4 col-md-6 grid-item c-5">
+                                            <div class="gallery-single mb-30">
+                                                <div class="gallery-thumb-wrapper">
+                                                    <div class="gallery-thumb">
+                                                        <img src="{{'armado/'}}assets/img/gallery/fire/gallery1.jpg"
+                                                            alt="img not found">
+                                                        <div class="gallery-overlay"></div>
+                                                    </div>
+                                                    <div class="gallery-thumb-action">
+                                                        <a class="action-plus-btn popup-image"
+                                                            href="assets/img/gallery/fire/gallery1.jpg"><i
+                                                                class="fa fa-plus"></i></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4 col-md-6 grid-item c-5">
+                                            <div class="gallery-single mb-30">
+                                                <div class="gallery-thumb-wrapper">
+                                                    <div class="gallery-thumb">
+                                                        <img src="{{'armado/'}}assets/img/gallery/fire/gallery2.jpg"
+                                                            alt="img not found">
+                                                        <div class="gallery-overlay"></div>
+                                                    </div>
+                                                    <div class="gallery-thumb-action">
+                                                        <a class="action-plus-btn popup-image"
+                                                            href="assets/img/gallery/fire/gallery2.jpg"><i
+                                                                class="fa fa-plus"></i></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4 col-md-6 grid-item c-5">
+                                            <div class="gallery-single mb-30">
+                                                <div class="gallery-thumb-wrapper">
+                                                    <div class="gallery-thumb">
+                                                        <img src="{{'armado/'}}assets/img/gallery/fire/gallery3.jpg"
+                                                            alt="img not found">
+                                                        <div class="gallery-overlay"></div>
+                                                    </div>
+                                                    <div class="gallery-thumb-action">
+                                                        <a class="action-plus-btn popup-image"
+                                                            href="assets/img/gallery/fire/gallery3.jpg"><i
+                                                                class="fa fa-plus"></i></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4 col-md-6 grid-item c-5">
+                                            <div class="gallery-single mb-30">
+                                                <div class="gallery-thumb-wrapper">
+                                                    <div class="gallery-thumb">
+                                                        <img src="{{'armado/'}}assets/img/gallery/fire/gallery4.jpg"
+                                                            alt="img not found">
+                                                        <div class="gallery-overlay"></div>
+                                                    </div>
+                                                    <div class="gallery-thumb-action">
+                                                        <a class="action-plus-btn popup-image"
+                                                            href="assets/img/gallery/fire/gallery4.jpg"><i
+                                                                class="fa fa-plus"></i></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4 col-md-6 grid-item c-5">
+                                            <div class="gallery-single mb-30">
+                                                <div class="gallery-thumb-wrapper">
+                                                    <div class="gallery-thumb">
+                                                        <img src="{{'armado/'}}assets/img/gallery/fire/gallery5.jpg"
+                                                            alt="img not found">
+                                                        <div class="gallery-overlay"></div>
+                                                    </div>
+                                                    <div class="gallery-thumb-action">
+                                                        <a class="action-plus-btn popup-image"
+                                                            href="assets/img/gallery/fire/gallery5.jpg"><i
+                                                                class="fa fa-plus"></i></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4 col-md-6 grid-item c-5">
+                                            <div class="gallery-single mb-30">
+                                                <div class="gallery-thumb-wrapper">
+                                                    <div class="gallery-thumb">
+                                                        <img src="{{'armado/'}}assets/img/gallery/fire/gallery6.jpg"
+                                                            alt="img not found">
+                                                        <div class="gallery-overlay"></div>
+                                                    </div>
+                                                    <div class="gallery-thumb-action">
+                                                        <a class="action-plus-btn popup-image"
+                                                            href="assets/img/gallery/fire/gallery6.jpg"><i
+                                                                class="fa fa-plus"></i></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4 col-md-6 grid-item c-5">
+                                            <div class="gallery-single mb-30">
+                                                <div class="gallery-thumb-wrapper">
+                                                    <div class="gallery-thumb">
+                                                        <img src="{{'armado/'}}assets/img/gallery/fire/gallery7.jpg"
+                                                            alt="img not found">
+                                                        <div class="gallery-overlay"></div>
+                                                    </div>
+                                                    <div class="gallery-thumb-action">
+                                                        <a class="action-plus-btn popup-image"
+                                                            href="assets/img/gallery/fire/gallery7.jpg"><i
+                                                                class="fa fa-plus"></i></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4 col-md-6 grid-item c-5">
+                                            <div class="gallery-single mb-30">
+                                                <div class="gallery-thumb-wrapper">
+                                                    <div class="gallery-thumb">
+                                                        <img src="{{'armado/'}}assets/img/gallery/fire/gallery8.jpg"
+                                                            alt="img not found">
+                                                        <div class="gallery-overlay"></div>
+                                                    </div>
+                                                    <div class="gallery-thumb-action">
+                                                        <a class="action-plus-btn popup-image"
+                                                            href="assets/img/gallery/fire/gallery8.jpg"><i
+                                                                class="fa fa-plus"></i></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
+                    </div>
+                    <div class="text-center gallery-btn mt-25 mb-30">
+                        <a href="javascript:void(0)" class="text-btn load-more-btn">Load More</a>
                     </div>
                 </div>
             </div>
 
         </section>
-        <!-- operations area end  -->
+        <!-- kegiatan area end  -->
 
         <!-- blog area start  -->
         <section class="blog-area pt-130 pb-100 p-relative fix black-bg z-index-2">
@@ -1805,38 +1993,6 @@
             </div>
         </section>
         <!-- blog area end  -->
-
-        <!-- brand-area-start -->
-        <div class="bg-white brand-area pt-130 pb-130 p-relative z-index-2">
-            <div class="container">
-                <div class="row wow fadeInUp" data-wow-delay=".3s">
-                    <div class="col-lg-12">
-                        <div class="brand-active slider-drag">
-                            <div class="arm-brand">
-                                <img src="{{ 'armado/' }}assets/img/brand/img-1.png" alt="img not found">
-                            </div>
-                            <div class="arm-brand">
-                                <img src="{{ 'armado/' }}assets/img/brand/img-2.png" alt="img not found">
-                            </div>
-                            <div class="arm-brand">
-                                <img src="{{ 'armado/' }}assets/img/brand/img-3.png" alt="img not found">
-                            </div>
-                            <div class="arm-brand">
-                                <img src="{{ 'armado/' }}assets/img/brand/img-4.png" alt="img not found">
-                            </div>
-                            <div class="arm-brand">
-                                <img src="{{ 'armado/' }}assets/img/brand/img-5.png" alt="img not found">
-                            </div>
-                            <div class="arm-brand">
-                                <img src="{{ 'armado/' }}assets/img/brand/img-3.png" alt="img not found">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- brand-area-end -->
-
 
     </main>
 

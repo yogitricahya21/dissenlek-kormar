@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\About;
+use App\Models\Banner;
 use App\Models\Leader;
 use App\Models\Activity;
 use App\Models\Complaint;
@@ -22,8 +23,10 @@ class MainController extends Controller
         $activities = Activity::latest()->take(4)->get();
         // Ambil semua personel
         $personnels = Personnel::all();
+        // Ambil semua banner urut berdasarkan order_index
+        $banners = Banner::orderBy('order_index', 'asc')->get();
 
-        return view('welcome', compact('about', 'current_leader', 'old_leaders', 'activities', 'personnels'));
+        return view('welcome', compact('about', 'current_leader', 'old_leaders', 'activities', 'personnels','banners'));
     }
 
     public function storeComplaint(Request $request)
