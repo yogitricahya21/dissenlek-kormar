@@ -1,8 +1,8 @@
 <x-app-layout>
     <x-slot name="header">
         <div class="flex items-center justify-between">
-            <h2 class="text-xl font-semibold leading-tight text-gray-800">Daftar Kegiatan</h2>
-            <a href="{{ route('activities.create') }}" class="px-4 py-2 text-xs text-white bg-blue-600 rounded">
+            <h2 class="text-xl font-semibold leading-tight text-gray-800 dark:text-gray-200">Daftar Kegiatan</h2>
+            <a href="{{ route('activities.create') }}" class="px-4 py-2 text-xs font-bold text-white uppercase bg-blue-600 rounded hover:bg-blue-700">
                 + Tambah Kegiatan
             </a>
         </div>

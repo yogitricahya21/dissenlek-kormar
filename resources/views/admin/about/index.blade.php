@@ -1,7 +1,7 @@
 <x-app-layout>
     <x-slot name="header">
-        <h2 class="text-xl font-semibold leading-tight text-gray-800">
-            {{ __('Pengaturan Profil Satuan (Sekilas Disenlek)') }}
+        <h2 class="text-xl font-semibold leading-tight text-gray-800 dark:text-gray-200">
+            {{ __('Pengaturan Profil Satuan') }}
         </h2>
     </x-slot>
 

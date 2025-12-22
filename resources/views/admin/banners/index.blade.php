@@ -1,8 +1,8 @@
 <x-app-layout>
     <x-slot name="header">
         <div class="flex items-center justify-between">
-            <h2 class="text-xl font-semibold leading-tight text-gray-800">Manajemen Banner Slider</h2>
-            <a href="{{ route('banners.create') }}" class="px-4 py-2 text-white bg-blue-600 rounded-lg hover:bg-blue-700">
+            <h2 class="text-xl font-semibold leading-tight text-gray-800 dark:text-gray-200">Manajemen Banner Slider</h2>
+            <a href="{{ route('banners.create') }}" class="px-4 py-2 text-xs font-bold text-white uppercase bg-blue-600 rounded hover:bg-blue-700">
                 + Tambah Banner
             </a>
         </div>
