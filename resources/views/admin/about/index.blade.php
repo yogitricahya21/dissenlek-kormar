@@ -15,7 +15,7 @@
             @endif
 
             <div class="p-6 overflow-hidden bg-white shadow-sm sm:rounded-lg">
-                <form action="{{ route('about.update') }}" method="POST" enctype="multipart/form-data">
+                <form action="{{ route('admin.about.update') }}" method="POST" enctype="multipart/form-data">
                     @csrf
                     
                     <div class="grid grid-cols-1 gap-6 md:grid-cols-2">

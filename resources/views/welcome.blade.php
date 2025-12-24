@@ -24,6 +24,7 @@
     <link rel="stylesheet" href="{{ 'armado/assets/css/odometer.css' }}">
     <link rel="stylesheet" href="{{ 'armado/assets/css/default.css' }}">
     <link rel="stylesheet" href="{{ 'armado/assets/css/style.css' }}">
+    <link rel="stylesheet" href="{{ 'css/style.css' }}">
 </head>
 
 <body>
@@ -48,9 +49,11 @@
                         <div class="header-main-content-wrapper">
                             <!-- header left logo-->
                             <div class="header-main-left header-main-left-header1">
-                                <div class="header-logo header1-logo">
-                                    <a href="index.html" class="logo-white"><img
-                                            src="{{ 'armado/' }}assets/img/logo/logo-white.png" alt="logo-img"></a>
+                                <div class="header-logo header1-logo logo-wrapper">
+                                    <a href="#home" class="logo-white">
+                                        <img src="{{ asset('storage/' . $about->logo) }}" alt="logo-img">
+                                    </a>
+                                    <span class="logo-text">DISSENLEK <br> KORPS MARINIR</span>
                                 </div>
                             </div>
                             <!-- header left logo -->
@@ -59,58 +62,16 @@
                                 <div class="main-menu main-menu1 d-none d-xl-block">
                                     <nav id="mobile-menu">
                                         <ul>
-                                            <li class="menu-item-has-children"><a href="index.html">Home</a>
+                                            <li><a href="#home">Home</a></li>
+                                            <li><a href="#about">About</a></li>
+                                            <li class="menu-item-has-children"><a href="#kadis">Leader</a>
                                                 <ul class="sub-menu">
-                                                    <li><a href="index.html">Military Service</a></li>
-                                                    <li><a href="index-2.html">Security Guard Service</a></li>
-                                                    <li><a href="index-3.html">Fire Fighter</a></li>
+                                                    <li><a href="#kadis">Kadissenlek</a></li>
+                                                    <li><a href="#kadis_lalu">pimpinan lalu</a></li>
                                                 </ul>
                                             </li>
-                                            <li><a href="about.html">About</a></li>
-                                            <li class="menu-item-has-children"><a href="services.html">Our Services</a>
-                                                <ul class="sub-menu">
-                                                    <li><a href="services.html">Services</a></li>
-                                                    <li><a href="service-details.html">Service Details</a></li>
-                                                </ul>
-                                            </li>
-                                            <li class="menu-item-has-children"><a href="#">Pages</a>
-                                                <ul class="sub-menu">
-                                                    <li><a href="gallery.html">Gallery</a></li>
-                                                    <li><a href="team.html">Team</a></li>
-                                                    <li><a href="team-details.html">Team Details</a></li>
-                                                    <li><a href="pricing.html">Pricing</a></li>
-                                                    <li><a href="donation.html">Donation</a></li>
-                                                    <li><a href="faq.html">FAQ</a></li>
-                                                    <li><a href="error-404.html">Error 404</a></li>
-                                                </ul>
-                                            </li>
-                                            <li class="menu-item-has-children"><a href="blog.html">Blog</a>
-                                                <ul class="sub-menu">
-                                                    <li><a href="blog.html">Blog</a></li>
-                                                    <li><a href="blog-2.html">Blog 3 Columns</a></li>
-                                                    <li><a href="blog-details.html">Blog Details</a></li>
-                                                </ul>
-                                            </li>
-                                            <li class="menu-item-has-children"><a href="#">Elements</a>
-                                                <ul class="sub-menu">
-                                                    <li><a href="elements-accordion.html">Accordion</a></li>
-                                                    <li><a href="elements-blog.html">Blog</a></li>
-                                                    <li><a href="elements-button.html">Button</a></li>
-                                                    <li><a href="elements-client.html">Client</a></li>
-                                                    <li><a href="elements-counter.html">Counter</a></li>
-                                                    <li><a href="elements-cta.html">Call To Action</a></li>
-                                                    <li><a href="elements-footer.html">Footer</a></li>
-                                                    <li><a href="elements-form.html">Form</a></li>
-                                                    <li><a href="elements-gallery.html">Gallery</a></li>
-                                                    <li><a href="elements-newsletter.html">Newsletter</a></li>
-                                                    <li><a href="elements-pagination.html">Pagination</a></li>
-                                                    <li><a href="elements-table.html">Table</a></li>
-                                                    <li><a href="elements-team.html">Team</a></li>
-                                                    <li><a href="elements-testimonial.html">Testimonial</a></li>
-                                                    <li><a href="elements-video.html">Video</a></li>
-                                                </ul>
-                                            </li>
-                                            <li><a href="contact.html">Contact</a></li>
+                                            <li><a href="#team">Teams</a></li>
+                                            <li><a href="#jops">jops</a></li>
                                         </ul>
                                     </nav>
                                 </div>
@@ -221,69 +182,96 @@
     <main>
 
         <!-- home-area-start -->
-        <div class="banner-area banner-area3 pos-rel z-index-2">
+        <div id="home" class="banner-area banner-area3 pos-rel z-index-2">
             <div class="swiper-container slider__active">
                 <div class="swiper-wrapper">
-                    <!-- slide 1 video background -->
-                    <div class="swiper-slide">
-                        <div class="single-banner single-banner-3 banner-1080 p-relative d-flex align-items-center">
-                            <div class="banner-bg banner-bg3 banner-bg3-1 d-none" data-background="">
-                            </div>
-                            <div class="video-wrapper p-relative">
-                                <video autoplay muted loop>
-                                    <source src="{{ 'armado/' }}assets/video/home-3-slide-1.mp4"
-                                        type="video/mp4">
-                                </video>
-                            </div>
-                            <div class="social-links bannner-3-social">
-                                <ul>
-                                    <li><a href="https://facebook.com
-                                    "
-                                            target="_blank"><i class="fab fa-facebook"></i></a></li>
-                                    <li><a href="https://twitter.com
-                                    "
-                                            target="_blank"><i class="fab fa-twitter"></i></a></li>
-                                    <li><a href="https://linkedin.com/" target="_blank"><i
-                                                class="fab fa-linkedin-in"></i></a></li>
-                                    <li><a href="https://youtube.com
-                                    "
-                                            target="_blank"><i class="fab fa-youtube"></i></a></li>
-                                </ul>
-                            </div>
-                            <div class="armado-shape">
-                                <span class="stroke-text">ARMADO</span>
-                            </div>
+                    @foreach ($banners as $banner)
+                        <div class="swiper-slide">
+                            <div
+                                class="single-banner single-banner-3 banner-1080 p-relative d-flex align-items-center">
 
-                            <div class="banner-shape-wrapper">
-                                <img class="banner-3-shape-a-1"
-                                    src="{{ 'armado/' }}assets/img/shape/cube-shape-2.png" alt="img not found">
-                                <img class="banner-3-shape-a-2"
-                                    src="{{ 'armado/' }}assets/img/shape/cube-shape.png" alt="img not found">
-                                <img class="banner-3-shape-a-3"
-                                    src="{{ 'armado/' }}assets/img/shape/border-dot.png" alt="img not found">
-                                <img class="banner-3-shape-a-4"
-                                    src="{{ 'armado/' }}assets/img/shape/square-route.png" alt="img not found">
-                            </div>
-                            <div class="container">
-                                <div class="banner-inner p-relative">
+                                {{-- 1. BAGIAN BACKGROUND (IMAGE / VIDEO) --}}
+                                @if ($banner->media_type == 'image')
+                                    {{-- HAPUS class d-none dan tambahkan style background-image langsung --}}
+                                    <div class="banner-bg banner-bg3 banner-bg3-1"
+                                        data-background="{{ asset('assets/img/banner/' . $banner->media_file) }}"
+                                        style="background-image: url('{{ asset('assets/img/banner/' . $banner->media_file) }}');">
+                                    </div>
+                                @else
+                                    {{-- Untuk Video --}}
+                                    <div class="banner-bg banner-bg3 banner-bg3-1 d-none" data-background=""></div>
+                                    <div class="video-wrapper p-relative">
+                                        <video autoplay muted loop>
+                                            <source src="{{ asset('assets/video/' . $banner->media_file) }}"
+                                                type="video/mp4">
+                                        </video>
+                                    </div>
+                                @endif
 
-                                    <div class="row">
-                                        <div class="col-12">
-                                            <div class="text-center banner-content banner-content3 banner-content3-1">
-                                                <div class="banner-btn justify-content-center mb-80 d-none">
-                                                    <a href="https://www.youtube.com/watch?v=q0IHRgeatHI"
-                                                        class="popup-video">
-                                                        <span class="play-btn"><i class="fas fa-play"></i></span></a>
-                                                </div>
-                                                <h1 class="banner-title mb-15">
-                                                    Ensure fire safety
-                                                </h1>
-                                                <div class="banner-meta-text">
-                                                    <span>save life & property</span>
-                                                </div>
-                                                <div class="banner-btn justify-content-center mt-80">
-                                                    <a href="about.html" class="fill-btn">About Us</a>
-                                                    <a href="services.html" class="border-btn">Our Services</a>
+                                {{-- 2. SOSIAL MEDIA (STATIS SESUAI TEMPLATE) --}}
+                                <div class="social-links bannner-3-social">
+                                    <ul>
+                                        <li><a href="https://facebook.com" target="_blank"><i
+                                                    class="fab fa-facebook"></i></a></li>
+                                        <li><a href="https://twitter.com" target="_blank"><i
+                                                    class="fab fa-twitter"></i></a></li>
+                                        <li><a href="https://linkedin.com/" target="_blank"><i
+                                                    class="fab fa-linkedin-in"></i></a></li>
+                                        <li><a href="https://youtube.com" target="_blank"><i
+                                                    class="fab fa-youtube"></i></a></li>
+                                    </ul>
+                                </div>
+
+                                {{-- 3. TEXT BACKROUND (STROKE) --}}
+                                <div class="armado-shape">
+                                    <span class="stroke-text">{{ $banner->stroke_text }}</span>
+                                </div>
+
+                                {{-- 4. ORNAMEN SHAPE (STATIS) --}}
+                                <div class="banner-shape-wrapper">
+                                    <img class="banner-3-shape-a-1"
+                                        src="{{ asset('armado/assets/img/shape/cube-shape-2.png') }}"
+                                        alt="img not found">
+                                    <img class="banner-3-shape-a-2"
+                                        src="{{ asset('armado/assets/img/shape/cube-shape.png') }}"
+                                        alt="img not found">
+                                    <img class="banner-3-shape-a-3"
+                                        src="{{ asset('armado/assets/img/shape/border-dot.png') }}"
+                                        alt="img not found">
+                                    <img class="banner-3-shape-a-4"
+                                        src="{{ asset('armado/assets/img/shape/square-route.png') }}"
+                                        alt="img not found">
+                                </div>
+
+                                <div class="container">
+                                    <div class="banner-inner p-relative">
+                                        <div class="row">
+                                            <div class="col-12">
+                                                <div
+                                                    class="text-center banner-content banner-content3 banner-content3-1">
+
+                                                    {{-- 5. EYEBROW TEXT (Teks kecil paling atas) --}}
+                                                    @if ($banner->eyebrow_text)
+                                                        <p>{{ $banner->eyebrow_text }}</p>
+                                                    @endif
+
+                                                    {{-- 6. JUDUL UTAMA --}}
+                                                    <h1 class="banner-title mb-15">
+                                                        {{ $banner->title }}
+                                                    </h1>
+
+                                                    {{-- 7. SUBTITLE --}}
+                                                    <div class="banner-meta-text">
+                                                        <span>{{ $banner->subtitle }}</span>
+                                                    </div>
+
+                                                    {{-- 8. TOMBOL-TOMBOL --}}
+                                                    <div class="banner-btn justify-content-center mt-80">
+                                                        <a href="{{ $banner->btn_fill_url }}"
+                                                            class="fill-btn">{{ $banner->btn_fill_text }}</a>
+                                                        <a href="{{ $banner->btn_border_url }}"
+                                                            class="border-btn">{{ $banner->btn_border_text }}</a>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
@@ -291,129 +279,7 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <!-- end of slide 1 video background -->
-                    <div class="swiper-slide">
-                        <div class="single-banner single-banner-3 banner-1080 p-relative d-flex align-items-center">
-                            <div class="banner-bg banner-bg3 banner-bg3-1"
-                                data-background="assets/img/banner/banner-3-2.jpg">
-                            </div>
-                            <div class="social-links bannner-3-social">
-                                <ul>
-                                    <li><a href="https://facebook.com
-                                    "
-                                            target="_blank"><i class="fab fa-facebook"></i></a></li>
-                                    <li><a href="https://twitter.com
-                                    "
-                                            target="_blank"><i class="fab fa-twitter"></i></a></li>
-                                    <li><a href="https://linkedin.com/" target="_blank"><i
-                                                class="fab fa-linkedin-in"></i></a></li>
-                                    <li><a href="https://youtube.com
-                                    "
-                                            target="_blank"><i class="fab fa-youtube"></i></a></li>
-                                </ul>
-                            </div>
-                            <div class="armado-shape">
-                                <span class="stroke-text">ARMADO</span>
-                            </div>
-
-                            <div class="banner-shape-wrapper">
-                                <img class="banner-3-shape-a-1"
-                                    src="{{ 'armado/' }}assets/img/shape/cube-shape-2.png" alt="img not found">
-                                <img class="banner-3-shape-a-2"
-                                    src="{{ 'armado/' }}assets/img/shape/cube-shape.png" alt="img not found">
-                                <img class="banner-3-shape-a-3"
-                                    src="{{ 'armado/' }}assets/img/shape/border-dot.png" alt="img not found">
-                                <img class="banner-3-shape-a-4"
-                                    src="{{ 'armado/' }}assets/img/shape/square-route.png" alt="img not found">
-                            </div>
-                            <div class="container">
-                                <div class="banner-inner p-relative">
-
-                                    <div class="row">
-                                        <div class="col-12">
-                                            <div class="text-center banner-content banner-content3 banner-content3-1">
-                                                <p>
-                                                    THE WORLD BEST Fire and EMS
-                                                </p>
-                                                <h1 class="banner-title mb-15">
-                                                    Ensure fire safety
-                                                </h1>
-                                                <div class="banner-meta-text">
-                                                    <span>save life & property</span>
-                                                </div>
-                                                <div class="banner-btn justify-content-center mt-80">
-                                                    <a href="about.html" class="fill-btn">About Us</a>
-                                                    <a href="services.html" class="border-btn">Our Services</a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="single-banner single-banner-3 banner-1080 p-relative d-flex align-items-center">
-                            <div class="banner-bg banner-bg3 banner-bg3-1"
-                                data-background="assets/img/banner/banner-3-3.jpg">
-                            </div>
-                            <div class="social-links bannner-3-social">
-                                <ul>
-                                    <li><a href="https://facebook.com
-                                    "
-                                            target="_blank"><i class="fab fa-facebook"></i></a></li>
-                                    <li><a href="https://twitter.com
-                                    "
-                                            target="_blank"><i class="fab fa-twitter"></i></a></li>
-                                    <li><a href="https://linkedin.com/" target="_blank"><i
-                                                class="fab fa-linkedin-in"></i></a></li>
-                                    <li><a href="https://youtube.com
-                                    "
-                                            target="_blank"><i class="fab fa-youtube"></i></a></li>
-                                </ul>
-                            </div>
-                            <div class="armado-shape">
-                                <span class="stroke-text">ARMADO</span>
-                            </div>
-
-                            <div class="banner-shape-wrapper">
-                                <img class="banner-3-shape-a-1"
-                                    src="{{ 'armado/' }}assets/img/shape/cube-shape-2.png" alt="img not found">
-                                <img class="banner-3-shape-a-2"
-                                    src="{{ 'armado/' }}assets/img/shape/cube-shape.png" alt="img not found">
-                                <img class="banner-3-shape-a-3"
-                                    src="{{ 'armado/' }}assets/img/shape/border-dot.png" alt="img not found">
-                                <img class="banner-3-shape-a-4"
-                                    src="{{ 'armado/' }}assets/img/shape/square-route.png" alt="img not found">
-                            </div>
-                            <div class="container">
-                                <div class="banner-inner p-relative">
-
-                                    <div class="row">
-                                        <div class="col-12">
-                                            <div class="text-center banner-content banner-content3 banner-content3-1">
-                                                <p>
-                                                    THE WORLD BEST Fire and EMS
-                                                </p>
-                                                <h1 class="banner-title mb-15">
-                                                    Ensure fire safety
-                                                </h1>
-                                                <div class="banner-meta-text">
-                                                    <span>save life & property</span>
-                                                </div>
-                                                <div class="banner-btn justify-content-center mt-80">
-                                                    <a href="about.html" class="fill-btn">About Us</a>
-                                                    <a href="services.html" class="border-btn">Our Services</a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
+                    @endforeach
                 </div>
             </div>
             <div class="slider-pagination slider-3-pagination"></div>
@@ -421,16 +287,16 @@
         <!-- home-area-end -->
 
         <!-- about area start  -->
-        <section class="about-area pt-130 pb-65 p-relative">
+        <section id="about" class="about-area pt-130 pb-65 p-relative">
             <div class="container">
                 <div class="row align-items-end wow fadeInUp" data-wow-delay=".3s">
                     <div class="col-lg-6">
                         <div class="bd-section-title-wrapper">
                             <div class="bd-section-subtitle st-b">
-                                dissenlek <span>kormar</span>
+                                tentang <span>kami</span>
                             </div>
                             <h3 class="bd-section-title mb-35">
-                                tentang kami
+                                dissenlek kormar
                             </h3>
                         </div>
                     </div>
@@ -481,6 +347,7 @@
                                 </div>
                                 <div class="about-tab-content">
                                     <div class="tab-content" id="nav-tabContent">
+                                        <!-- about tab nav 1 -->
                                         <div class="tab-pane fade show active" id="nav-1" role="tabpanel"
                                             aria-labelledby="nav-1-tab">
                                             <div class="bd-section-title-wrapper">
@@ -537,14 +404,15 @@
                                                     one of the more obscure.
                                                 </p>
                                                 <div class="about-btn mt-50">
-                                                    <a href="contact.html" class="arm-btn"><span
-                                                            class="circle-btn"><i
+                                                    <a href="#footer" class="arm-btn"><span class="circle-btn"><i
                                                                 class="fal fa-long-arrow-right"></i></span>Contact
                                                         Us
                                                     </a>
                                                 </div>
                                             </div>
                                         </div>
+                                        <!-- about tab nav 1 end -->
+                                        <!-- about tab nav 2 -->
                                         <div class="tab-pane fade" id="nav-2" role="tabpanel"
                                             aria-labelledby="nav-2-tab">
                                             <div class="bd-section-title-wrapper">
@@ -578,14 +446,15 @@
                                                     one of the more obscure.
                                                 </p>
                                                 <div class="about-btn mt-50">
-                                                    <a href="contact.html" class="arm-btn"><span
-                                                            class="circle-btn"><i
+                                                    <a href="#footer" class="arm-btn"><span class="circle-btn"><i
                                                                 class="fal fa-long-arrow-right"></i></span>Contact
                                                         Us
                                                     </a>
                                                 </div>
                                             </div>
                                         </div>
+                                        <!-- about tab nav 2 end -->
+                                        <!-- about tab nav 3 -->
                                         <div class="tab-pane fade" id="nav-3" role="tabpanel"
                                             aria-labelledby="nav-3-tab">
                                             <div class="bd-section-title-wrapper">
@@ -639,14 +508,15 @@
                                                     one of the more obscure.
                                                 </p>
                                                 <div class="about-btn mt-50">
-                                                    <a href="contact.html" class="arm-btn"><span
-                                                            class="circle-btn"><i
+                                                    <a href="#footer" class="arm-btn"><span class="circle-btn"><i
                                                                 class="fal fa-long-arrow-right"></i></span>Contact
                                                         Us
                                                     </a>
                                                 </div>
                                             </div>
                                         </div>
+                                        <!-- about tab nav 3 end -->
+                                        <!-- about tab nav 4 -->
                                         <div class="tab-pane fade" id="nav-4" role="tabpanel"
                                             aria-labelledby="nav-3-tab">
                                             <div class="bd-section-title-wrapper">
@@ -700,14 +570,14 @@
                                                     one of the more obscure.
                                                 </p>
                                                 <div class="about-btn mt-50">
-                                                    <a href="contact.html" class="arm-btn"><span
-                                                            class="circle-btn"><i
+                                                    <a href="#footer" class="arm-btn"><span class="circle-btn"><i
                                                                 class="fal fa-long-arrow-right"></i></span>Contact
                                                         Us
                                                     </a>
                                                 </div>
                                             </div>
                                         </div>
+                                        <!-- about tab nav 4 end -->
                                     </div>
                                 </div>
                             </div>
@@ -721,7 +591,7 @@
         <!-- about area end  -->
 
         <!-- kepala dinas area start  -->
-        <section class="bg-white about-area pt-130 pb-65 p-relative fix z-index-2">
+        <section id="kadis" class="bg-white about-area pt-130 pb-65 p-relative fix z-index-2">
             <div class="about-area-3-bg area-absolute" data-background=""></div>
             <div class="about-area-shapes">
                 <img class="about-3-shape-2" src="{{ 'armado/' }}assets/img/shape/fire-extinguiser.png"
@@ -759,10 +629,10 @@
                             <div class="about-content-wrapper-3 mb-65 wow fadeInRight" data-wow-delay=".3s">
                                 <div class="bd-section-title-wrapper">
                                     <div class="bd-section-subtitle st-b">
-                                        About <span>us</span>
+                                        our<span>Leaders</span>
                                     </div>
-                                    <h3 class="mb-40 bd-section-title">We help with
-                                        any fire issues & emergencies</h3>
+                                    <h3 class="mb-40 bd-section-title">kepala dinas senjata elektronika korps marinir
+                                    </h3>
                                 </div>
                                 <p class="about-sp">Teachings of the great explorer of
                                     the truth, the master-builder of
@@ -783,16 +653,15 @@
         <!-- kepala dinas area end  -->
 
         <!-- kepala dinas dari masa ke masa area start  -->
-        <section class="bg-white features-area pt-130 pb-70 p-relative z-index-2">
+        <section id="kadis_lalu" class="bg-white features-area pt-130 pb-70 p-relative z-index-2">
             <div class="container">
                 <div class="row justify-content-center wow fadeInUp" data-wow-delay=".3s">
                     <div class="col-xl-6">
                         <div class="bd-section-title-wrapper centered-title">
                             <div class="bd-section-subtitle st-b">
-                                PREMIUM <span>FEATURES</span>
+                                lasted <span>leader</span>
                             </div>
-                            <h3 class="bd-section-title mb-50">Our features Make Your
-                                life easy</h3>
+                            <h3 class="bd-section-title mb-50">kadisenlek dari masa ke masa</h3>
                         </div>
                     </div>
                 </div>
@@ -819,7 +688,8 @@
                                                     </svg>
 
                                                 </div>
-                                                <a href="team-details.html"><img src="{{'armado/'}}assets/img/team/team-1.png"
+                                                <a href="team-details.html"><img
+                                                        src="{{ 'armado/' }}assets/img/team/team-1.png"
                                                         alt="img not found"></a>
                                             </div>
                                             <div class="team-content">
@@ -865,7 +735,8 @@
                                                     </svg>
 
                                                 </div>
-                                                <a href="team-details.html"><img src="{{'armado/'}}assets/img/team/team-2.png"
+                                                <a href="team-details.html"><img
+                                                        src="{{ 'armado/' }}assets/img/team/team-2.png"
                                                         alt="img not found"></a>
                                             </div>
                                             <div class="team-content">
@@ -911,7 +782,8 @@
                                                     </svg>
 
                                                 </div>
-                                                <a href="team-details.html"><img src="{{'armado/'}}assets/img/team/team-3.png"
+                                                <a href="team-details.html"><img
+                                                        src="{{ 'armado/' }}assets/img/team/team-3.png"
                                                         alt="img not found"></a>
                                             </div>
                                             <div class="team-content">
@@ -948,16 +820,17 @@
         <!-- kepala dinas dari masa ke masa area end  -->
 
         <!-- personel area start  -->
-        <section class="bg-white team-area pt-130 pb-130 p-relative fix z-index-2">
-            <div class="team-overlay area-absolute" data-background="assets/img/bg/team.jpg"></div>
+        <section id="team" class="bg-white team-area pt-130 pb-130 p-relative fix z-index-2">
+            <div class="team-overlay area-absolute" data-background="{{ 'armado/' }}assets/img/bg/team.jpg">
+            </div>
             <div class="container">
                 <div class="row justify-content-center wow fadeInUp" data-wow-delay=".3s">
                     <div class="col-xl-6">
                         <div class="bd-section-title-wrapper bd-section-title-wrapper-team-3 centered-title">
                             <div class="bd-section-subtitle st-b">
-                                Armado <span>OUR TEAM</span>
+                                dissenlek <span>our TEAM</span>
                             </div>
-                            <h3 class="bd-section-title mb-50">Meet Our Best Team</h3>
+                            <h3 class="bd-section-title mb-50">personel dissenlek kormar</h3>
                         </div>
                     </div>
                 </div>
@@ -1122,8 +995,8 @@
         </section>
         <!-- personel area end  -->
 
-        <!-- kegiatan area start  -->
-        <section class="bg-white operations-area pt-80 pb-130 p-relative z-index-2">
+        <!-- gallery kegiatan area start  -->
+        <section id="jops" class="bg-white operations-area pt-80 pb-130 p-relative z-index-2">
             <div class="container">
                 <div class="row justify-content-center wow fadeInUp" data-wow-delay=".3s">
                     <div class="col-lg-8">
@@ -1131,7 +1004,7 @@
                             <div class="bd-section-subtitle st-b">
                                 <div class="subtitle-text">mission <span>gallery</span></div>
                             </div>
-                            <h3 class="bd-section-title mb-50">operations gallery
+                            <h3 class="bd-section-title mb-50">kegitan dissenlek kormar
                             </h3>
                         </div>
                     </div>
@@ -1141,11 +1014,11 @@
                         <div class="gallery-tab-nav mb-65">
                             <nav>
                                 <div class="nav nav-tabs masonary-menu">
-                                    <button class="nav-link active" data-filter=".c-1">ARMY</button>
-                                    <button class="nav-link" data-filter=".c-2">NAVY</button>
-                                    <button class="nav-link" data-filter=".c-3">POLICE</button>
-                                    <button class="nav-link" data-filter=".c-4">AIR FORCE</button>
-                                    <button class="nav-link" data-filter=".c-5">FIRE FIGHTER</button>
+                                    <button class="nav-link active" data-filter=".c-1">SUBDIS 1</button>
+                                    <button class="nav-link" data-filter=".c-2">SUBDIS 2</button>
+                                    <button class="nav-link" data-filter=".c-3">SUBDIS 3</button>
+                                    <button class="nav-link" data-filter=".c-4">SUBDIS 4</button>
+                                    <button class="nav-link" data-filter=".c-5">SUBDIS 5</button>
                                 </div>
                             </nav>
                         </div>
@@ -1157,7 +1030,7 @@
                                             <div class="gallery-single mb-30">
                                                 <div class="gallery-thumb-wrapper">
                                                     <div class="gallery-thumb">
-                                                        <img src="{{'armado/'}}assets/img/gallery/army/gallery1.jpg"
+                                                        <img src="{{ 'armado/' }}assets/img/gallery/army/gallery1.jpg"
                                                             alt="img not found">
                                                         <div class="gallery-overlay"></div>
                                                     </div>
@@ -1173,7 +1046,7 @@
                                             <div class="gallery-single mb-30">
                                                 <div class="gallery-thumb-wrapper">
                                                     <div class="gallery-thumb">
-                                                        <img src="{{'armado/'}}assets/img/gallery/army/gallery2.jpg"
+                                                        <img src="{{ 'armado/' }}assets/img/gallery/army/gallery2.jpg"
                                                             alt="img not found">
                                                         <div class="gallery-overlay"></div>
                                                     </div>
@@ -1189,7 +1062,7 @@
                                             <div class="gallery-single mb-30">
                                                 <div class="gallery-thumb-wrapper">
                                                     <div class="gallery-thumb">
-                                                        <img src="{{'armado/'}}assets/img/gallery/army/gallery3.jpg"
+                                                        <img src="{{ 'armado/' }}assets/img/gallery/army/gallery3.jpg"
                                                             alt="img not found">
                                                         <div class="gallery-overlay"></div>
                                                     </div>
@@ -1205,7 +1078,7 @@
                                             <div class="gallery-single mb-30">
                                                 <div class="gallery-thumb-wrapper">
                                                     <div class="gallery-thumb">
-                                                        <img src="{{'armado/'}}assets/img/gallery/army/gallery4.jpg"
+                                                        <img src="{{ 'armado/' }}assets/img/gallery/army/gallery4.jpg"
                                                             alt="img not found">
                                                         <div class="gallery-overlay"></div>
                                                     </div>
@@ -1221,7 +1094,7 @@
                                             <div class="gallery-single mb-30">
                                                 <div class="gallery-thumb-wrapper">
                                                     <div class="gallery-thumb">
-                                                        <img src="{{'armado/'}}assets/img/gallery/army/gallery5.jpg"
+                                                        <img src="{{ 'armado/' }}assets/img/gallery/army/gallery5.jpg"
                                                             alt="img not found">
                                                         <div class="gallery-overlay"></div>
                                                     </div>
@@ -1237,7 +1110,7 @@
                                             <div class="gallery-single mb-30">
                                                 <div class="gallery-thumb-wrapper">
                                                     <div class="gallery-thumb">
-                                                        <img src="{{'armado/'}}assets/img/gallery/army/gallery6.jpg"
+                                                        <img src="{{ 'armado/' }}assets/img/gallery/army/gallery6.jpg"
                                                             alt="img not found">
                                                         <div class="gallery-overlay"></div>
                                                     </div>
@@ -1253,7 +1126,7 @@
                                             <div class="gallery-single mb-30">
                                                 <div class="gallery-thumb-wrapper">
                                                     <div class="gallery-thumb">
-                                                        <img src="{{'armado/'}}assets/img/gallery/army/gallery7.jpg"
+                                                        <img src="{{ 'armado/' }}assets/img/gallery/army/gallery7.jpg"
                                                             alt="img not found">
                                                         <div class="gallery-overlay"></div>
                                                     </div>
@@ -1269,7 +1142,7 @@
                                             <div class="gallery-single mb-30">
                                                 <div class="gallery-thumb-wrapper">
                                                     <div class="gallery-thumb">
-                                                        <img src="{{'armado/'}}assets/img/gallery/army/gallery8.jpg"
+                                                        <img src="{{ 'armado/' }}assets/img/gallery/army/gallery8.jpg"
                                                             alt="img not found">
                                                         <div class="gallery-overlay"></div>
                                                     </div>
@@ -1285,7 +1158,7 @@
                                             <div class="gallery-single mb-30">
                                                 <div class="gallery-thumb-wrapper">
                                                     <div class="gallery-thumb">
-                                                        <img src="{{'armado/'}}assets/img/gallery/navy/gallery1.jpg"
+                                                        <img src="{{ 'armado/' }}assets/img/gallery/navy/gallery1.jpg"
                                                             alt="img not found">
                                                         <div class="gallery-overlay"></div>
                                                     </div>
@@ -1301,7 +1174,7 @@
                                             <div class="gallery-single mb-30">
                                                 <div class="gallery-thumb-wrapper">
                                                     <div class="gallery-thumb">
-                                                        <img src="{{'armado/'}}assets/img/gallery/navy/gallery2.jpg"
+                                                        <img src="{{ 'armado/' }}assets/img/gallery/navy/gallery2.jpg"
                                                             alt="img not found">
                                                         <div class="gallery-overlay"></div>
                                                     </div>
@@ -1317,7 +1190,7 @@
                                             <div class="gallery-single mb-30">
                                                 <div class="gallery-thumb-wrapper">
                                                     <div class="gallery-thumb">
-                                                        <img src="{{'armado/'}}assets/img/gallery/navy/gallery3.jpg"
+                                                        <img src="{{ 'armado/' }}assets/img/gallery/navy/gallery3.jpg"
                                                             alt="img not found">
                                                         <div class="gallery-overlay"></div>
                                                     </div>
@@ -1333,7 +1206,7 @@
                                             <div class="gallery-single mb-30">
                                                 <div class="gallery-thumb-wrapper">
                                                     <div class="gallery-thumb">
-                                                        <img src="{{'armado/'}}assets/img/gallery/navy/gallery4.jpg"
+                                                        <img src="{{ 'armado/' }}assets/img/gallery/navy/gallery4.jpg"
                                                             alt="img not found">
                                                         <div class="gallery-overlay"></div>
                                                     </div>
@@ -1349,7 +1222,7 @@
                                             <div class="gallery-single mb-30">
                                                 <div class="gallery-thumb-wrapper">
                                                     <div class="gallery-thumb">
-                                                        <img src="{{'armado/'}}assets/img/gallery/navy/gallery5.jpg"
+                                                        <img src="{{ 'armado/' }}assets/img/gallery/navy/gallery5.jpg"
                                                             alt="img not found">
                                                         <div class="gallery-overlay"></div>
                                                     </div>
@@ -1365,7 +1238,7 @@
                                             <div class="gallery-single mb-30">
                                                 <div class="gallery-thumb-wrapper">
                                                     <div class="gallery-thumb">
-                                                        <img src="{{'armado/'}}assets/img/gallery/navy/gallery6.jpg"
+                                                        <img src="{{ 'armado/' }}assets/img/gallery/navy/gallery6.jpg"
                                                             alt="img not found">
                                                         <div class="gallery-overlay"></div>
                                                     </div>
@@ -1381,7 +1254,7 @@
                                             <div class="gallery-single mb-30">
                                                 <div class="gallery-thumb-wrapper">
                                                     <div class="gallery-thumb">
-                                                        <img src="{{'armado/'}}assets/img/gallery/navy/gallery7.jpg"
+                                                        <img src="{{ 'armado/' }}assets/img/gallery/navy/gallery7.jpg"
                                                             alt="img not found">
                                                         <div class="gallery-overlay"></div>
                                                     </div>
@@ -1397,7 +1270,7 @@
                                             <div class="gallery-single mb-30">
                                                 <div class="gallery-thumb-wrapper">
                                                     <div class="gallery-thumb">
-                                                        <img src="{{'armado/'}}assets/img/gallery/police/gallery1.jpg"
+                                                        <img src="{{ 'armado/' }}assets/img/gallery/police/gallery1.jpg"
                                                             alt="img not found">
                                                         <div class="gallery-overlay"></div>
                                                     </div>
@@ -1413,7 +1286,7 @@
                                             <div class="gallery-single mb-30">
                                                 <div class="gallery-thumb-wrapper">
                                                     <div class="gallery-thumb">
-                                                        <img src="{{'armado/'}}assets/img/gallery/police/gallery2.jpg"
+                                                        <img src="{{ 'armado/' }}assets/img/gallery/police/gallery2.jpg"
                                                             alt="img not found">
                                                         <div class="gallery-overlay"></div>
                                                     </div>
@@ -1429,7 +1302,7 @@
                                             <div class="gallery-single mb-30">
                                                 <div class="gallery-thumb-wrapper">
                                                     <div class="gallery-thumb">
-                                                        <img src="{{'armado/'}}assets/img/gallery/police/gallery3.jpg"
+                                                        <img src="{{ 'armado/' }}assets/img/gallery/police/gallery3.jpg"
                                                             alt="img not found">
                                                         <div class="gallery-overlay"></div>
                                                     </div>
@@ -1445,7 +1318,7 @@
                                             <div class="gallery-single mb-30">
                                                 <div class="gallery-thumb-wrapper">
                                                     <div class="gallery-thumb">
-                                                        <img src="{{'armado/'}}assets/img/gallery/police/gallery4.jpg"
+                                                        <img src="{{ 'armado/' }}assets/img/gallery/police/gallery4.jpg"
                                                             alt="img not found">
                                                         <div class="gallery-overlay"></div>
                                                     </div>
@@ -1461,7 +1334,7 @@
                                             <div class="gallery-single mb-30">
                                                 <div class="gallery-thumb-wrapper">
                                                     <div class="gallery-thumb">
-                                                        <img src="{{'armado/'}}assets/img/gallery/police/gallery5.jpg"
+                                                        <img src="{{ 'armado/' }}assets/img/gallery/police/gallery5.jpg"
                                                             alt="img not found">
                                                         <div class="gallery-overlay"></div>
                                                     </div>
@@ -1477,7 +1350,7 @@
                                             <div class="gallery-single mb-30">
                                                 <div class="gallery-thumb-wrapper">
                                                     <div class="gallery-thumb">
-                                                        <img src="{{'armado/'}}assets/img/gallery/police/gallery6.jpg"
+                                                        <img src="{{ 'armado/' }}assets/img/gallery/police/gallery6.jpg"
                                                             alt="img not found">
                                                         <div class="gallery-overlay"></div>
                                                     </div>
@@ -1493,7 +1366,7 @@
                                             <div class="gallery-single mb-30">
                                                 <div class="gallery-thumb-wrapper">
                                                     <div class="gallery-thumb">
-                                                        <img src="{{'armado/'}}assets/img/gallery/air-force/gallery1.jpg"
+                                                        <img src="{{ 'armado/' }}assets/img/gallery/air-force/gallery1.jpg"
                                                             alt="img not found">
                                                         <div class="gallery-overlay"></div>
                                                     </div>
@@ -1509,7 +1382,7 @@
                                             <div class="gallery-single mb-30">
                                                 <div class="gallery-thumb-wrapper">
                                                     <div class="gallery-thumb">
-                                                        <img src="{{'armado/'}}assets/img/gallery/air-force/gallery2.jpg"
+                                                        <img src="{{ 'armado/' }}assets/img/gallery/air-force/gallery2.jpg"
                                                             alt="img not found">
                                                         <div class="gallery-overlay"></div>
                                                     </div>
@@ -1525,7 +1398,7 @@
                                             <div class="gallery-single mb-30">
                                                 <div class="gallery-thumb-wrapper">
                                                     <div class="gallery-thumb">
-                                                        <img src="{{'armado/'}}assets/img/gallery/air-force/gallery3.jpg"
+                                                        <img src="{{ 'armado/' }}assets/img/gallery/air-force/gallery3.jpg"
                                                             alt="img not found">
                                                         <div class="gallery-overlay"></div>
                                                     </div>
@@ -1541,7 +1414,7 @@
                                             <div class="gallery-single mb-30">
                                                 <div class="gallery-thumb-wrapper">
                                                     <div class="gallery-thumb">
-                                                        <img src="{{'armado/'}}assets/img/gallery/air-force/gallery4.jpg"
+                                                        <img src="{{ 'armado/' }}assets/img/gallery/air-force/gallery4.jpg"
                                                             alt="img not found">
                                                         <div class="gallery-overlay"></div>
                                                     </div>
@@ -1557,7 +1430,7 @@
                                             <div class="gallery-single mb-30">
                                                 <div class="gallery-thumb-wrapper">
                                                     <div class="gallery-thumb">
-                                                        <img src="{{'armado/'}}assets/img/gallery/air-force/gallery5.jpg"
+                                                        <img src="{{ 'armado/' }}assets/img/gallery/air-force/gallery5.jpg"
                                                             alt="img not found">
                                                         <div class="gallery-overlay"></div>
                                                     </div>
@@ -1573,7 +1446,7 @@
                                             <div class="gallery-single mb-30">
                                                 <div class="gallery-thumb-wrapper">
                                                     <div class="gallery-thumb">
-                                                        <img src="{{'armado/'}}assets/img/gallery/air-force/gallery6.jpg"
+                                                        <img src="{{ 'armado/' }}assets/img/gallery/air-force/gallery6.jpg"
                                                             alt="img not found">
                                                         <div class="gallery-overlay"></div>
                                                     </div>
@@ -1589,7 +1462,7 @@
                                             <div class="gallery-single mb-30">
                                                 <div class="gallery-thumb-wrapper">
                                                     <div class="gallery-thumb">
-                                                        <img src="{{'armado/'}}assets/img/gallery/air-force/gallery7.jpg"
+                                                        <img src="{{ 'armado/' }}assets/img/gallery/air-force/gallery7.jpg"
                                                             alt="img not found">
                                                         <div class="gallery-overlay"></div>
                                                     </div>
@@ -1605,7 +1478,7 @@
                                             <div class="gallery-single mb-30">
                                                 <div class="gallery-thumb-wrapper">
                                                     <div class="gallery-thumb">
-                                                        <img src="{{'armado/'}}assets/img/gallery/air-force/gallery8.jpg"
+                                                        <img src="{{ 'armado/' }}assets/img/gallery/air-force/gallery8.jpg"
                                                             alt="img not found">
                                                         <div class="gallery-overlay"></div>
                                                     </div>
@@ -1621,7 +1494,7 @@
                                             <div class="gallery-single mb-30">
                                                 <div class="gallery-thumb-wrapper">
                                                     <div class="gallery-thumb">
-                                                        <img src="{{'armado/'}}assets/img/gallery/fire/gallery1.jpg"
+                                                        <img src="{{ 'armado/' }}assets/img/gallery/fire/gallery1.jpg"
                                                             alt="img not found">
                                                         <div class="gallery-overlay"></div>
                                                     </div>
@@ -1637,7 +1510,7 @@
                                             <div class="gallery-single mb-30">
                                                 <div class="gallery-thumb-wrapper">
                                                     <div class="gallery-thumb">
-                                                        <img src="{{'armado/'}}assets/img/gallery/fire/gallery2.jpg"
+                                                        <img src="{{ 'armado/' }}assets/img/gallery/fire/gallery2.jpg"
                                                             alt="img not found">
                                                         <div class="gallery-overlay"></div>
                                                     </div>
@@ -1653,7 +1526,7 @@
                                             <div class="gallery-single mb-30">
                                                 <div class="gallery-thumb-wrapper">
                                                     <div class="gallery-thumb">
-                                                        <img src="{{'armado/'}}assets/img/gallery/fire/gallery3.jpg"
+                                                        <img src="{{ 'armado/' }}assets/img/gallery/fire/gallery3.jpg"
                                                             alt="img not found">
                                                         <div class="gallery-overlay"></div>
                                                     </div>
@@ -1669,7 +1542,7 @@
                                             <div class="gallery-single mb-30">
                                                 <div class="gallery-thumb-wrapper">
                                                     <div class="gallery-thumb">
-                                                        <img src="{{'armado/'}}assets/img/gallery/fire/gallery4.jpg"
+                                                        <img src="{{ 'armado/' }}assets/img/gallery/fire/gallery4.jpg"
                                                             alt="img not found">
                                                         <div class="gallery-overlay"></div>
                                                     </div>
@@ -1685,7 +1558,7 @@
                                             <div class="gallery-single mb-30">
                                                 <div class="gallery-thumb-wrapper">
                                                     <div class="gallery-thumb">
-                                                        <img src="{{'armado/'}}assets/img/gallery/fire/gallery5.jpg"
+                                                        <img src="{{ 'armado/' }}assets/img/gallery/fire/gallery5.jpg"
                                                             alt="img not found">
                                                         <div class="gallery-overlay"></div>
                                                     </div>
@@ -1701,7 +1574,7 @@
                                             <div class="gallery-single mb-30">
                                                 <div class="gallery-thumb-wrapper">
                                                     <div class="gallery-thumb">
-                                                        <img src="{{'armado/'}}assets/img/gallery/fire/gallery6.jpg"
+                                                        <img src="{{ 'armado/' }}assets/img/gallery/fire/gallery6.jpg"
                                                             alt="img not found">
                                                         <div class="gallery-overlay"></div>
                                                     </div>
@@ -1717,7 +1590,7 @@
                                             <div class="gallery-single mb-30">
                                                 <div class="gallery-thumb-wrapper">
                                                     <div class="gallery-thumb">
-                                                        <img src="{{'armado/'}}assets/img/gallery/fire/gallery7.jpg"
+                                                        <img src="{{ 'armado/' }}assets/img/gallery/fire/gallery7.jpg"
                                                             alt="img not found">
                                                         <div class="gallery-overlay"></div>
                                                     </div>
@@ -1733,7 +1606,7 @@
                                             <div class="gallery-single mb-30">
                                                 <div class="gallery-thumb-wrapper">
                                                     <div class="gallery-thumb">
-                                                        <img src="{{'armado/'}}assets/img/gallery/fire/gallery8.jpg"
+                                                        <img src="{{ 'armado/' }}assets/img/gallery/fire/gallery8.jpg"
                                                             alt="img not found">
                                                         <div class="gallery-overlay"></div>
                                                     </div>
@@ -1757,247 +1630,13 @@
             </div>
 
         </section>
-        <!-- kegiatan area end  -->
-
-        <!-- blog area start  -->
-        <section class="blog-area pt-130 pb-100 p-relative fix black-bg z-index-2">
-            <div class="blog-area-overlay"></div>
-            <div class="container">
-                <div class="row justify-content-center wow fadeInUp" data-wow-delay=".3s">
-                    <div class="col-xl-6">
-                        <div class="bd-section-title-wrapper centered-title">
-                            <div class="bd-section-subtitle st-b title-text-white">
-                                latest <span>blog news</span>
-                            </div>
-                            <h3 class="bd-section-title mb-50 title-text-white">Armado
-                                insight</h3>
-                        </div>
-                    </div>
-                </div>
-                <div class="blog-inner p-relative">
-                    <div class="blog-shape-wrapper">
-                        <img class="blog-area-shape-1" src="{{ 'armado/' }}assets/img/shape/circle-white.png"
-                            alt="img not found">
-                        <img class="blog-area-shape-2" src="{{ 'armado/' }}assets/img/shape/round-2.png"
-                            alt="img not found">
-                    </div>
-                    <div class="row">
-                        <div class="col-lg-4 col-md-6 mb-30">
-                            <div class="blog-group wow fadeInUp" data-wow-delay=".3s">
-                                <div class="mb-0 single-blog blog-main-single-2">
-                                    <div class="blog-thumb d-none">
-
-                                        <a href="blog-details.html">
-                                            <img src="{{ 'armado/' }}assets/img/blog/blog-11.jpg"
-                                                alt="img not found">
-                                        </a>
-                                    </div>
-                                    <div class="blog-content">
-                                        <div class="blog-meta-wrapper">
-                                            <div class="blog-tags">
-                                                <a href="blog.html" class="blog-tag">Training</a>
-                                            </div>
-                                            <div class="meta-list">
-                                                <div class="meta-item">
-                                                    <div class="meta-icon">
-                                                        <i class="flaticon-048-calendar"></i>
-                                                    </div>
-                                                    <div class="meta-text">20 Sep, 2022</div>
-                                                </div>
-                                                <div class="meta-item">
-                                                    <a href="blog-details.html">
-                                                        <div class="meta-icon">
-                                                            <i class="flaticon-055-speech-bubble"></i>
-                                                        </div>
-                                                        <div class="meta-text">0 Comments</div>
-                                                    </a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <h4 class="blog-title">
-                                            <a href="blog-details.html">
-                                                You will receive MOS training for your Special Forces
-                                                MOS
-                                            </a>
-                                        </h4>
-                                        <div class="blog-btn">
-                                            <a href="services.html" class="arrow-text-btn">
-                                                <span>Read More</span>
-                                                <i class="flaticon-042-arrow-right"></i>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="mb-0 single-blog blog-main-single-2">
-                                    <div class="blog-thumb d-none">
-
-                                        <a href="blog-details.html">
-                                            <img src="{{ 'armado/' }}assets/img/blog/blog-11.jpg"
-                                                alt="img not found">
-                                        </a>
-                                    </div>
-                                    <div class="blog-content">
-                                        <div class="blog-meta-wrapper">
-                                            <div class="blog-tags">
-                                                <a href="blog.html" class="blog-tag">Training</a>
-                                            </div>
-                                            <div class="meta-list">
-                                                <div class="meta-item">
-                                                    <div class="meta-icon">
-                                                        <i class="flaticon-048-calendar"></i>
-                                                    </div>
-                                                    <div class="meta-text">20 Sep, 2022</div>
-                                                </div>
-                                                <div class="meta-item">
-                                                    <a href="blog-details.html">
-                                                        <div class="meta-icon">
-                                                            <i class="flaticon-055-speech-bubble"></i>
-                                                        </div>
-                                                        <div class="meta-text">0 Comments</div>
-                                                    </a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <h4 class="blog-title">
-                                            <a href="blog-details.html">
-                                                SF medical sergeant -- 46 weeks. The
-                                                18D education is arguably
-                                            </a>
-                                        </h4>
-                                        <div class="blog-btn">
-                                            <a href="services.html" class="arrow-text-btn">
-                                                <span>Read More</span>
-                                                <i class="flaticon-042-arrow-right"></i>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-6 mb-30">
-                            <div class="blog-group-thumb p-relative wow fadeInUp" data-wow-delay=".4s">
-                                <div class="swiper-container blog-slider-2">
-                                    <div class="swiper-wrapper">
-                                        <div class="swiper-slide">
-                                            <a href="blog-details.html"><img
-                                                    src="{{ 'armado/' }}assets/img/blog/blog-group-thumb.jpg"
-                                                    alt="img not found"></a>
-                                        </div>
-                                        <div class="swiper-slide">
-                                            <a href="blog-details.html"><img
-                                                    src="{{ 'armado/' }}assets/img/blog/blog-group-thumb-2.jpg"
-                                                    alt="img not found"></a>
-                                        </div>
-                                        <div class="swiper-slide">
-                                            <a href="blog-details.html"><img
-                                                    src="{{ 'armado/' }}assets/img/blog/blog-group-thumb-3.jpg"
-                                                    alt="img not found"></a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="blog-2-pagination"></div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-6 mb-30">
-                            <div class="blog-group wow fadeInUp" data-wow-delay=".5s">
-                                <div class="mb-0 single-blog blog-main-single-2">
-                                    <div class="blog-thumb d-none">
-
-                                        <a href="blog-details.html">
-                                            <img src="{{ 'armado/' }}assets/img/blog/blog-11.jpg"
-                                                alt="img not found">
-                                        </a>
-                                    </div>
-                                    <div class="blog-content">
-                                        <div class="blog-meta-wrapper">
-                                            <div class="blog-tags">
-                                                <a href="blog.html" class="blog-tag">Training</a>
-                                            </div>
-                                            <div class="meta-list">
-                                                <div class="meta-item">
-                                                    <div class="meta-icon">
-                                                        <i class="flaticon-048-calendar"></i>
-                                                    </div>
-                                                    <div class="meta-text">20 Sep, 2022</div>
-                                                </div>
-                                                <div class="meta-item">
-                                                    <a href="blog-details.html">
-                                                        <div class="meta-icon">
-                                                            <i class="flaticon-055-speech-bubble"></i>
-                                                        </div>
-                                                        <div class="meta-text">0 Comments</div>
-                                                    </a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <h4 class="blog-title">
-                                            <a href="blog-details.html">
-                                                We Provide Security Solutions to Help Protect Your People
-                                            </a>
-                                        </h4>
-                                        <div class="blog-btn">
-                                            <a href="services.html" class="arrow-text-btn">
-                                                <span>Read More</span>
-                                                <i class="flaticon-042-arrow-right"></i>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="mb-0 single-blog blog-main-single-2">
-                                    <div class="blog-thumb d-none">
-
-                                        <a href="blog-details.html">
-                                            <img src="{{ 'armado/' }}assets/img/blog/blog-11.jpg"
-                                                alt="img not found">
-                                        </a>
-                                    </div>
-                                    <div class="blog-content">
-                                        <div class="blog-meta-wrapper">
-                                            <div class="blog-tags">
-                                                <a href="blog.html" class="blog-tag">Training</a>
-                                            </div>
-                                            <div class="meta-list">
-                                                <div class="meta-item">
-                                                    <div class="meta-icon">
-                                                        <i class="flaticon-048-calendar"></i>
-                                                    </div>
-                                                    <div class="meta-text">20 Sep, 2022</div>
-                                                </div>
-                                                <div class="meta-item">
-                                                    <a href="blog-details.html">
-                                                        <div class="meta-icon">
-                                                            <i class="flaticon-055-speech-bubble"></i>
-                                                        </div>
-                                                        <div class="meta-text">0 Comments</div>
-                                                    </a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <h4 class="blog-title">
-                                            <a href="blog-details.html">
-                                                Why Do We Love Protecting People So Much? Fusce sodales
-                                            </a>
-                                        </h4>
-                                        <div class="blog-btn">
-                                            <a href="services.html" class="arrow-text-btn">
-                                                <span>Read More</span>
-                                                <i class="flaticon-042-arrow-right"></i>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- blog area end  -->
+        <!-- gallery kegiatan area end  -->
 
     </main>
 
     <!-- footer-area-start -->
-    <footer class="footer1-bg footer-sticky" data-background="assets/img/bg/footer2-bg.jpg">
+    <footer id="footer" class="footer1-bg footer-sticky"
+        data-background="{{ 'armado/' }}assets/img/bg/footer2-bg.jpg">
         <div class="footer1-overlay"></div>
         <div class="contact-meta-area">
             <div class="container">
@@ -2159,23 +1798,32 @@
             <div class="animation-preloader">
                 <div class="spinner"></div>
                 <div class="txt-loading">
-                    <span data-text-preloader="A" class="letters-loading">
-                        A
-                    </span>
-                    <span data-text-preloader="R" class="letters-loading">
-                        R
-                    </span>
-                    <span data-text-preloader="M" class="letters-loading">
-                        M
-                    </span>
-                    <span data-text-preloader="A" class="letters-loading">
-                        A
-                    </span>
                     <span data-text-preloader="D" class="letters-loading">
                         D
                     </span>
-                    <span data-text-preloader="O" class="letters-loading">
-                        O
+                    <span data-text-preloader="I" class="letters-loading">
+                        I
+                    </span>
+                    <span data-text-preloader="S" class="letters-loading">
+                        S
+                    </span>
+                    <span data-text-preloader="S" class="letters-loading">
+                        S
+                    </span>
+                    <span data-text-preloader="E" class="letters-loading">
+                        E
+                    </span>
+                    <span data-text-preloader="N" class="letters-loading">
+                        N
+                    </span>
+                    <span data-text-preloader="L" class="letters-loading">
+                        L
+                    </span>
+                    <span data-text-preloader="E" class="letters-loading">
+                        E
+                    </span>
+                    <span data-text-preloader="K" class="letters-loading">
+                        K
                     </span>
                 </div>
             </div>

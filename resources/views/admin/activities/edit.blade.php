@@ -6,7 +6,7 @@
     <div class="py-12">
         <div class="max-w-4xl mx-auto sm:px-6 lg:px-8">
             <div class="p-6 bg-white shadow-sm sm:rounded-lg">
-                <form action="{{ route('activities.update', $activity) }}" method="POST" enctype="multipart/form-data">
+                <form action="{{ route('admin.activities.update', $activity) }}" method="POST" enctype="multipart/form-data">
                     @csrf
                     @method('PUT')
                     
@@ -34,7 +34,7 @@
                     </div>
 
                     <button type="submit" class="px-4 py-2 text-white bg-blue-600 rounded">Update Kegiatan</button>
-                    <a href="{{ route('activities.index') }}" class="ml-2 text-gray-600">Batal</a>
+                    <a href="{{ route('admin.activities.index') }}" class="ml-2 text-gray-600">Batal</a>
                 </form>
             </div>
         </div>

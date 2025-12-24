@@ -543,10 +543,10 @@ p {
   --clr-common-black: #222222;
   --clr-common-border: #c7c7c7;
   --clr-common-placeholder: #aaa;
-  --clr-theme-1: #1f4941;
+  --clr-theme-1: #183d64;
   --clr-theme-2: #ffaf00;
   --clr-theme-3: #7c7c7c;
-  --clr-bg-1: #1f4941;
+  --clr-bg-1: #183d64;
   --clr-bg-2: #ffaf00;
   --clr-bg-3: #fffcf6;
   --clr-bg-4: #f2f2f2;
@@ -1935,7 +1935,7 @@ div.mean-container a.meanmenu-reveal {
 }
 
 .header-main1 {
-  background: #1e4942;
+  background: #183d64;
   overflow-x: clip;
   position: absolute;
   top: 0;
@@ -1953,7 +1953,7 @@ div.mean-container a.meanmenu-reveal {
 }
 
 .header1-logo {
-  width: 207px;
+  width: 100px;
 }
 .header1-logo img {
   width: 100%;

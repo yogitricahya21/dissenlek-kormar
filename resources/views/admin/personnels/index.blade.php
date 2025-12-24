@@ -4,7 +4,7 @@
             <h2 class="text-xl font-semibold leading-tight text-gray-800 dark:text-gray-200">
                 {{ __('Daftar Personel') }}
             </h2>
-            <a href="{{ route('personnels.create') }}"
+            <a href="{{ route('admin.personnels.create') }}"
                 class="px-4 py-2 text-xs font-bold text-white uppercase bg-blue-600 rounded hover:bg-blue-700">
                 + Tambah Personel
             </a>
@@ -52,10 +52,10 @@
                                     <div class="text-sm text-gray-500">{{ $person->position }}</div>
                                 </td>
                                 <td class="px-6 py-4 text-sm font-medium text-right">
-                                    <a href="{{ route('personnels.edit', $person) }}"
+                                    <a href="{{ route('admin.personnels.edit', $person) }}"
                                         class="mr-3 font-bold text-indigo-600 hover:text-indigo-900">Edit</a>
 
-                                    <form action="{{ route('personnels.destroy', $person) }}" method="POST"
+                                    <form action="{{ route('admin.personnels.destroy', $person) }}" method="POST"
                                         class="inline-block"
                                         onsubmit="return confirm('Apakah Anda yakin ingin menghapus personel ini?')">
                                         @csrf

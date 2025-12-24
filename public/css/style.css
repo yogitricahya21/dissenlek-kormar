@@ -1,0 +1,72 @@
+.logo-custom {
+    width: 3%;
+    /* Atur lebar sesuai keinginan */
+    height: auto;
+    /* Menjaga rasio agar tidak gepeng */
+    object-fit: contain;
+    /* Memastikan gambar tidak terpotong */
+}
+
+.logo-wrapper {
+    display: flex;
+    /* Membuat isi berjejer ke samping */
+    align-items: center;
+    /* Membuat tulisan rata tengah secara vertikal dengan logo */
+    gap: 15px;
+    /* Memberi jarak antara logo dan tulisan */
+    /* Mencegah tulisan turun ke bawah/menumpuk */
+    white-space: nowrap;
+    /* Memastikan kontainer bisa meluas mengikuti panjang tulisan */
+    width: max-content;
+    /* Opsional: Jika ingin memberi batas maksimal agar tidak menabrak menu lain */
+    max-width: 30px;
+}
+
+.logo-text {
+    font-size: 26px;
+    /* Ukuran tulisan */
+    font-weight: bold;
+    /* Ketebalan tulisan */
+    color: #ffffff;
+    /* Warna tulisan (sesuaikan dengan tema) */
+    /* Tambahkan ini pada class tulisan Anda agar teks tidak terpotong */
+    display: inline-block;
+    flex-shrink: 0;
+    /* Mencegah tulisan "tercekik" saat ruang sempit */
+}
+
+/* Tambahan agar gambar logo tidak terlalu besar */
+.logo-wrapper img {
+    height: 100px;
+    /* Sesuaikan tinggi logo agar pas dengan tulisan */
+    width: auto;
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Jarak dipersempit sedikit untuk layar kecil */
+    white-space: nowrap;
+    overflow: hidden; /* Mencegah elemen keluar jalur */
+}
+
+/* Untuk layar HP (di bawah 768px) */
+@media (max-width: 768px) {
+    .logo-wrapper {
+        /* Membatasi lebar agar tidak menabrak tombol menu di kanan */
+        max-width: 70%; 
+        gap: 8px;
+    }
+
+    .logo-wrapper img {
+        /* Kecilkan logo sedikit agar hemat ruang */
+        height: 50px !important; 
+        width: auto;
+    }
+
+    .logo-text {
+        /* Kecilkan ukuran font di HP */
+        font-size: 20px; 
+        /* Jika tulisan kepanjangan, akan jadi titik-titik (...) daripada menabrak menu */
+        text-overflow: ellipsis; 
+        overflow: hidden;
+        flex-shrink: 0; /* Izinkan teks mengalah jika ruang sangat sempit */
+    }
+}

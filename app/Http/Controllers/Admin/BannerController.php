@@ -42,16 +42,16 @@ class BannerController extends Controller
         if ($request->hasFile('media_file')) {
             $file = $request->file('media_file');
             $filename = time() . '_' . $file->getClientOriginalName();
-            
-            // Simpan ke public/assets/img/banner atau video
+
+            // Simpan langsung ke public/assets/...
             $subFolder = ($request->media_type == 'video') ? 'video' : 'img/banner';
             $file->move(public_path('assets/' . $subFolder), $filename);
-            
+
             $data['media_file'] = $filename;
         }
 
         Banner::create($data);
-        return redirect()->route('banners.index')->with('success', 'Banner berhasil ditambahkan');
+        return redirect()->route('admin.banners.index')->with('success', 'Banner berhasil diproses');
     }
 
     /**
@@ -78,15 +78,18 @@ class BannerController extends Controller
         $data = $request->all();
 
         if ($request->hasFile('media_file')) {
-            // Hapus file lama jika ada (opsional)
-            $filename = time() . '_' . $request->file('media_file')->getClientOriginalName();
+            $file = $request->file('media_file');
+            $filename = time() . '_' . $file->getClientOriginalName();
+
+            // Simpan langsung ke public/assets/...
             $subFolder = ($request->media_type == 'video') ? 'video' : 'img/banner';
-            $request->file('media_file')->move(public_path('assets/' . $subFolder), $filename);
+            $file->move(public_path('assets/' . $subFolder), $filename);
+
             $data['media_file'] = $filename;
         }
 
         $banner->update($data);
-        return redirect()->route('banners.index')->with('success', 'Banner diperbarui');
+        return redirect()->route('admin.banners.index')->with('success', 'Banner berhasil diproses');
     }
 
     /**
@@ -95,6 +98,6 @@ class BannerController extends Controller
     public function destroy(Banner $banner)
     {
         $banner->delete();
-        return redirect()->route('banners.index')->with('success', 'Banner dihapus');
+        return redirect()->route('admin.banners.index')->with('success', 'Banner dihapus');
     }
 }

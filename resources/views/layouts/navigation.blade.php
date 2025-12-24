@@ -13,27 +13,27 @@
                         {{ __('Dashboard') }}
                     </x-nav-link>
 
-                    <x-nav-link :href="route('about.index')" :active="request()->routeIs('about.*')">
+                    <x-nav-link :href="route('admin.about.index')" :active="request()->routeIs('about.*')">
                         {{ __('Profil Satuan') }}
                     </x-nav-link>
 
-                    <x-nav-link :href="route('personnels.index')" :active="request()->routeIs('personnels.*')">
+                    <x-nav-link :href="route('admin.personnels.index')" :active="request()->routeIs('personnels.*')">
                         {{ __('Data Personel') }}
                     </x-nav-link>
 
-                    <x-nav-link :href="route('activities.index')" :active="request()->routeIs('activities.*')">
+                    <x-nav-link :href="route('admin.activities.index')" :active="request()->routeIs('activities.*')">
                         {{ __('Kegiatan') }}
                     </x-nav-link>
 
-                    <x-nav-link :href="route('leaders.index')" :active="request()->routeIs('leaders.*')">
+                    <x-nav-link :href="route('admin.leaders.index')" :active="request()->routeIs('leaders.*')">
                         {{ __('Pimpinan') }}
                     </x-nav-link>
 
-                    <x-nav-link :href="route('banners.index')" :active="request()->routeIs('banners.*')">
+                    <x-nav-link :href="route('admin.banners.index')" :active="request()->routeIs('banners.*')">
                         {{ __('Manajemen Banner') }}
                     </x-nav-link>
 
-                    <x-nav-link :href="route('complaints.index')" :active="request()->routeIs('complaints.*')">
+                    <x-nav-link :href="route('admin.complaints.index')" :active="request()->routeIs('complaints.*')">
                         {{ __('Pengaduan') }}
                     </x-nav-link>
                 </div>

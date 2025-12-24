@@ -2,7 +2,7 @@
     <x-slot name="header">
         <div class="flex items-center justify-between">
             <h2 class="text-xl font-semibold leading-tight text-gray-800 dark:text-gray-200">Daftar Kegiatan</h2>
-            <a href="{{ route('activities.create') }}" class="px-4 py-2 text-xs font-bold text-white uppercase bg-blue-600 rounded hover:bg-blue-700">
+            <a href="{{ route('admin.activities.create') }}" class="px-4 py-2 text-xs font-bold text-white uppercase bg-blue-600 rounded hover:bg-blue-700">
                 + Tambah Kegiatan
             </a>
         </div>
@@ -39,9 +39,9 @@
                                     {{ \Carbon\Carbon::parse($act->date)->format('d M Y') }}
                                 </td>
                                 <td class="px-6 py-4 text-sm text-right">
-                                    <a href="{{ route('activities.edit', $act) }}"
+                                    <a href="{{ route('admin.activities.edit', $act) }}"
                                         class="mr-2 font-bold text-blue-600">Edit</a>
-                                    <form action="{{ route('activities.destroy', $act) }}" method="POST"
+                                    <form action="{{ route('admin.activities.destroy', $act) }}" method="POST"
                                         class="inline">
                                         @csrf @method('DELETE')
                                         <button class="font-bold text-red-600">Hapus</button>

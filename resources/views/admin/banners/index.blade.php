@@ -2,7 +2,7 @@
     <x-slot name="header">
         <div class="flex items-center justify-between">
             <h2 class="text-xl font-semibold leading-tight text-gray-800 dark:text-gray-200">Manajemen Banner Slider</h2>
-            <a href="{{ route('banners.create') }}" class="px-4 py-2 text-xs font-bold text-white uppercase bg-blue-600 rounded hover:bg-blue-700">
+            <a href="{{ route('admin.banners.create') }}" class="px-4 py-2 text-xs font-bold text-white uppercase bg-blue-600 rounded hover:bg-blue-700">
                 + Tambah Banner
             </a>
         </div>
@@ -36,8 +36,8 @@
                             <td class="p-3 text-xs uppercase border">{{ $banner->media_type }}</td>
                             <td class="p-3 text-center border">
                                 <div class="flex justify-center space-x-2">
-                                    <a href="{{ route('banners.edit', $banner->id) }}" class="text-yellow-600 hover:underline">Edit</a>
-                                    <form action="{{ route('banners.destroy', $banner->id) }}" method="POST" onsubmit="return confirm('Hapus banner ini?')">
+                                    <a href="{{ route('admin.banners.edit', $banner->id) }}" class="text-yellow-600 hover:underline">Edit</a>
+                                    <form action="{{ route('admin.banners.destroy', $banner->id) }}" method="POST" onsubmit="return confirm('Hapus banner ini?')">
                                         @csrf @method('DELETE')
                                         <button type="submit" class="text-red-600 hover:underline">Hapus</button>
                                     </form>

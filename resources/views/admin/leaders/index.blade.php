@@ -4,7 +4,7 @@
             <h2 class="text-xl font-semibold leading-tight text-gray-800 dark:text-gray-200">
                 {{ __('Daftar Pimpinan / Pejabat') }}
             </h2>
-            <a href="{{ route('leaders.create') }}"
+            <a href="{{ route('admin.leaders.create') }}"
                 class="px-4 py-2 text-xs font-bold text-white uppercase bg-blue-600 rounded hover:bg-blue-700">
                 + Tambah Pimpinan
             </a>
@@ -59,9 +59,9 @@
                                     @endif
                                 </td>
                                 <td class="px-6 py-4 text-sm font-medium text-right">
-                                    <a href="{{ route('leaders.edit', $leader) }}"
+                                    <a href="{{ route('admin.leaders.edit', $leader) }}"
                                         class="mr-3 text-indigo-600 hover:text-indigo-900">Edit</a>
-                                    <form action="{{ route('leaders.destroy', $leader) }}" method="POST"
+                                    <form action="{{ route('admin.leaders.destroy', $leader) }}" method="POST"
                                         class="inline-block" onsubmit="return confirm('Hapus data pimpinan ini?')">
                                         @csrf @method('DELETE')
                                         <button type="submit" class="text-red-600 hover:text-red-900">Hapus</button>
