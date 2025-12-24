@@ -3693,7 +3693,13 @@ div.mean-container a.meanmenu-reveal {
 }
 
 .about-thumb-1-area {
-  max-width: 690px;
+  max-width: 450px;
+}
+
+@media (max-width: 767px) {
+    .about-thumb-1-area {
+        display: none !important;
+    }
 }
 
 .about-thumb-1-wrapper {
