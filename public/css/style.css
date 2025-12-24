@@ -70,3 +70,63 @@
         flex-shrink: 0; /* Izinkan teks mengalah jika ruang sangat sempit */
     }
 }
+
+/* 1. Background Section About */
+#about {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    z-index: 1;
+}
+
+/* Overlay agar teks tetap terbaca jelas jika background terlalu terang/kontras */
+#about::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.850); /* Sesuaikan angka 0.8 untuk tingkat transparansi */
+    z-index: -1;
+}
+
+/* 2. Styling Logo dan Efek Glow */
+.logo-glow-wrapper {
+    position: relative;
+    display: inline-block;
+    padding: 15px;
+    margin-left: 70px; /* Menggeser logo ke kanan */
+    transition: all 0.4s ease;
+}
+
+.custom-logo {
+    max-width: 100%;
+    height: auto;
+    /* Efek Glow: Warna #f39c12 biasanya menyesuaikan warna emas/kuning bawaan template Armado */
+    filter: drop-shadow(0 0 20px rgba(243, 157, 18, 0.8)); 
+    animation: pulseGlow 3s infinite alternate;
+}
+
+/* Animasi cahaya berdenyut (Glow) */
+@keyframes pulseGlow {
+    from {
+        filter: drop-shadow(0 0 10px rgba(243, 156, 18, 0.5));
+    }
+    to {
+        filter: drop-shadow(0 0 35px rgba(243, 156, 18, 0.9));
+    }
+}
+
+/* 3. Penyesuaian Mobile */
+@media (max-width: 991px) {
+    .logo-glow-wrapper {
+        margin-left: 0; /* Kembalikan ke tengah jika di mobile */
+        display: block;
+        text-align: center;
+    }
+    #about {
+        background-attachment: scroll; /* Mencegah lag pada browser mobile */
+    }
+}

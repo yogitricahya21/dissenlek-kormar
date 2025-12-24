@@ -260,11 +260,11 @@
 
                                                     {{-- 5. EYEBROW TEXT (Teks kecil paling atas) --}}
                                                     @if ($banner->eyebrow_text)
-                                                        <p>{{ $banner->eyebrow_text }}</p>
+                                                        <p class="mb-5">{{ $banner->eyebrow_text }}</p>
                                                     @endif
 
                                                     {{-- 6. JUDUL UTAMA --}}
-                                                    <h1 class="banner-title mb-15">
+                                                    <h1 class="mb-10 banner-title">
                                                         {{ $banner->title }}
                                                     </h1>
 
@@ -295,7 +295,8 @@
         <!-- home-area-end -->
 
         <!-- about area start  -->
-        <section id="about" class="about-area pt-130 pb-65 p-relative">
+        <section id="about" class="about-area pt-130 pb-65 p-relative"
+            style="background-image: url('{{ asset('armado/assets/img/bg/wall_about.png') }}');">
             <div class="container">
                 <div class="row justify-content-center wow fadeInUp" data-wow-delay=".3s">
                     <div class="col-xl-6">
@@ -303,283 +304,126 @@
                             <div class="bd-section-subtitle st-b">
                                 <span>about</span>us
                             </div>
-                            <h3 class="bd-section-title mb-50">dissenlek kormar</h3>
+                            <h3 class="bd-section-title mb-15">dissenlek kormar</h3>
                         </div>
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-xl-6">
-                        <div class="about-content-wrapper mb-65 wow fadeInRight" data-wow-delay=".3s">
+                    <div class="col-xl-7">
+                        <div class="about-content-wrapper mb-15 wow fadeInRight" data-wow-delay=".3s">
                             <div class="about-tab-wrapper">
-                                <div class="about-tab-nav mb-80">
+                                <div class="mb-30 about-tab-nav">
                                     <nav>
                                         <div class="nav nav-tabs" id="nav-tab" role="tablist">
-                                            <button class="nav-link" id="nav-3-tab" data-bs-toggle="tab"
-                                                data-bs-target="#nav-4" type="button" role="tab"
-                                                aria-controls="nav-3" aria-selected="false">Our history</button>
+                                            <button class="nav-link active" id="nav-1-tab" data-bs-toggle="tab"
+                                                data-bs-target="#nav-1" type="button" role="tab"
+                                                aria-controls="nav-1" aria-selected="false">Our history</button>
                                             <button class="nav-link" id="nav-2-tab" data-bs-toggle="tab"
                                                 data-bs-target="#nav-2" type="button" role="tab"
                                                 aria-controls="nav-2" aria-selected="false">Our Vision</button>
-                                            <button class="nav-link active" id="nav-1-tab" data-bs-toggle="tab"
-                                                data-bs-target="#nav-1" type="button" role="tab"
-                                                aria-controls="nav-1" aria-selected="true">Our Missions</button>
                                             <button class="nav-link" id="nav-3-tab" data-bs-toggle="tab"
                                                 data-bs-target="#nav-3" type="button" role="tab"
-                                                aria-controls="nav-3" aria-selected="false">Our Goals</button>
+                                                aria-controls="nav-3" aria-selected="true">Our Missions</button>
+                                            <button class="nav-link" id="nav-4-tab" data-bs-toggle="tab"
+                                                data-bs-target="#nav-4" type="button" role="tab"
+                                                aria-controls="nav-4" aria-selected="false">Our Activitys</button>
                                         </div>
                                     </nav>
                                 </div>
                                 <div class="about-tab-content">
                                     <div class="tab-content" id="nav-tabContent">
-                                        <!-- about tab nav 1 -->
+
                                         <div class="tab-pane fade show active" id="nav-1" role="tabpanel"
                                             aria-labelledby="nav-1-tab">
                                             <div class="bd-section-title-wrapper">
-                                                <h3 class="mb-40 bd-section-title">About Our Mission</h3>
+                                                <h3 class="mb-7 bd-section-title">About Our History</h3>
                                             </div>
                                             <div class="about-content">
-                                                <p>
-                                                    Armado weapon often resembles real firearms, but the replicas shoot
-                                                    small plastic
-                                                    6mm BBs. In its nature, airsoft is similar to first-person shooting
-                                                    video games, and
-                                                    it allows experiencing realistic battle and tactical scenario
-                                                    gameplay.
-                                                </p>
-                                            </div>
-                                            <div class="border-box">
-                                                <div class="row">
-                                                    <div class="col-xl-6 col-md-6">
-                                                        <div class="about-info">
-                                                            <div class="about-info-icon">
-                                                                <i class="flaticon-032-riot-police"></i>
-                                                            </div>
-                                                            <div class="about-info-text">
-                                                                <span><span class="odometer"
-                                                                        data-count="1250">0</span>
-                                                                    +</span>
-                                                                <p>total Team members</p>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-xl-6 col-md-6">
-                                                        <div class="about-info">
-                                                            <div class="about-info-icon">
-                                                                <i class="flaticon-027-check"></i>
-                                                            </div>
-                                                            <div class="about-info-text">
-                                                                <span><span class="odometer" data-count="350">0</span>
-                                                                    +</span>
-                                                                <p>Operations Completed</p>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="about-content">
-                                                <p>
-                                                    Contrary to popular belief, Lorem Ipsum is not simply random text.
-                                                    It has roots in a
-                                                    piece of classical Latin literature from 45 BC, making it over 2000
-                                                    years old.
-                                                    Richard McClintock, a Latin professor at Hampden-Sydney College in
-                                                    Virginia, looked
-                                                    up
-                                                    one of the more obscure.
-                                                </p>
-                                                <div class="about-btn mt-50">
-                                                    <a href="#footer" class="arm-btn"><span class="circle-btn"><i
-                                                                class="fal fa-long-arrow-right"></i></span>Contact
-                                                        Us
-                                                    </a>
-                                                </div>
+                                                <p>{!! $about->sejarah ?? 'History content not available.' !!}</p>
                                             </div>
                                         </div>
-                                        <!-- about tab nav 1 end -->
-                                        <!-- about tab nav 2 -->
+
                                         <div class="tab-pane fade" id="nav-2" role="tabpanel"
                                             aria-labelledby="nav-2-tab">
                                             <div class="bd-section-title-wrapper">
-                                                <h3 class="mb-40 bd-section-title">About Our Vision</h3>
+                                                <h3 class="mb-7 bd-section-title">About Our Vision</h3>
                                             </div>
                                             <div class="about-content">
-                                                <p>
-                                                    Armado weapon often resembles real firearms, but the replicas shoot
-                                                    small plastic
-                                                    6mm BBs. In its nature, airsoft is similar to first-person shooting
-                                                    video games, and
-                                                    it allows experiencing realistic battle and tactical scenario
-                                                    gameplay.
-                                                </p>
-                                            </div>
-                                            <div class="about-content">
-                                                <p class="about-sp">Teachings of the great explorer of the truth, the
-                                                    master-builder of
-                                                    human happiness.
-                                                    No one rejects, dislikes, or avoids pleasure itself.</p>
-                                            </div>
-                                            <div class="about-content">
-                                                <p>
-                                                    Contrary to popular belief, Lorem Ipsum is not simply random text.
-                                                    It has roots in a
-                                                    piece of classical Latin literature from 45 BC, making it over 2000
-                                                    years old.
-                                                    Richard McClintock, a Latin professor at Hampden-Sydney College in
-                                                    Virginia, looked
-                                                    up
-                                                    one of the more obscure.
-                                                </p>
-                                                <div class="about-btn mt-50">
-                                                    <a href="#footer" class="arm-btn"><span class="circle-btn"><i
-                                                                class="fal fa-long-arrow-right"></i></span>Contact
-                                                        Us
-                                                    </a>
-                                                </div>
+                                                <p>{!! $about->visi ?? 'Vision content not available.' !!}</p>
                                             </div>
                                         </div>
-                                        <!-- about tab nav 2 end -->
-                                        <!-- about tab nav 3 -->
+
                                         <div class="tab-pane fade" id="nav-3" role="tabpanel"
                                             aria-labelledby="nav-3-tab">
                                             <div class="bd-section-title-wrapper">
-                                                <h3 class="mb-40 bd-section-title">About Our Goal</h3>
+                                                <h3 class="mb-7 bd-section-title">About Our Mission</h3>
                                             </div>
                                             <div class="about-content">
-                                                <p>
-                                                    Armado weapon often resembles real firearms, but the replicas shoot
-                                                    small plastic
-                                                    6mm BBs. In its nature, airsoft is similar to first-person shooting
-                                                    video games, and
-                                                    it allows experiencing realistic battle and tactical scenario
-                                                    gameplay.
-                                                </p>
-                                            </div>
-                                            <div class="border-box">
-                                                <div class="row">
-                                                    <div class="col-xl-6">
-                                                        <div class="about-info">
-                                                            <div class="about-info-icon">
-                                                                <i class="flaticon-032-riot-police"></i>
-                                                            </div>
-                                                            <div class="about-info-text">
-                                                                <span>1250 +</span>
-                                                                <p>total Team members</p>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-xl-6">
-                                                        <div class="about-info">
-                                                            <div class="about-info-icon">
-                                                                <i class="flaticon-027-check"></i>
-                                                            </div>
-                                                            <div class="about-info-text">
-                                                                <span>350 +</span>
-                                                                <p>Operations Completed</p>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="about-content">
-                                                <p>
-                                                    Contrary to popular belief, Lorem Ipsum is not simply random text.
-                                                    It has roots in a
-                                                    piece of classical Latin literature from 45 BC, making it over 2000
-                                                    years old.
-                                                    Richard McClintock, a Latin professor at Hampden-Sydney College in
-                                                    Virginia, looked
-                                                    up
-                                                    one of the more obscure.
-                                                </p>
-                                                <div class="about-btn mt-50">
-                                                    <a href="#footer" class="arm-btn"><span class="circle-btn"><i
-                                                                class="fal fa-long-arrow-right"></i></span>Contact
-                                                        Us
-                                                    </a>
-                                                </div>
+                                                <p>{!! $about->misi ?? 'Mission content not available.' !!}</p>
                                             </div>
                                         </div>
-                                        <!-- about tab nav 3 end -->
-                                        <!-- about tab nav 4 -->
+
                                         <div class="tab-pane fade" id="nav-4" role="tabpanel"
-                                            aria-labelledby="nav-3-tab">
+                                            aria-labelledby="nav-4-tab">
                                             <div class="bd-section-title-wrapper">
-                                                <h3 class="mb-40 bd-section-title">About Our History</h3>
+                                                <h3 class="mb-7 bd-section-title">Our Activity</h3>
                                             </div>
                                             <div class="about-content">
-                                                <p>
-                                                    Armado weapon often resembles real firearms, but the replicas shoot
-                                                    small plastic
-                                                    6mm BBs. In its nature, airsoft is similar to first-person shooting
-                                                    video games, and
-                                                    it allows experiencing realistic battle and tactical scenario
-                                                    gameplay.
-                                                </p>
+                                                <p>{!! $about->tugas_pokok ?? 'Goals content not available.' !!}</p>
                                             </div>
                                             <div class="border-box">
                                                 <div class="row">
                                                     <div class="col-xl-6">
                                                         <div class="about-info">
-                                                            <div class="about-info-icon">
-                                                                <i class="flaticon-032-riot-police"></i>
-                                                            </div>
+                                                            <a href="#team">
+                                                                <div class="about-info-icon">
+                                                                    <i class="flaticon-032-riot-police"></i>
+                                                                </div>
+                                                            </a>
                                                             <div class="about-info-text">
-                                                                <span>1250 +</span>
-                                                                <p>total Team members</p>
+                                                                <span>{{ \App\Models\Personnel::count() }}</span>
+                                                                <p>Total Personnel</p>
                                                             </div>
                                                         </div>
                                                     </div>
                                                     <div class="col-xl-6">
                                                         <div class="about-info">
-                                                            <div class="about-info-icon">
-                                                                <i class="flaticon-027-check"></i>
-                                                            </div>
+                                                            <a href="#jops">
+                                                                <div class="about-info-icon">
+                                                                    <i class="flaticon-027-check"></i>
+                                                                </div>
+                                                            </a>
                                                             <div class="about-info-text">
-                                                                <span>350 +</span>
-                                                                <p>Operations Completed</p>
+                                                                <span>{{ \App\Models\Activity::count() }}</span>
+                                                                <p>Activities Completed</p>
                                                             </div>
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="about-content">
-                                                <p>
-                                                    Contrary to popular belief, Lorem Ipsum is not simply random text.
-                                                    It has roots in a
-                                                    piece of classical Latin literature from 45 BC, making it over 2000
-                                                    years old.
-                                                    Richard McClintock, a Latin professor at Hampden-Sydney College in
-                                                    Virginia, looked
-                                                    up
-                                                    one of the more obscure.
-                                                </p>
-                                                <div class="about-btn mt-50">
-                                                    <a href="#footer" class="arm-btn"><span class="circle-btn"><i
-                                                                class="fal fa-long-arrow-right"></i></span>Contact
-                                                        Us
-                                                    </a>
-                                                </div>
-                                            </div>
                                         </div>
-                                        <!-- about tab nav 4 end -->
                                     </div>
                                 </div>
                             </div>
-
-
                         </div>
                     </div>
-                    <div class="col-xl-6">
+
+                    <div class="col-xl-5 d-none d-xl-block">
                         <div class="about-thumb-1-area">
-                            <div class="about-thumb-1-wrapper mb-65 p-relative z-index-1">
+                            <div class="about-thumb-1-wrapper mb-100 p-relative z-index-1"
+                                style="transform: translateY(30px);">
                                 <div class="about-thumb about-thumb-1 p-relative wow fadeInLeft" data-wow-delay=".3s">
-                                    <img src="{{ 'armado/' }}assets/img/about/img-2.png" alt="img not found">
+                                    <div class="logo-glow-wrapper">
+                                        @if ($about->logo)
+                                            <img src="{{ asset('storage/' . $about->logo) }}" alt="Logo"
+                                                class="custom-logo">
+                                        @else
+                                            <img src="{{ asset('armado/assets/img/about/img-2.png') }}"
+                                                alt="Default Image" class="custom-logo">
+                                        @endif
+                                    </div>
                                     <div class="panel wow"></div>
                                 </div>
-                                {{-- <div class="facility-shape-wrapper">
-                                    <img class="about-shape about-img"
-                                        src="{{ 'armado/' }}assets/img/about/img-1.jpg" alt="img not found">
-                                </div> --}}
                             </div>
                         </div>
                     </div>
@@ -629,7 +473,8 @@
                                     <div class="bd-section-subtitle st-b">
                                         our<span>Leaders</span>
                                     </div>
-                                    <h3 class="mb-40 bd-section-title">kepala dinas<br>senjata elektronika<br>korps marinir
+                                    <h3 class="mb-40 bd-section-title">kepala dinas<br>senjata elektronika<br>korps
+                                        marinir
                                     </h3>
                                 </div>
                                 <p class="about-sp">Teachings of the great explorer of
@@ -826,7 +671,7 @@
                     <div class="col-xl-6">
                         <div class="bd-section-title-wrapper bd-section-title-wrapper-team-3 centered-title">
                             <div class="bd-section-subtitle st-b">
-                                dissenlek <span>our TEAM</span>
+                                <span>our </span>TEAMS
                             </div>
                             <h3 class="bd-section-title mb-50">personel<br>dissenlek kormar</h3>
                         </div>
@@ -1000,7 +845,7 @@
                     <div class="col-lg-8">
                         <div class="bd-section-title-wrapper centered-title operation-title">
                             <div class="bd-section-subtitle st-b">
-                                <div class="subtitle-text">missions <span>gallery</span></div>
+                                <div class="subtitle-text">activtys <span>gallery</span></div>
                             </div>
                             <h3 class="bd-section-title mb-50">kegitan dissenlek kormar
                             </h3>
