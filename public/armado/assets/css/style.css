@@ -2629,35 +2629,35 @@ div.mean-container a.meanmenu-reveal {
 }
 
 .banner-title {
-  font-size: 120px;
+  font-size: 110px;
   text-transform: uppercase;
   color: var(--clr-common-white);
   line-height: 1;
-  letter-spacing: 3px;
+  letter-spacing: 1px;
 }
 @media only screen and (min-width: 1200px) and (max-width: 1399px) {
-  .banner-title {
-    font-size: 90px;
-  }
-}
-@media only screen and (min-width: 992px) and (max-width: 1199px) {
   .banner-title {
     font-size: 80px;
   }
 }
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  .banner-title {
+    font-size: 70px;
+  }
+}
 @media only screen and (min-width: 768px) and (max-width: 991px) {
   .banner-title {
-    font-size: 60px;
+    font-size: 70px;
   }
 }
 @media only screen and (min-width: 576px) and (max-width: 767px), (max-width: 575px) {
   .banner-title {
-    font-size: 52px;
+    font-size: 62px;
   }
 }
 @media (max-width:450px) {
   .banner-title {
-    font-size: 40px;
+    font-size: 50px;
   }
 }
 .banner-title .marked-text {

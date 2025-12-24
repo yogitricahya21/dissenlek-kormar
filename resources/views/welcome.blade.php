@@ -8,7 +8,7 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Place favicon.ico in the root directory -->
-    <link rel="shortcut icon" type="image/x-icon" href="{{ 'armado/assets/img/favicon.png' }}">
+    <link rel="shortcut icon" type="image/x-icon" href="{{ asset('storage/' . $about->logo) }}">
     <!-- CSS here -->
     <link rel="stylesheet" href="{{ 'armado/assets/css/preloader.css' }}">
     <link rel="stylesheet" href="{{ 'armado/assets/css/bootstrap.css' }}">
@@ -40,13 +40,16 @@
     <div class="mouseCursor cursor-outer"></div>
     <div class="mouseCursor cursor-inner"><span>Drag</span></div>
 
-    <!-- header area start  -->
+    <!-- header area  -->
     <header>
         <div id="header-sticky" class="header-main header-main1">
             <div class="container">
                 <div class="row align-items-center">
                     <div class="col-xl-12 col-lg-12">
+
+                        <!-- header main wrapper -->
                         <div class="header-main-content-wrapper">
+
                             <!-- header left logo-->
                             <div class="header-main-left header-main-left-header1">
                                 <div class="header-logo header1-logo logo-wrapper">
@@ -56,30 +59,32 @@
                                     <span class="logo-text">DISSENLEK <br> KORPS MARINIR</span>
                                 </div>
                             </div>
-                            <!-- header left logo -->
+                            <!-- header left logo end-->
+
+                            <!-- header right main menu -->
                             <div class="header-main-right header-main-right-header1">
-                                <!-- main menu start -->
+
+                                <!-- menus -->
                                 <div class="main-menu main-menu1 d-none d-xl-block">
                                     <nav id="mobile-menu">
                                         <ul>
-                                            <li><a href="#home">Home</a></li>
-                                            <li><a href="#about">About</a></li>
+                                            <li><a href="#about">Profile</a></li>
                                             <li class="menu-item-has-children"><a href="#kadis">Leader</a>
                                                 <ul class="sub-menu">
                                                     <li><a href="#kadis">Kadissenlek</a></li>
-                                                    <li><a href="#kadis_lalu">pimpinan lalu</a></li>
+                                                    <li><a href="#kadis_lalu">previous leaders</a></li>
                                                 </ul>
                                             </li>
                                             <li><a href="#team">Teams</a></li>
-                                            <li><a href="#jops">jops</a></li>
+                                            <li><a href="#jops">activity</a></li>
                                         </ul>
                                     </nav>
                                 </div>
-                                <!-- main menu end -->
+                                <!-- menus end -->
 
                                 <!-- mobile menu area start -->
                                 <div class="menu-bar d-xl-none">
-                                    <a class="side-toggle" href="javascript:void(0)">
+                                    <a class="side-toggle" href="#about">
                                         <div class="dot-icon">
                                             <img src="{{ 'armado/' }}assets/img/icons/side-toggle.png"
                                                 alt="img not found">
@@ -103,14 +108,17 @@
                                     </div>
                                 </div>
                                 <!--contact info end-->
+
                             </div>
+                            <!-- header right main menu end-->
                         </div>
+                        <!-- header main wrapper end-->
                     </div>
                 </div>
             </div>
         </div>
     </header>
-    <!-- header-area-end -->
+    <!-- header area end -->
 
     <!-- side toggle start -->
     <aside class="fix">
@@ -120,8 +128,8 @@
                     <div class="row align-items-center">
                         <div class="col-9">
                             <div class="offset-logo">
-                                <a href="index.html">
-                                    <img src="{{ 'armado/' }}assets/img/logo/logo-white.png" alt="Logo">
+                                <a href="#home">
+                                    <span class="logo-text">DISSENLEK <br> KORPS MARINIR</span>
                                 </a>
                             </div>
                         </div>
@@ -289,41 +297,17 @@
         <!-- about area start  -->
         <section id="about" class="about-area pt-130 pb-65 p-relative">
             <div class="container">
-                <div class="row align-items-end wow fadeInUp" data-wow-delay=".3s">
-                    <div class="col-lg-6">
-                        <div class="bd-section-title-wrapper">
+                <div class="row justify-content-center wow fadeInUp" data-wow-delay=".3s">
+                    <div class="col-xl-6">
+                        <div class="bd-section-title-wrapper centered-title">
                             <div class="bd-section-subtitle st-b">
-                                tentang <span>kami</span>
+                                <span>about</span>us
                             </div>
-                            <h3 class="bd-section-title mb-35">
-                                dissenlek kormar
-                            </h3>
-                        </div>
-                    </div>
-                    <div class="col-lg-6">
-                        <div class="service-btn d-flex justify-content-lg-end mb-60">
-                            <a href="services.html" class="arrow-text-btn">
-                                <i class="flaticon-042-arrow-right"></i>
-                                <span>View All Services</span>
-                            </a>
+                            <h3 class="bd-section-title mb-50">dissenlek kormar</h3>
                         </div>
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-xl-6">
-                        <div class="about-thumb-1-area">
-                            <div class="about-thumb-1-wrapper mb-65 p-relative z-index-1">
-                                <div class="about-thumb about-thumb-1 p-relative wow fadeInLeft" data-wow-delay=".3s">
-                                    <img src="{{ 'armado/' }}assets/img/about/img-2.png" alt="img not found">
-                                    <div class="panel wow"></div>
-                                </div>
-                                <div class="facility-shape-wrapper">
-                                    <img class="about-shape about-img"
-                                        src="{{ 'armado/' }}assets/img/about/img-1.jpg" alt="img not found">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
                     <div class="col-xl-6">
                         <div class="about-content-wrapper mb-65 wow fadeInRight" data-wow-delay=".3s">
                             <div class="about-tab-wrapper">
@@ -333,15 +317,15 @@
                                             <button class="nav-link" id="nav-3-tab" data-bs-toggle="tab"
                                                 data-bs-target="#nav-4" type="button" role="tab"
                                                 aria-controls="nav-3" aria-selected="false">Our history</button>
-                                            <button class="nav-link active" id="nav-1-tab" data-bs-toggle="tab"
-                                                data-bs-target="#nav-1" type="button" role="tab"
-                                                aria-controls="nav-1" aria-selected="true">Our Mission</button>
                                             <button class="nav-link" id="nav-2-tab" data-bs-toggle="tab"
                                                 data-bs-target="#nav-2" type="button" role="tab"
                                                 aria-controls="nav-2" aria-selected="false">Our Vision</button>
+                                            <button class="nav-link active" id="nav-1-tab" data-bs-toggle="tab"
+                                                data-bs-target="#nav-1" type="button" role="tab"
+                                                aria-controls="nav-1" aria-selected="true">Our Missions</button>
                                             <button class="nav-link" id="nav-3-tab" data-bs-toggle="tab"
                                                 data-bs-target="#nav-3" type="button" role="tab"
-                                                aria-controls="nav-3" aria-selected="false">Our Goal</button>
+                                                aria-controls="nav-3" aria-selected="false">Our Goals</button>
                                         </div>
                                     </nav>
                                 </div>
@@ -351,7 +335,7 @@
                                         <div class="tab-pane fade show active" id="nav-1" role="tabpanel"
                                             aria-labelledby="nav-1-tab">
                                             <div class="bd-section-title-wrapper">
-                                                <h3 class="mb-40 bd-section-title">About Our Strategy</h3>
+                                                <h3 class="mb-40 bd-section-title">About Our Mission</h3>
                                             </div>
                                             <div class="about-content">
                                                 <p>
@@ -585,6 +569,20 @@
 
                         </div>
                     </div>
+                    <div class="col-xl-6">
+                        <div class="about-thumb-1-area">
+                            <div class="about-thumb-1-wrapper mb-65 p-relative z-index-1">
+                                <div class="about-thumb about-thumb-1 p-relative wow fadeInLeft" data-wow-delay=".3s">
+                                    <img src="{{ 'armado/' }}assets/img/about/img-2.png" alt="img not found">
+                                    <div class="panel wow"></div>
+                                </div>
+                                {{-- <div class="facility-shape-wrapper">
+                                    <img class="about-shape about-img"
+                                        src="{{ 'armado/' }}assets/img/about/img-1.jpg" alt="img not found">
+                                </div> --}}
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -631,7 +629,7 @@
                                     <div class="bd-section-subtitle st-b">
                                         our<span>Leaders</span>
                                     </div>
-                                    <h3 class="mb-40 bd-section-title">kepala dinas senjata elektronika korps marinir
+                                    <h3 class="mb-40 bd-section-title">kepala dinas<br>senjata elektronika<br>korps marinir
                                     </h3>
                                 </div>
                                 <p class="about-sp">Teachings of the great explorer of
@@ -661,7 +659,7 @@
                             <div class="bd-section-subtitle st-b">
                                 lasted <span>leader</span>
                             </div>
-                            <h3 class="bd-section-title mb-50">kadisenlek dari masa ke masa</h3>
+                            <h3 class="bd-section-title mb-50">kadisenlek<br>dari masa ke masa</h3>
                         </div>
                     </div>
                 </div>
@@ -830,7 +828,7 @@
                             <div class="bd-section-subtitle st-b">
                                 dissenlek <span>our TEAM</span>
                             </div>
-                            <h3 class="bd-section-title mb-50">personel dissenlek kormar</h3>
+                            <h3 class="bd-section-title mb-50">personel<br>dissenlek kormar</h3>
                         </div>
                     </div>
                 </div>
@@ -1002,7 +1000,7 @@
                     <div class="col-lg-8">
                         <div class="bd-section-title-wrapper centered-title operation-title">
                             <div class="bd-section-subtitle st-b">
-                                <div class="subtitle-text">mission <span>gallery</span></div>
+                                <div class="subtitle-text">missions <span>gallery</span></div>
                             </div>
                             <h3 class="bd-section-title mb-50">kegitan dissenlek kormar
                             </h3>
