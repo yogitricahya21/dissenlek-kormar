@@ -55,7 +55,7 @@ class LeaderController extends Controller
             'is_current' => $request->has('is_current') ? true : false,
         ]);
 
-        return redirect()->route('leaders.index')->with('success', 'Data Pimpinan berhasil disimpan!');
+        return redirect()->route('admin.leaders.index')->with('success', 'Data Pimpinan berhasil disimpan!');
     }
 
     /**
@@ -104,7 +104,7 @@ class LeaderController extends Controller
 
         $leader->update($data);
 
-        return redirect()->route('leaders.index')->with('success', 'Data pimpinan berhasil diperbarui!');
+        return redirect()->route('admin.leaders.index')->with('success', 'Data pimpinan berhasil diperbarui!');
     }
 
     /**
@@ -116,6 +116,6 @@ class LeaderController extends Controller
             Storage::disk('public')->delete($leader->image);
         }
         $leader->delete();
-        return redirect()->route('leaders.index')->with('success', 'Data pimpinan berhasil dihapus!');
+        return redirect()->route('admin.leaders.index')->with('success', 'Data pimpinan berhasil dihapus!');
     }
 }

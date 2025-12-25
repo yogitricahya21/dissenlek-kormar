@@ -6,7 +6,7 @@
     <div class="py-12">
         <div class="max-w-4xl mx-auto sm:px-6 lg:px-8">
             <div class="p-6 bg-white shadow-sm sm:rounded-lg">
-                <form action="{{ route('leaders.store') }}" method="POST" enctype="multipart/form-data">
+                <form action="{{ route('admin.leaders.store') }}" method="POST" enctype="multipart/form-data">
                     @csrf
                     <div class="mb-4">
                         <label class="block font-bold">Nama Lengkap:</label>
