@@ -96,7 +96,7 @@
                                 <!--contact info-->
                                 <div class="meta-items meta-items-header1 d-none d-lg-inline-flex">
                                     <div class="meta-item header-meta-item">
-                                        <a href="tel:+91036259003">
+                                        <a href="#footer">
                                             <div class="meta-item-icon">
                                                 <i class="fas fa-phone-alt"></i>
                                             </div>
@@ -1611,7 +1611,7 @@
                     <div class="row align-items-center">
                         <div class="col-lg-12">
                             <div class="text-center copyright-text copyright-1-text">
-                                Copyright &copy; 2023 by <a href="#">Armado</a>. All rights reserved.
+                                Copyright &copy; 2025 by <a href="#">Armado</a>. All rights reserved.
                             </div>
                         </div>
                     </div>
