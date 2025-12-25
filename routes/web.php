@@ -35,7 +35,7 @@ Route::middleware('auth')->group(function () {
         Route::resource('banners', BannerController::class);
         Route::get('/about', [AboutController::class, 'index'])->name('about.index');
         Route::get('kadis', [KadisController::class, 'index'])->name('kadis.index');
-        Route::post('kadis', [KadisController::class, 'store'])->name('kadis.update');
+        Route::post('kadis', [KadisController::class, 'store'])->name('kadis.store');
     });
 });
 

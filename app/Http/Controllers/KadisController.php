@@ -13,7 +13,7 @@ class KadisController extends Controller
      */
     public function index()
     {
-       // Mengambil pimpinan yang aktif untuk ditampilkan di form edit
+        // Mengambil pimpinan yang aktif untuk ditampilkan di form edit
         $kadis = kadis::where('is_active', true)->first() ?? new kadis();
         return view('admin.kadis.index', compact('kadis'));
     }
@@ -40,12 +40,12 @@ class KadisController extends Controller
             'nrp'   => 'required',
             'quote' => 'required',
             'image' => 'nullable|image|max:2048',
+            'is_active' => 'required|boolean', // Tambahkan ini untuk validasi is_active
         ]);
 
         $data = $request->all();
 
         if ($request->hasFile('image')) {
-            // Hapus foto lama jika ada
             if ($kadis->image) Storage::disk('public')->delete($kadis->image);
             $data['image'] = $request->file('image')->store('kadis', 'public');
         }
