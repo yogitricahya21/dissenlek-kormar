@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\MainController;
 use App\Http\Controllers\AboutController;
+use App\Http\Controllers\KadisController;
 use App\Http\Controllers\LeaderController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\ActivityController;
@@ -33,7 +34,8 @@ Route::middleware('auth')->group(function () {
         Route::resource('complaints', ComplaintController::class);
         Route::resource('banners', BannerController::class);
         Route::get('/about', [AboutController::class, 'index'])->name('about.index');
-        Route::post('/about', [AboutController::class, 'update'])->name('about.update');
+        Route::get('kadis', [KadisController::class, 'index'])->name('kadis.index');
+        Route::post('kadis', [KadisController::class, 'store'])->name('kadis.update');
     });
 });
 

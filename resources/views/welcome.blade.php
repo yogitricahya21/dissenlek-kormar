@@ -433,64 +433,51 @@
         <!-- about area end  -->
 
         <!-- kepala dinas area start  -->
-        <section id="kadis" class="bg-white about-area pt-130 pb-65 p-relative fix z-index-2">
-            <div class="about-area-3-bg area-absolute" data-background=""></div>
-            <div class="about-area-shapes">
-                <img class="about-3-shape-2" src="{{ 'armado/' }}assets/img/shape/fire-extinguiser.png"
-                    alt="img not found">
-            </div>
+        <section id="kadis" class="about-area pt-130 pb-65 section-kadis-custom"
+            style="background-image: url('{{ asset('armado/assets/img/bg/wall.jpg') }}');">
+
             <div class="container">
-                <div class="about-inner p-relative">
-                    <div class="about-area-shapes">
-                        <img class="about-3-shape-1" src="{{ 'armado/' }}assets/img/shape/circle.png"
-                            alt="img not found">
-                    </div>
-                    <div class="row align-items-center">
-                        <div class="col-xl-6">
-                            <div class="about-thumb-3-area mb-65 wow fadeInLeft" data-wow-delay=".3s">
-                                <div class="about-thumb about-thumb-3 p-relative">
-                                    <div class="about-thumb-3-1">
-                                        <img class=""
-                                            src="{{ 'armado/' }}assets/img/about/about-thumb-3-1.jpg"
-                                            alt="img not found">
-                                        <div class="panel-bottom wow z-index-0"></div>
-                                    </div>
-                                    <div class="about-thumb-3-2">
-                                        <img class=""
-                                            src="{{ 'armado/' }}assets/img/about/about-thumb-3-2.jpg"
-                                            alt="img not found">
-                                        <div class="panel-top wow" data-wow-delay=".5s"></div>
-                                    </div>
-                                    <img class="about-thumb-3-3"
-                                        src="{{ 'armado/' }}assets/img/about/about-thumb-3-3.png"
-                                        alt="img not found">
+                @if ($kadis)
+                    <div class="about-inner p-relative">
+                        <div class="row align-items-center">
+
+                            <div class="col-xl-5 kadis-desktop-column wow fadeInLeft" data-wow-delay=".3s"
+                                data-wow-duration="1.2s">
+                                <div class="about-thumb-3-1">
+                                    <img src="{{ asset('storage/' . $kadis->image) }}" alt="Foto Kadis">
                                 </div>
                             </div>
-                        </div>
-                        <div class="col-xl-6">
-                            <div class="about-content-wrapper-3 mb-65 wow fadeInRight" data-wow-delay=".3s">
-                                <div class="bd-section-title-wrapper">
-                                    <div class="bd-section-subtitle st-b">
-                                        our<span>Leaders</span>
+
+                            <div class="col-xl-7">
+                                <div class="about-content-wrapper-3 mb-65 wow fadeInRight" data-wow-delay=".5s"
+                                    data-wow-duration="1.2s">
+
+                                    <div class="bd-section-title-wrapper">
+                                        <div class="bd-section-subtitle st-b">our<span>Leader</span></div>
+                                        <div class="kadis-title-box">
+                                            <h3 class="bd-section-title">KADISSENLEK <br> KORPS MARINIR</h3>
+                                            <span class="kadis-rank-text">{{ $kadis->rank }}</span>
+                                            <span class="kadis-name-text">{{ $kadis->name }}</span>
+                                        </div>
                                     </div>
-                                    <h3 class="mb-40 bd-section-title">kepala dinas<br>senjata elektronika<br>korps
-                                        marinir
-                                    </h3>
+
+                                    <div class="kadis-mobile-img wow fadeIn" data-wow-delay=".2s">
+                                        <img src="{{ asset('storage/' . $kadis->image) }}" alt="Kadis Mobile">
+                                    </div>
+
+                                    <div class="about-sp kadis-quote-box">
+                                        {!! $kadis->quote !!}
+                                    </div>
+                                    <div class="about-description">
+                                        {!! $kadis->description !!}
+                                    </div>
+
                                 </div>
-                                <p class="about-sp">Teachings of the great explorer of
-                                    the truth, the master-builder of
-                                    human happiness.
-                                    No one rejects, dislikes, or avoids pleasure itself.</p>
-                                <p class="">Teachings of the great explorer of the
-                                    truth, the master-builder of human happiness.
-                                    No one rejects, dislikes, or avoids pleasure itself, because it is who do not know
-                                    how to pursue pleasure. Adipiscing elit, sed do eiusmod tempor incididunt ut labore
-                                    et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.
-                                </p>
                             </div>
+
                         </div>
                     </div>
-                </div>
+                @endif
             </div>
         </section>
         <!-- kepala dinas area end  -->

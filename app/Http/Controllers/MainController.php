@@ -25,8 +25,10 @@ class MainController extends Controller
         $personnels = Personnel::all();
         // Ambil semua banner urut berdasarkan order_index
         $banners = Banner::orderBy('order_index', 'asc')->get();
+        // Mengambil satu data Kadis yang sedang aktif
+        $kadis = \App\Models\Kadis::where('is_active', true)->first();
 
-        return view('welcome', compact('about', 'current_leader', 'old_leaders', 'activities', 'personnels','banners'));
+        return view('welcome', compact('about', 'current_leader', 'old_leaders', 'activities', 'personnels', 'banners', 'kadis'));
     }
 
     public function storeComplaint(Request $request)

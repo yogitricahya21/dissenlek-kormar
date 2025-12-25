@@ -4,7 +4,7 @@
             <div class="flex">
                 <div class="flex items-center shrink-0">
                     <a href="{{ route('dashboard') }}">
-                        <x-application-logo class="block w-auto text-gray-800 fill-current h-9" /> 
+                        <x-application-logo class="block w-auto text-gray-800 fill-current h-9" />
                     </a>
                 </div>
 
@@ -23,6 +23,10 @@
 
                     <x-nav-link :href="route('admin.activities.index')" :active="request()->routeIs('activities.*')">
                         {{ __('Kegiatan') }}
+                    </x-nav-link>
+
+                    <x-nav-link :href="route('admin.kadis.index')" :active="request()->routeIs('kadis.*')">
+                        {{ __('Kadis') }}
                     </x-nav-link>
 
                     <x-nav-link :href="route('admin.leaders.index')" :active="request()->routeIs('leaders.*')">
