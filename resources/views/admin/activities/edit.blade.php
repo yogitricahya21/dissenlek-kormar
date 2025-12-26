@@ -6,18 +6,21 @@
     <div class="py-12">
         <div class="max-w-4xl mx-auto sm:px-6 lg:px-8">
             <div class="p-6 bg-white shadow-sm sm:rounded-lg">
-                <form action="{{ route('admin.activities.update', $activity) }}" method="POST" enctype="multipart/form-data">
+                <form action="{{ route('admin.activities.update', $activity) }}" method="POST"
+                    enctype="multipart/form-data">
                     @csrf
                     @method('PUT')
-                    
+
                     <div class="mb-4">
                         <label class="block font-bold">Judul Kegiatan:</label>
-                        <input type="text" name="title" value="{{ $activity->title }}" class="w-full p-2 border rounded" required>
+                        <input type="text" name="title" value="{{ $activity->title }}"
+                            class="w-full p-2 border rounded" required>
                     </div>
 
                     <div class="mb-4">
                         <label class="block font-bold">Tanggal Kegiatan:</label>
-                        <input type="date" name="date" value="{{ $activity->date }}" class="w-full p-2 border rounded" required>
+                        <input type="date" name="date" value="{{ $activity->date }}"
+                            class="w-full p-2 border rounded" required>
                     </div>
 
                     <div class="mb-4">
@@ -26,8 +29,18 @@
                     </div>
 
                     <div class="mb-4">
+                        <label class="block font-bold">Subdis:</label>
+                        <select name="subdis" class="w-full p-2 border rounded">
+                            <option value="Duknis">DUKNIS</option>
+                            <option value="Harsis">HARSIS</option>
+                            <option value="Urtu">URTU</option>
+                            <option value="Ren">REN</option>
+                        </select>
+                    </div>
+
+                    <div class="mb-4">
                         <label class="block font-bold">Foto Saat Ini:</label>
-                        @if($activity->image)
+                        @if ($activity->image)
                             <img src="{{ asset('storage/' . $activity->image) }}" class="h-32 mb-2 rounded">
                         @endif
                         <input type="file" name="image" class="w-full">

@@ -607,29 +607,30 @@
         <!-- personel area end  -->
 
         <!-- gallery kegiatan area start  -->
-        <section id="jops" class="bg-white operations-area pt-80 pb-130 p-relative z-index-2">
+        {{-- <section id="jops" class="bg-white operations-area pt-80 pb-130 p-relative z-index-2"
+            style="background-image: url('{{ asset('armado/assets/img/bg/wall_about.png') }}');">
             <div class="container">
                 <div class="row justify-content-center wow fadeInUp" data-wow-delay=".3s">
                     <div class="col-lg-8">
                         <div class="bd-section-title-wrapper centered-title operation-title">
                             <div class="bd-section-subtitle st-b">
-                                <div class="subtitle-text">activtys <span>gallery</span></div>
+                                <div class="subtitle-text">activities <span>gallery</span></div>
                             </div>
-                            <h3 class="bd-section-title mb-50">kegitan dissenlek kormar
-                            </h3>
+                            <h3 class="bd-section-title mb-50">kegiatan dissenlek kormar</h3>
                         </div>
                     </div>
                 </div>
+
                 <div class="container">
-                    <div class="gallery-tab-wrapper">
+                    <div class="gallery-tab-wrapper wow fadeInUp" data-wow-delay=".3s">
                         <div class="gallery-tab-nav mb-65">
                             <nav>
                                 <div class="nav nav-tabs masonary-menu">
-                                    <button class="nav-link active" data-filter=".c-1">SUBDIS 1</button>
-                                    <button class="nav-link" data-filter=".c-2">SUBDIS 2</button>
-                                    <button class="nav-link" data-filter=".c-3">SUBDIS 3</button>
-                                    <button class="nav-link" data-filter=".c-4">SUBDIS 4</button>
-                                    <button class="nav-link" data-filter=".c-5">SUBDIS 5</button>
+                                    <button class="nav-link active" data-filter=".c-1">ARMY</button>
+                                    <button class="nav-link" data-filter=".c-2">NAVY</button>
+                                    <button class="nav-link" data-filter=".c-3">POLICE</button>
+                                    <button class="nav-link" data-filter=".c-4">AIR FORCE</button>
+                                    <button class="nav-link" data-filter=".c-5">FIRE FIGHTER</button>
                                 </div>
                             </nav>
                         </div>
@@ -641,7 +642,7 @@
                                             <div class="gallery-single mb-30">
                                                 <div class="gallery-thumb-wrapper">
                                                     <div class="gallery-thumb">
-                                                        <img src="{{ 'armado/' }}assets/img/gallery/army/gallery1.jpg"
+                                                        <img src="{{asset('armado')}}/assets/img/gallery/army/gallery1.jpg"
                                                             alt="img not found">
                                                         <div class="gallery-overlay"></div>
                                                     </div>
@@ -653,123 +654,11 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="col-lg-4 col-md-6 grid-item c-1">
-                                            <div class="gallery-single mb-30">
-                                                <div class="gallery-thumb-wrapper">
-                                                    <div class="gallery-thumb">
-                                                        <img src="{{ 'armado/' }}assets/img/gallery/army/gallery2.jpg"
-                                                            alt="img not found">
-                                                        <div class="gallery-overlay"></div>
-                                                    </div>
-                                                    <div class="gallery-thumb-action">
-                                                        <a class="action-plus-btn popup-image"
-                                                            href="assets/img/gallery/army/gallery2.jpg"><i
-                                                                class="fa fa-plus"></i></a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-4 col-md-6 grid-item c-1">
-                                            <div class="gallery-single mb-30">
-                                                <div class="gallery-thumb-wrapper">
-                                                    <div class="gallery-thumb">
-                                                        <img src="{{ 'armado/' }}assets/img/gallery/army/gallery3.jpg"
-                                                            alt="img not found">
-                                                        <div class="gallery-overlay"></div>
-                                                    </div>
-                                                    <div class="gallery-thumb-action">
-                                                        <a class="action-plus-btn popup-image"
-                                                            href="assets/img/gallery/army/gallery3.jpg"><i
-                                                                class="fa fa-plus"></i></a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-4 col-md-6 grid-item c-1">
-                                            <div class="gallery-single mb-30">
-                                                <div class="gallery-thumb-wrapper">
-                                                    <div class="gallery-thumb">
-                                                        <img src="{{ 'armado/' }}assets/img/gallery/army/gallery4.jpg"
-                                                            alt="img not found">
-                                                        <div class="gallery-overlay"></div>
-                                                    </div>
-                                                    <div class="gallery-thumb-action">
-                                                        <a class="action-plus-btn popup-image"
-                                                            href="assets/img/gallery/army/gallery4.jpg"><i
-                                                                class="fa fa-plus"></i></a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-4 col-md-6 grid-item c-1">
-                                            <div class="gallery-single mb-30">
-                                                <div class="gallery-thumb-wrapper">
-                                                    <div class="gallery-thumb">
-                                                        <img src="{{ 'armado/' }}assets/img/gallery/army/gallery5.jpg"
-                                                            alt="img not found">
-                                                        <div class="gallery-overlay"></div>
-                                                    </div>
-                                                    <div class="gallery-thumb-action">
-                                                        <a class="action-plus-btn popup-image"
-                                                            href="assets/img/gallery/army/gallery5.jpg"><i
-                                                                class="fa fa-plus"></i></a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-4 col-md-6 grid-item c-1">
-                                            <div class="gallery-single mb-30">
-                                                <div class="gallery-thumb-wrapper">
-                                                    <div class="gallery-thumb">
-                                                        <img src="{{ 'armado/' }}assets/img/gallery/army/gallery6.jpg"
-                                                            alt="img not found">
-                                                        <div class="gallery-overlay"></div>
-                                                    </div>
-                                                    <div class="gallery-thumb-action">
-                                                        <a class="action-plus-btn popup-image"
-                                                            href="assets/img/gallery/army/gallery6.jpg"><i
-                                                                class="fa fa-plus"></i></a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-4 col-md-6 grid-item c-1">
-                                            <div class="gallery-single mb-30">
-                                                <div class="gallery-thumb-wrapper">
-                                                    <div class="gallery-thumb">
-                                                        <img src="{{ 'armado/' }}assets/img/gallery/army/gallery7.jpg"
-                                                            alt="img not found">
-                                                        <div class="gallery-overlay"></div>
-                                                    </div>
-                                                    <div class="gallery-thumb-action">
-                                                        <a class="action-plus-btn popup-image"
-                                                            href="assets/img/gallery/army/gallery7.jpg"><i
-                                                                class="fa fa-plus"></i></a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-4 col-md-6 grid-item c-1">
-                                            <div class="gallery-single mb-30">
-                                                <div class="gallery-thumb-wrapper">
-                                                    <div class="gallery-thumb">
-                                                        <img src="{{ 'armado/' }}assets/img/gallery/army/gallery8.jpg"
-                                                            alt="img not found">
-                                                        <div class="gallery-overlay"></div>
-                                                    </div>
-                                                    <div class="gallery-thumb-action">
-                                                        <a class="action-plus-btn popup-image"
-                                                            href="assets/img/gallery/army/gallery8.jpg"><i
-                                                                class="fa fa-plus"></i></a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
                                         <div class="col-lg-4 col-md-6 grid-item c-2">
                                             <div class="gallery-single mb-30">
                                                 <div class="gallery-thumb-wrapper">
                                                     <div class="gallery-thumb">
-                                                        <img src="{{ 'armado/' }}assets/img/gallery/navy/gallery1.jpg"
+                                                        <img src="{{asset('armado')}}/assets/img/gallery/navy/gallery1.jpg"
                                                             alt="img not found">
                                                         <div class="gallery-overlay"></div>
                                                     </div>
@@ -781,107 +670,11 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="col-lg-4 col-md-6 grid-item c-2">
-                                            <div class="gallery-single mb-30">
-                                                <div class="gallery-thumb-wrapper">
-                                                    <div class="gallery-thumb">
-                                                        <img src="{{ 'armado/' }}assets/img/gallery/navy/gallery2.jpg"
-                                                            alt="img not found">
-                                                        <div class="gallery-overlay"></div>
-                                                    </div>
-                                                    <div class="gallery-thumb-action">
-                                                        <a class="action-plus-btn popup-image"
-                                                            href="assets/img/gallery/navy/gallery2.jpg"><i
-                                                                class="fa fa-plus"></i></a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-4 col-md-6 grid-item c-2">
-                                            <div class="gallery-single mb-30">
-                                                <div class="gallery-thumb-wrapper">
-                                                    <div class="gallery-thumb">
-                                                        <img src="{{ 'armado/' }}assets/img/gallery/navy/gallery3.jpg"
-                                                            alt="img not found">
-                                                        <div class="gallery-overlay"></div>
-                                                    </div>
-                                                    <div class="gallery-thumb-action">
-                                                        <a class="action-plus-btn popup-image"
-                                                            href="assets/img/gallery/navy/gallery3.jpg"><i
-                                                                class="fa fa-plus"></i></a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-4 col-md-6 grid-item c-2">
-                                            <div class="gallery-single mb-30">
-                                                <div class="gallery-thumb-wrapper">
-                                                    <div class="gallery-thumb">
-                                                        <img src="{{ 'armado/' }}assets/img/gallery/navy/gallery4.jpg"
-                                                            alt="img not found">
-                                                        <div class="gallery-overlay"></div>
-                                                    </div>
-                                                    <div class="gallery-thumb-action">
-                                                        <a class="action-plus-btn popup-image"
-                                                            href="assets/img/gallery/navy/gallery4.jpg"><i
-                                                                class="fa fa-plus"></i></a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-4 col-md-6 grid-item c-2">
-                                            <div class="gallery-single mb-30">
-                                                <div class="gallery-thumb-wrapper">
-                                                    <div class="gallery-thumb">
-                                                        <img src="{{ 'armado/' }}assets/img/gallery/navy/gallery5.jpg"
-                                                            alt="img not found">
-                                                        <div class="gallery-overlay"></div>
-                                                    </div>
-                                                    <div class="gallery-thumb-action">
-                                                        <a class="action-plus-btn popup-image"
-                                                            href="assets/img/gallery/navy/gallery5.jpg"><i
-                                                                class="fa fa-plus"></i></a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-4 col-md-6 grid-item c-2">
-                                            <div class="gallery-single mb-30">
-                                                <div class="gallery-thumb-wrapper">
-                                                    <div class="gallery-thumb">
-                                                        <img src="{{ 'armado/' }}assets/img/gallery/navy/gallery6.jpg"
-                                                            alt="img not found">
-                                                        <div class="gallery-overlay"></div>
-                                                    </div>
-                                                    <div class="gallery-thumb-action">
-                                                        <a class="action-plus-btn popup-image"
-                                                            href="assets/img/gallery/navy/gallery6.jpg"><i
-                                                                class="fa fa-plus"></i></a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-4 col-md-6 grid-item c-2">
-                                            <div class="gallery-single mb-30">
-                                                <div class="gallery-thumb-wrapper">
-                                                    <div class="gallery-thumb">
-                                                        <img src="{{ 'armado/' }}assets/img/gallery/navy/gallery7.jpg"
-                                                            alt="img not found">
-                                                        <div class="gallery-overlay"></div>
-                                                    </div>
-                                                    <div class="gallery-thumb-action">
-                                                        <a class="action-plus-btn popup-image"
-                                                            href="assets/img/gallery/navy/gallery7.jpg"><i
-                                                                class="fa fa-plus"></i></a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
                                         <div class="col-lg-4 col-md-6 grid-item c-3">
                                             <div class="gallery-single mb-30">
                                                 <div class="gallery-thumb-wrapper">
                                                     <div class="gallery-thumb">
-                                                        <img src="{{ 'armado/' }}assets/img/gallery/police/gallery1.jpg"
+                                                        <img src="{{asset('armado')}}/assets/img/gallery/police/gallery1.jpg"
                                                             alt="img not found">
                                                         <div class="gallery-overlay"></div>
                                                     </div>
@@ -893,91 +686,11 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="col-lg-4 col-md-6 grid-item c-3">
-                                            <div class="gallery-single mb-30">
-                                                <div class="gallery-thumb-wrapper">
-                                                    <div class="gallery-thumb">
-                                                        <img src="{{ 'armado/' }}assets/img/gallery/police/gallery2.jpg"
-                                                            alt="img not found">
-                                                        <div class="gallery-overlay"></div>
-                                                    </div>
-                                                    <div class="gallery-thumb-action">
-                                                        <a class="action-plus-btn popup-image"
-                                                            href="assets/img/gallery/police/gallery2.jpg"><i
-                                                                class="fa fa-plus"></i></a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-4 col-md-6 grid-item c-3">
-                                            <div class="gallery-single mb-30">
-                                                <div class="gallery-thumb-wrapper">
-                                                    <div class="gallery-thumb">
-                                                        <img src="{{ 'armado/' }}assets/img/gallery/police/gallery3.jpg"
-                                                            alt="img not found">
-                                                        <div class="gallery-overlay"></div>
-                                                    </div>
-                                                    <div class="gallery-thumb-action">
-                                                        <a class="action-plus-btn popup-image"
-                                                            href="assets/img/gallery/police/gallery3.jpg"><i
-                                                                class="fa fa-plus"></i></a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-4 col-md-6 grid-item c-3">
-                                            <div class="gallery-single mb-30">
-                                                <div class="gallery-thumb-wrapper">
-                                                    <div class="gallery-thumb">
-                                                        <img src="{{ 'armado/' }}assets/img/gallery/police/gallery4.jpg"
-                                                            alt="img not found">
-                                                        <div class="gallery-overlay"></div>
-                                                    </div>
-                                                    <div class="gallery-thumb-action">
-                                                        <a class="action-plus-btn popup-image"
-                                                            href="assets/img/gallery/police/gallery4.jpg"><i
-                                                                class="fa fa-plus"></i></a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-4 col-md-6 grid-item c-3">
-                                            <div class="gallery-single mb-30">
-                                                <div class="gallery-thumb-wrapper">
-                                                    <div class="gallery-thumb">
-                                                        <img src="{{ 'armado/' }}assets/img/gallery/police/gallery5.jpg"
-                                                            alt="img not found">
-                                                        <div class="gallery-overlay"></div>
-                                                    </div>
-                                                    <div class="gallery-thumb-action">
-                                                        <a class="action-plus-btn popup-image"
-                                                            href="assets/img/gallery/police/gallery5.jpg"><i
-                                                                class="fa fa-plus"></i></a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-4 col-md-6 grid-item c-3">
-                                            <div class="gallery-single mb-30">
-                                                <div class="gallery-thumb-wrapper">
-                                                    <div class="gallery-thumb">
-                                                        <img src="{{ 'armado/' }}assets/img/gallery/police/gallery6.jpg"
-                                                            alt="img not found">
-                                                        <div class="gallery-overlay"></div>
-                                                    </div>
-                                                    <div class="gallery-thumb-action">
-                                                        <a class="action-plus-btn popup-image"
-                                                            href="assets/img/gallery/police/gallery6.jpg"><i
-                                                                class="fa fa-plus"></i></a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
                                         <div class="col-lg-4 col-md-6 grid-item c-4">
                                             <div class="gallery-single mb-30">
                                                 <div class="gallery-thumb-wrapper">
                                                     <div class="gallery-thumb">
-                                                        <img src="{{ 'armado/' }}assets/img/gallery/air-force/gallery1.jpg"
+                                                        <img src="{{asset('armado')}}/assets/img/gallery/air-force/gallery1.jpg"
                                                             alt="img not found">
                                                         <div class="gallery-overlay"></div>
                                                     </div>
@@ -989,235 +702,11 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="col-lg-4 col-md-6 grid-item c-4">
-                                            <div class="gallery-single mb-30">
-                                                <div class="gallery-thumb-wrapper">
-                                                    <div class="gallery-thumb">
-                                                        <img src="{{ 'armado/' }}assets/img/gallery/air-force/gallery2.jpg"
-                                                            alt="img not found">
-                                                        <div class="gallery-overlay"></div>
-                                                    </div>
-                                                    <div class="gallery-thumb-action">
-                                                        <a class="action-plus-btn popup-image"
-                                                            href="assets/img/gallery/air-force/gallery2.jpg"><i
-                                                                class="fa fa-plus"></i></a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-4 col-md-6 grid-item c-4">
-                                            <div class="gallery-single mb-30">
-                                                <div class="gallery-thumb-wrapper">
-                                                    <div class="gallery-thumb">
-                                                        <img src="{{ 'armado/' }}assets/img/gallery/air-force/gallery3.jpg"
-                                                            alt="img not found">
-                                                        <div class="gallery-overlay"></div>
-                                                    </div>
-                                                    <div class="gallery-thumb-action">
-                                                        <a class="action-plus-btn popup-image"
-                                                            href="assets/img/gallery/air-force/gallery3.jpg"><i
-                                                                class="fa fa-plus"></i></a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-4 col-md-6 grid-item c-4">
-                                            <div class="gallery-single mb-30">
-                                                <div class="gallery-thumb-wrapper">
-                                                    <div class="gallery-thumb">
-                                                        <img src="{{ 'armado/' }}assets/img/gallery/air-force/gallery4.jpg"
-                                                            alt="img not found">
-                                                        <div class="gallery-overlay"></div>
-                                                    </div>
-                                                    <div class="gallery-thumb-action">
-                                                        <a class="action-plus-btn popup-image"
-                                                            href="assets/img/gallery/air-force/gallery4.jpg"><i
-                                                                class="fa fa-plus"></i></a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-4 col-md-6 grid-item c-4">
-                                            <div class="gallery-single mb-30">
-                                                <div class="gallery-thumb-wrapper">
-                                                    <div class="gallery-thumb">
-                                                        <img src="{{ 'armado/' }}assets/img/gallery/air-force/gallery5.jpg"
-                                                            alt="img not found">
-                                                        <div class="gallery-overlay"></div>
-                                                    </div>
-                                                    <div class="gallery-thumb-action">
-                                                        <a class="action-plus-btn popup-image"
-                                                            href="assets/img/gallery/air-force/gallery5.jpg"><i
-                                                                class="fa fa-plus"></i></a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-4 col-md-6 grid-item c-4">
-                                            <div class="gallery-single mb-30">
-                                                <div class="gallery-thumb-wrapper">
-                                                    <div class="gallery-thumb">
-                                                        <img src="{{ 'armado/' }}assets/img/gallery/air-force/gallery6.jpg"
-                                                            alt="img not found">
-                                                        <div class="gallery-overlay"></div>
-                                                    </div>
-                                                    <div class="gallery-thumb-action">
-                                                        <a class="action-plus-btn popup-image"
-                                                            href="assets/img/gallery/air-force/gallery6.jpg"><i
-                                                                class="fa fa-plus"></i></a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-4 col-md-6 grid-item c-4">
-                                            <div class="gallery-single mb-30">
-                                                <div class="gallery-thumb-wrapper">
-                                                    <div class="gallery-thumb">
-                                                        <img src="{{ 'armado/' }}assets/img/gallery/air-force/gallery7.jpg"
-                                                            alt="img not found">
-                                                        <div class="gallery-overlay"></div>
-                                                    </div>
-                                                    <div class="gallery-thumb-action">
-                                                        <a class="action-plus-btn popup-image"
-                                                            href="assets/img/gallery/air-force/gallery7.jpg"><i
-                                                                class="fa fa-plus"></i></a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-4 col-md-6 grid-item c-4">
-                                            <div class="gallery-single mb-30">
-                                                <div class="gallery-thumb-wrapper">
-                                                    <div class="gallery-thumb">
-                                                        <img src="{{ 'armado/' }}assets/img/gallery/air-force/gallery8.jpg"
-                                                            alt="img not found">
-                                                        <div class="gallery-overlay"></div>
-                                                    </div>
-                                                    <div class="gallery-thumb-action">
-                                                        <a class="action-plus-btn popup-image"
-                                                            href="assets/img/gallery/air-force/gallery8.jpg"><i
-                                                                class="fa fa-plus"></i></a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
                                         <div class="col-lg-4 col-md-6 grid-item c-5">
                                             <div class="gallery-single mb-30">
                                                 <div class="gallery-thumb-wrapper">
                                                     <div class="gallery-thumb">
-                                                        <img src="{{ 'armado/' }}assets/img/gallery/fire/gallery1.jpg"
-                                                            alt="img not found">
-                                                        <div class="gallery-overlay"></div>
-                                                    </div>
-                                                    <div class="gallery-thumb-action">
-                                                        <a class="action-plus-btn popup-image"
-                                                            href="assets/img/gallery/fire/gallery1.jpg"><i
-                                                                class="fa fa-plus"></i></a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-4 col-md-6 grid-item c-5">
-                                            <div class="gallery-single mb-30">
-                                                <div class="gallery-thumb-wrapper">
-                                                    <div class="gallery-thumb">
-                                                        <img src="{{ 'armado/' }}assets/img/gallery/fire/gallery2.jpg"
-                                                            alt="img not found">
-                                                        <div class="gallery-overlay"></div>
-                                                    </div>
-                                                    <div class="gallery-thumb-action">
-                                                        <a class="action-plus-btn popup-image"
-                                                            href="assets/img/gallery/fire/gallery2.jpg"><i
-                                                                class="fa fa-plus"></i></a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-4 col-md-6 grid-item c-5">
-                                            <div class="gallery-single mb-30">
-                                                <div class="gallery-thumb-wrapper">
-                                                    <div class="gallery-thumb">
-                                                        <img src="{{ 'armado/' }}assets/img/gallery/fire/gallery3.jpg"
-                                                            alt="img not found">
-                                                        <div class="gallery-overlay"></div>
-                                                    </div>
-                                                    <div class="gallery-thumb-action">
-                                                        <a class="action-plus-btn popup-image"
-                                                            href="assets/img/gallery/fire/gallery3.jpg"><i
-                                                                class="fa fa-plus"></i></a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-4 col-md-6 grid-item c-5">
-                                            <div class="gallery-single mb-30">
-                                                <div class="gallery-thumb-wrapper">
-                                                    <div class="gallery-thumb">
-                                                        <img src="{{ 'armado/' }}assets/img/gallery/fire/gallery4.jpg"
-                                                            alt="img not found">
-                                                        <div class="gallery-overlay"></div>
-                                                    </div>
-                                                    <div class="gallery-thumb-action">
-                                                        <a class="action-plus-btn popup-image"
-                                                            href="assets/img/gallery/fire/gallery4.jpg"><i
-                                                                class="fa fa-plus"></i></a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-4 col-md-6 grid-item c-5">
-                                            <div class="gallery-single mb-30">
-                                                <div class="gallery-thumb-wrapper">
-                                                    <div class="gallery-thumb">
-                                                        <img src="{{ 'armado/' }}assets/img/gallery/fire/gallery5.jpg"
-                                                            alt="img not found">
-                                                        <div class="gallery-overlay"></div>
-                                                    </div>
-                                                    <div class="gallery-thumb-action">
-                                                        <a class="action-plus-btn popup-image"
-                                                            href="assets/img/gallery/fire/gallery5.jpg"><i
-                                                                class="fa fa-plus"></i></a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-4 col-md-6 grid-item c-5">
-                                            <div class="gallery-single mb-30">
-                                                <div class="gallery-thumb-wrapper">
-                                                    <div class="gallery-thumb">
-                                                        <img src="{{ 'armado/' }}assets/img/gallery/fire/gallery6.jpg"
-                                                            alt="img not found">
-                                                        <div class="gallery-overlay"></div>
-                                                    </div>
-                                                    <div class="gallery-thumb-action">
-                                                        <a class="action-plus-btn popup-image"
-                                                            href="assets/img/gallery/fire/gallery6.jpg"><i
-                                                                class="fa fa-plus"></i></a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-4 col-md-6 grid-item c-5">
-                                            <div class="gallery-single mb-30">
-                                                <div class="gallery-thumb-wrapper">
-                                                    <div class="gallery-thumb">
-                                                        <img src="{{ 'armado/' }}assets/img/gallery/fire/gallery7.jpg"
-                                                            alt="img not found">
-                                                        <div class="gallery-overlay"></div>
-                                                    </div>
-                                                    <div class="gallery-thumb-action">
-                                                        <a class="action-plus-btn popup-image"
-                                                            href="assets/img/gallery/fire/gallery7.jpg"><i
-                                                                class="fa fa-plus"></i></a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-4 col-md-6 grid-item c-5">
-                                            <div class="gallery-single mb-30">
-                                                <div class="gallery-thumb-wrapper">
-                                                    <div class="gallery-thumb">
-                                                        <img src="{{ 'armado/' }}assets/img/gallery/fire/gallery8.jpg"
+                                                        <img src="{{asset('armado')}}/assets/img/gallery/fire/gallery8.jpg"
                                                             alt="img not found">
                                                         <div class="gallery-overlay"></div>
                                                     </div>
@@ -1239,7 +728,72 @@
                     </div>
                 </div>
             </div>
+        </section> --}}
+        <section id="jops" class="bg-white operations-area pt-80 pb-130 p-relative z-index-2"
+            style="background-image: url('{{ asset('armado/assets/img/bg/wall_about.png') }}');">
+            <div class="container">
+                <div class="row justify-content-center wow fadeInUp" data-wow-delay=".3s">
+                    <div class="col-lg-8">
+                        <div class="bd-section-title-wrapper centered-title operation-title">
+                            <div class="bd-section-subtitle st-b">
+                                <div class="subtitle-text">activities <span>gallery</span></div>
+                            </div>
+                            <h3 class="bd-section-title mb-50">kegiatan dissenlek kormar</h3>
+                        </div>
+                    </div>
+                </div>
 
+                <div class="container">
+                    <div class="gallery-tab-wrapper wow fadeInUp" data-wow-delay=".3s">
+                        <div class="gallery-tab-nav mb-65">
+                            <nav>
+                                <div class="nav nav-tabs masonary-menu">
+                                    <button class="nav-link active" data-filter="*">ALL</button>
+                                    <button class="nav-link" data-filter=".duknis">DUKNIS</button>
+                                    <button class="nav-link" data-filter=".harsis">HARSIS</button>
+                                    <button class="nav-link" data-filter=".urtu">URTU</button>
+                                    <button class="nav-link" data-filter=".ren">REN</button>
+                                </div>
+                            </nav>
+                        </div>
+                        <div class="gallery-tab-content">
+                            <div class="tab-content">
+                                <div class="grid gallery-wrapper row">
+                                    @foreach ($activities as $index => $item)
+                                        {{-- Gunakan lowercase untuk class agar cocok dengan filter button --}}
+                                        <div class="col-lg-4 col-md-6 grid-item {{ strtolower($item->subdis) }}">
+                                            <div class="gallery-single mb-30">
+                                                <div class="gallery-thumb-wrapper">
+                                                    <div class="gallery-thumb">
+                                                        <img src="{{ asset('storage/' . $item->image) }}"
+                                                            alt="{{ $item->title }}">
+
+                                                        <div class="gallery-overlay">
+                                                            <div class="gallery-content-info">
+                                                                <h5>{{ $item->title }}</h5>
+                                                                <span>{{ \Carbon\Carbon::parse($item->date)->translatedFormat('d M Y') }}</span>
+                                                            </div>
+                                                            <div class="gallery-thumb-action">
+                                                                <a class="action-plus-btn popup-image"
+                                                                    href="{{ asset('storage/' . $item->image) }}">
+                                                                    <i class="fa fa-plus"></i>
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    @endforeach
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="text-center gallery-btn mt-25 mb-30">
+                        <a href="javascript:void(0)" class="text-btn load-more-btn">Load More</a>
+                    </div>
+                </div>
+            </div>
         </section>
         <!-- gallery kegiatan area end  -->
 
@@ -1467,23 +1021,41 @@
     <!-- back to top end -->
 
     <!-- JS here -->
-    <script src="{{ 'armado/assets/js/vendor/jquery-3.6.0.min.js' }}"></script>
-    <script src="{{ 'armado/assets/js/vendor/waypoints.min.js' }}"></script>
-    <script src="{{ 'armado/assets/js/bootstrap.bundle.min.js' }}"></script>
-    <script src="{{ 'armado/assets/js/meanmenu.js' }}"></script>
-    <script src="{{ 'armado/assets/js/swiper-bundle.min.js' }}"></script>
-    <script src="{{ 'armado/assets/js/magnific-popup.min.js' }}"></script>
-    <script src="{{ 'armado/assets/js/backToTop.js' }}"></script>
-    <script src="{{ 'armado/assets/js/nice-select.min.js' }}"></script>
-    <script src="{{ 'armado/assets/js/ajax-form.js' }}"></script>
-    <script src="{{ 'armado/assets/js/wow.min.js' }}"></script>
-    <script src="{{ 'armado/assets/js/isotope.pkgd.min.js' }}"></script>
-    <script src="{{ 'armado/assets/js/imagesloaded.pkgd.min.js' }}"></script>
-    <script src="{{ 'armado/assets/js/jquery.appear.js' }}"></script>
-    <script src="{{ 'armado/assets/js/jquery.odometer.min.js' }}"></script>
-    <script src="{{ 'armado/assets/js/slick.min.js' }}"></script>
-    <script src="{{ 'armado/assets/js/js_circle-progress.min.js' }}"></script>
-    <script src="{{ 'armado/assets/js/main.js' }}"></script>
+    <script src="{{ asset('armado/assets/js/vendor/jquery-3.6.0.min.js') }}"></script>
+    <script src="{{ asset('armado/assets/js/vendor/waypoints.min.js') }}"></script>
+    <script src="{{ asset('armado/assets/js/bootstrap.bundle.min.js') }}"></script>
+    <script src="{{ asset('armado/assets/js/meanmenu.js') }}"></script>
+    <script src="{{ asset('armado/assets/js/swiper-bundle.min.js') }}"></script>
+    <script src="{{ asset('armado/assets/js/magnific-popup.min.js') }}"></script>
+    <script src="{{ asset('armado/assets/js/backToTop.js') }}"></script>
+    <script src="{{ asset('armado/assets/js/nice-select.min.js') }}"></script>
+    <script src="{{ asset('armado/assets/js/ajax-form.js') }}"></script>
+    <script src="{{ asset('armado/assets/js/wow.min.js') }}"></script>
+
+    <script src="{{ asset('armado/assets/js/isotope.pkgd.min.js') }}"></script>
+
+    <script src="{{ asset('armado/assets/js/imagesloaded.pkgd.min.js') }}"></script>
+
+    <script src="{{ asset('armado/assets/js/jquery.appear.js') }}"></script>
+    <script src="{{ asset('armado/assets/js/jquery.odometer.min.js') }}"></script>
+    <script src="{{ asset('armado/assets/js/slick.min.js') }}"></script>
+    <script src="{{ asset('armado/assets/js/js_circle-progress.min.js') }}"></script>
+
+    <script src="{{ asset('armado/assets/js/main.js') }}"></script>
+
+    <script>
+        $(document).ready(function() {
+            $('.popup-image').magnificPopup({
+                type: 'image',
+                gallery: {
+                    enabled: true
+                },
+                mainClass: 'mfp-with-zoom', // Opsional: menambah animasi zoom
+            });
+        });
+    </script>
+
+</body>
 </body>
 
 </html>

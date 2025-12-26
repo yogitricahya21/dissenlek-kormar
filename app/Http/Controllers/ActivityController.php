@@ -35,6 +35,7 @@ class ActivityController extends Controller
     {
         $request->validate([
             'title' => 'required|string|max:255',
+            'subdis' => 'required|string',
             'date' => 'required|date',
             'description' => 'required',
             'image' => 'nullable|image|mimes:jpg,png,jpeg|max:2048',
@@ -47,34 +48,14 @@ class ActivityController extends Controller
 
         Activity::create([
             'title' => $request->title,
+            'subdis' => $request->subdis,
             'date' => $request->date,
             'description' => $request->description,
             'image' => $imagePath,
         ]);
 
-        return redirect()->route('activities.index')->with('success', 'Kegiatan berhasil disimpan!');
-        $request->validate([
-            'title' => 'required|string|max:255',
-            'date' => 'required|date',
-            'description' => 'required',
-            'image' => 'nullable|image|mimes:jpg,png,jpeg|max:2048',
-        ]);
-
-        $imagePath = null;
-        if ($request->hasFile('image')) {
-            $imagePath = $request->file('image')->store('activities', 'public');
-        }
-
-        Activity::create([
-            'title' => $request->title,
-            'date' => $request->date,
-            'description' => $request->description,
-            'image' => $imagePath,
-        ]);
-
-        return redirect()->route('activities.index')->with('success', 'Kegiatan berhasil disimpan!');
+        return redirect()->route('admin.activities.index')->with('success', 'Kegiatan berhasil disimpan!');
     }
-
     /**
      * Display the specified resource.
      */
@@ -98,6 +79,7 @@ class ActivityController extends Controller
     {
         $request->validate([
             'title' => 'required|string|max:255',
+            'subdis' => 'nullable|string',
             'date' => 'required|date',
             'description' => 'required',
             'image' => 'nullable|image|mimes:jpg,png,jpeg|max:2048',
@@ -115,7 +97,7 @@ class ActivityController extends Controller
 
         $activity->update($data);
 
-        return redirect()->route('activities.index')->with('success', 'Kegiatan berhasil diperbarui!');
+        return redirect()->route('admin.activities.index')->with('success', 'Kegiatan berhasil diperbarui!');
     }
 
     /**
@@ -128,6 +110,6 @@ class ActivityController extends Controller
         }
         $activity->delete();
 
-        return redirect()->route('activities.index')->with('success', 'Kegiatan berhasil dihapus!');
+        return redirect()->route('admin.activities.index')->with('success', 'Kegiatan berhasil dihapus!');
     }
 }

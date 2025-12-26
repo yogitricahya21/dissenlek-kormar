@@ -24,6 +24,16 @@
                     </div>
 
                     <div class="mb-4">
+                        <label class="block font-bold">Subdis:</label>
+                        <select name="subdis" class="w-full p-2 border rounded">
+                            <option value="Duknis">DUKNIS</option>
+                            <option value="Harsis">HARSIS</option>
+                            <option value="Urtu">UTRU</option>
+                            <option value="Ren">REN</option>
+                        </select>
+                    </div>
+
+                    <div class="mb-4">
                         <label class="block font-bold">Foto Kegiatan:</label>
                         <input type="file" name="image" class="w-full">
                     </div>

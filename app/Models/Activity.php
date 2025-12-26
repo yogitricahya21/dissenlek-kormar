@@ -10,6 +10,7 @@ class Activity extends Model
     [
         'title',
         'description',
+        'subdis',
         'image',
         'date'
     ];

@@ -16,6 +16,7 @@
                         <tr class="bg-gray-50">
                             <th class="px-6 py-3 text-xs font-bold text-left uppercase">Foto</th>
                             <th class="px-6 py-3 text-xs font-bold text-left uppercase">Kegiatan</th>
+                            <th class="px-6 py-3 text-xs font-bold text-left uppercase">Subdis</th> {{-- Kolom Baru --}}
                             <th class="px-6 py-3 text-xs font-bold text-left uppercase">Tanggal</th>
                             <th class="px-6 py-3 text-xs font-bold text-right uppercase">Aksi</th>
                         </tr>
@@ -35,6 +36,12 @@
                                     <div class="font-bold text-gray-900">{{ $act->title }}</div>
                                     <div class="text-sm text-gray-500">{{ Str::limit($act->description, 50) }}</div>
                                 </td>
+                                {{-- Menampilkan Data Subdis --}}
+                                <td class="px-6 py-4 text-sm text-gray-900">
+                                    <span class="px-2 py-1 text-xs font-semibold bg-gray-100 rounded">
+                                        {{ $act->subdis ?? '-' }}
+                                    </span>
+                                </td>
                                 <td class="px-6 py-4 text-sm text-gray-900">
                                     {{ \Carbon\Carbon::parse($act->date)->format('d M Y') }}
                                 </td>
@@ -47,7 +54,8 @@
                                         <button class="font-bold text-red-600">Hapus</button>
                                     </form>
                                     <button
-                                        onclick="openActivityModal('{{ $act->title }}', '{{ $act->date }}', '{{ asset('storage/' . $act->image) }}', '{{ addslashes($act->description) }}')"
+                                        {{-- Tambahkan act->subdis ke parameter modal --}}
+                                        onclick="openActivityModal('{{ $act->title }}', '{{ $act->date }}', '{{ asset('storage/' . $act->image) }}', '{{ addslashes($act->description) }}', '{{ $act->subdis }}')"
                                         class="mr-3 font-bold text-green-600 hover:text-green-900">
                                         Lihat
                                     </button>
@@ -55,7 +63,7 @@
                             </tr>
                         @empty
                             <tr>
-                                <td colspan="4" class="py-10 text-center text-gray-500">Belum ada data kegiatan.</td>
+                                <td colspan="5" class="py-10 text-center text-gray-500">Belum ada data kegiatan.</td>
                             </tr>
                         @endforelse
                     </tbody>
@@ -63,12 +71,17 @@
             </div>
         </div>
     </div>
+
+    {{-- Modal Update untuk menampilkan Subdis --}}
     <div id="activityModal" class="fixed inset-0 z-50 hidden overflow-y-auto">
         <div class="flex items-center justify-center min-h-screen px-4">
             <div class="fixed inset-0 bg-gray-500 opacity-75"></div>
             <div class="overflow-hidden transition-all transform bg-white rounded-lg shadow-xl sm:max-w-2xl sm:w-full">
                 <div class="p-6 bg-white">
-                    <h3 class="pb-2 mb-4 text-lg font-bold border-b" id="actTitle"></h3>
+                    <div class="flex items-center justify-between pb-2 mb-4 border-b">
+                        <h3 class="text-lg font-bold" id="actTitle"></h3>
+                        <span id="actSubdis" class="px-2 py-1 text-xs font-bold text-blue-600 bg-blue-100 rounded"></span>
+                    </div>
                     <img id="actImg" src="" class="object-cover w-full h-64 mb-4 rounded">
                     <p class="mb-2 text-sm text-gray-500">Tanggal Pelaksanaan: <span id="actDate"></span></p>
                     <div class="prose text-gray-700 max-w-none">
@@ -85,11 +98,12 @@
     </div>
 
     <script>
-        function openActivityModal(title, date, img, desc) {
+        function openActivityModal(title, date, img, desc, subdis) {
             document.getElementById('actTitle').innerText = title;
             document.getElementById('actDate').innerText = date;
             document.getElementById('actDesc').innerText = desc;
             document.getElementById('actImg').src = img;
+            document.getElementById('actSubdis').innerText = subdis ? subdis : '-';
             document.getElementById('activityModal').classList.remove('hidden');
         }
 

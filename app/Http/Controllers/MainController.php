@@ -20,7 +20,7 @@ class MainController extends Controller
         // Khusus mantan pimpinan
         $old_leaders = Leader::where('is_current', false)->get();
         // Ambil 4 kegiatan terbaru
-        $activities = Activity::latest()->take(4)->get();
+        $activities = Activity::latest()->get();
         // Ambil semua personel
         $personnels = Personnel::all();
         // Ambil semua banner urut berdasarkan order_index

@@ -58,7 +58,7 @@ class PersonnelController extends Controller
         ]);
 
         // 4. Kembali ke halaman utama dengan pesan sukses
-        return redirect()->route('personnels.index')->with('success', 'Data Personel berhasil ditambahkan!');
+        return redirect()->route('admin.personnels.index')->with('success', 'Data Personel berhasil ditambahkan!');
     }
 
     /**
@@ -113,7 +113,7 @@ class PersonnelController extends Controller
         // Update data di database
         $personnel->update($data);
 
-        return redirect()->route('personnels.index')->with('success', 'Data Personel berhasil diperbarui!');
+        return redirect()->route('admin.personnels.index')->with('success', 'Data Personel berhasil diperbarui!');
     }
 
     /**
