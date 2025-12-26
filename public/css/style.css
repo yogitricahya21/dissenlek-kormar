@@ -381,3 +381,80 @@
     z-index: -1;
     /* Berada di bawah konten teks, tapi di atas background gambar */
 }
+
+
+/* STYLE PERSONNELS */
+/* Style untuk Section Background dengan Overlay */
+#team {
+    position: relative;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    z-index: 1;
+}
+
+/* Membuat overlay agar tulisan terbaca (Putih Transparan) */
+#team::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.850); /* Atur kegelapan di sini */
+    z-index: -1;
+}
+
+/* Style Khusus Foto Personel */
+.img-personel {
+    width: 100%;
+    aspect-ratio: 3 / 4;
+    object-fit: cover;
+    object-position: top;
+    display: block;
+    transition: all 0.3s ease;
+    box-sizing: border-box;
+    padding: 15px;
+    background-color: rgba(87, 87, 87, 0.850); /* Overlay abu-abu transparan */
+}
+
+
+.nrp-text {
+    font-size: 14px;
+    margin-bottom: 0px;
+    color: #575757; /* Sesuaikan warna agar kontras dengan overlay */
+}
+
+/* public/css/style-personel.css */
+
+.team-card.team-3 .team-content {
+    /* Mengatur tinggi minimum agar semua kotak sama rata */
+    max-height: 180px; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Menjaga konten tetap di tengah secara vertikal */
+    padding: 10px;
+    background: #ffffff; /* Pastikan background putih jika overlay di belakangnya gelap */
+}
+
+.member-name {
+    /* Membatasi nama agar tidak merusak layout jika terlalu panjang */
+    display: -webkit-box;
+    -webkit-line-clamp: 2; /* Maksimal 2 baris */
+    line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    height: 60px; /* Sesuaikan dengan line-height x 2 */
+    margin-bottom: 5px;
+    padding-top: 5px;
+}
+
+.member-designation {
+    /* Memberikan ruang yang pasti untuk jabatan */
+    display: block;
+    max-height: 40px; 
+    line-height: 1.4;
+    font-size: 10px;
+    padding-top: 8px;
+}

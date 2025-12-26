@@ -28,7 +28,7 @@ class MainController extends Controller
         // Mengambil satu data Kadis yang sedang aktif
         $kadis = \App\Models\Kadis::where('is_active', true)->first();
         // Mengambil semua data pimpinan dari database
-    $leaders = \App\Models\Leader::all();
+        $leaders = \App\Models\Leader::all();
 
         return view('welcome', compact('about', 'current_leader', 'old_leaders', 'activities', 'personnels', 'banners', 'kadis', 'leaders'));
     }

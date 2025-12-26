@@ -483,7 +483,8 @@
         <!-- kepala dinas area end  -->
 
         <!-- kepala dinas dari masa ke masa area start  -->
-        <section id="kadis_lalu" class="bg-white features-area pt-130 pb-70 p-relative z-index-2" style="background-image: url('{{ asset('armado/assets/img/bg/wall5.jpg') }}');">
+        <section id="kadis_lalu" class="bg-white features-area pt-130 pb-70 p-relative z-index-2"
+            style="background-image: url('{{ asset('armado/assets/img/bg/wall5.jpg') }}');">
             <div class="container">
                 <div class="row justify-content-center wow fadeInUp" data-wow-delay=".3s">
                     <div class="col-xl-6">
@@ -522,10 +523,10 @@
                                                     </div>
                                                     {{-- Menampilkan Image dari Database --}}
                                                     <div style="max-width: 250px; margin-bottom: 30px;">
-                                                    <a href="#">
-                                                        <img src="{{ asset('storage/' . $leader->image) }}"
-                                                            alt="{{ $leader->name }}" class="img-pimpinan">
-                                                    </a>
+                                                        <a href="#">
+                                                            <img src="{{ asset('storage/' . $leader->image) }}"
+                                                                alt="{{ $leader->name }}" class="img-pimpinan">
+                                                        </a>
                                                     </div>
                                                 </div>
                                                 <div class="team-content">
@@ -534,7 +535,8 @@
                                                     </h4>
                                                     {{-- Menampilkan Rank (Pangkat) dan Period (Masa Jabatan) --}}
                                                     <span class="member-designation">{{ $leader->rank }}</span>
-                                                    <p class="mt-2" style="color: #575757;">MASA JABATAN <br> {{ $leader->period }}
+                                                    <p class="mt-2" style="color: #575757;">MASA JABATAN <br>
+                                                        {{ $leader->period }}
                                                     </p>
 
                                                     {{-- Menandai jika pimpinan saat ini --}}
@@ -556,9 +558,9 @@
         <!-- kepala dinas dari masa ke masa area end  -->
 
         <!-- personel area start  -->
-        <section id="team" class="bg-white team-area pt-130 pb-130 p-relative fix z-index-2">
-            <div class="team-overlay area-absolute" data-background="{{ 'armado/' }}assets/img/bg/team.jpg">
-            </div>
+        <section id="team" class="team-area pt-130 pb-130 p-relative fix z-index-2"
+            style="background-image: url('{{ asset('armado/assets/img/bg/wall1.jpg') }}');">
+
             <div class="container">
                 <div class="row justify-content-center wow fadeInUp" data-wow-delay=".3s">
                     <div class="col-xl-6">
@@ -570,159 +572,32 @@
                         </div>
                     </div>
                 </div>
+
                 <div class="team-inner wow fadeInUp" data-wow-delay=".3s">
                     <div class="swiper team-3-slider">
                         <div class="swiper-wrapper">
-                            <div class="swiper-slide">
-                                <div class="team-card team-3">
-                                    <div class="team-thumb">
-                                        <div class="team-thumb-bg"></div>
-                                        <a href="team-details.html"><img
-                                                src="{{ 'armado/' }}assets/img/team/team-4.jpg"
-                                                alt="img not found"></a>
-                                    </div>
-                                    <div class="team-content">
-                                        <h4 class="member-name"><a href="team-details.html">Andrew Walker</a>
-                                        </h4>
-                                        <span class="member-designation">Fire Fighter</span>
-                                        <div class="social-links team-social">
-                                            <ul>
-                                                <li><a href="https://facebook.com
-                                    "
-                                                        target="_blank"><i class="fab fa-facebook"></i></a></li>
-                                                <li><a href="https://twitter.com
-                                    "
-                                                        target="_blank"><i class="fab fa-twitter"></i></a></li>
-                                                <li><a href="https://linkedin.com/" target="_blank"><i
-                                                            class="fab fa-linkedin-in"></i></a></li>
-                                                <li><a href="https://youtube.com
-                                    "
-                                                        target="_blank"><i class="fab fa-youtube"></i></a></li>
-                                            </ul>
+                            @foreach ($personnels as $personnel)
+                                <div class="swiper-slide">
+                                    <div class="team-card team-3">
+                                        <div class="team-thumb">
+                                            <div class="team-thumb-bg"></div>
+                                            <a href="#">
+                                                <img src="{{ asset('storage/' . $personnel->image) }}"
+                                                    class="img-personel" alt="{{ $personnel->name }}">
+                                            </a>
+                                        </div>
+                                        <div class="team-content">
+                                            <h4 class="member-name">
+                                                <a href="#">{{ $personnel->name }}</a>
+                                            </h4>
+                                            <span class="member-designation">
+                                                {{ $personnel->rank }} <br>NRP. {{ $personnel->nrp }}
+                                            </span>
+                                            <p class="nrp-text">{{ $personnel->position }}</p>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="team-card team-3">
-                                    <div class="team-thumb">
-                                        <div class="team-thumb-bg"></div>
-                                        <a href="team-details.html"><img
-                                                src="{{ 'armado/' }}assets/img/team/team-5.jpg"
-                                                alt="img not found"></a>
-                                    </div>
-                                    <div class="team-content">
-                                        <h4 class="member-name"><a href="team-details.html">David harly Rason</a>
-                                        </h4>
-                                        <span class="member-designation">Fire Fighter</span>
-                                        <div class="social-links team-social">
-                                            <ul>
-                                                <li><a href="https://facebook.com
-                                    "
-                                                        target="_blank"><i class="fab fa-facebook"></i></a></li>
-                                                <li><a href="https://twitter.com
-                                    "
-                                                        target="_blank"><i class="fab fa-twitter"></i></a></li>
-                                                <li><a href="https://linkedin.com/" target="_blank"><i
-                                                            class="fab fa-linkedin-in"></i></a></li>
-                                                <li><a href="https://youtube.com
-                                    "
-                                                        target="_blank"><i class="fab fa-youtube"></i></a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="team-card team-3">
-                                    <div class="team-thumb">
-                                        <div class="team-thumb-bg"></div>
-                                        <a href="team-details.html"><img
-                                                src="{{ 'armado/' }}assets/img/team/team-6.jpg"
-                                                alt="img not found"></a>
-                                    </div>
-                                    <div class="team-content">
-                                        <h4 class="member-name"><a href="team-details.html">Daniel Stiven</a>
-                                        </h4>
-                                        <span class="member-designation">Fire Fighter</span>
-                                        <div class="social-links team-social">
-                                            <ul>
-                                                <li><a href="https://facebook.com
-                                    "
-                                                        target="_blank"><i class="fab fa-facebook"></i></a></li>
-                                                <li><a href="https://twitter.com
-                                    "
-                                                        target="_blank"><i class="fab fa-twitter"></i></a></li>
-                                                <li><a href="https://linkedin.com/" target="_blank"><i
-                                                            class="fab fa-linkedin-in"></i></a></li>
-                                                <li><a href="https://youtube.com
-                                    "
-                                                        target="_blank"><i class="fab fa-youtube"></i></a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="team-card team-3">
-                                    <div class="team-thumb">
-                                        <div class="team-thumb-bg"></div>
-                                        <a href="team-details.html"><img
-                                                src="{{ 'armado/' }}assets/img/team/team-7.jpg"
-                                                alt="img not found"></a>
-                                    </div>
-                                    <div class="team-content">
-                                        <h4 class="member-name"><a href="team-details.html">Stipenson Robert</a>
-                                        </h4>
-                                        <span class="member-designation">Fire Fighter</span>
-                                        <div class="social-links team-social">
-                                            <ul>
-                                                <li><a href="https://facebook.com
-                                    "
-                                                        target="_blank"><i class="fab fa-facebook"></i></a></li>
-                                                <li><a href="https://twitter.com
-                                    "
-                                                        target="_blank"><i class="fab fa-twitter"></i></a></li>
-                                                <li><a href="https://linkedin.com/" target="_blank"><i
-                                                            class="fab fa-linkedin-in"></i></a></li>
-                                                <li><a href="https://youtube.com
-                                    "
-                                                        target="_blank"><i class="fab fa-youtube"></i></a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="team-card team-3">
-                                    <div class="team-thumb">
-                                        <div class="team-thumb-bg"></div>
-                                        <a href="team-details.html"><img
-                                                src="{{ 'armado/' }}assets/img/team/team-8.jpg"
-                                                alt="img not found"></a>
-                                    </div>
-                                    <div class="team-content">
-                                        <h4 class="member-name"><a href="team-details.html">Amelia Rose</a>
-                                        </h4>
-                                        <span class="member-designation">Fire Fighter</span>
-                                        <div class="social-links team-social">
-                                            <ul>
-                                                <li><a href="https://facebook.com
-                                    "
-                                                        target="_blank"><i class="fab fa-facebook"></i></a></li>
-                                                <li><a href="https://twitter.com
-                                    "
-                                                        target="_blank"><i class="fab fa-twitter"></i></a></li>
-                                                <li><a href="https://linkedin.com/" target="_blank"><i
-                                                            class="fab fa-linkedin-in"></i></a></li>
-                                                <li><a href="https://youtube.com
-                                    "
-                                                        target="_blank"><i class="fab fa-youtube"></i></a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                            @endforeach
                         </div>
                     </div>
                     <div class="team-3-pagination circle-dot-pagination wow fadeInUp" data-wow-delay=".3s"></div>
