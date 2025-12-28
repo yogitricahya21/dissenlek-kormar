@@ -607,130 +607,8 @@
         <!-- personel area end  -->
 
         <!-- gallery kegiatan area start  -->
-        {{-- <section id="jops" class="bg-white operations-area pt-80 pb-130 p-relative z-index-2"
-            style="background-image: url('{{ asset('armado/assets/img/bg/wall_about.png') }}');">
-            <div class="container">
-                <div class="row justify-content-center wow fadeInUp" data-wow-delay=".3s">
-                    <div class="col-lg-8">
-                        <div class="bd-section-title-wrapper centered-title operation-title">
-                            <div class="bd-section-subtitle st-b">
-                                <div class="subtitle-text">activities <span>gallery</span></div>
-                            </div>
-                            <h3 class="bd-section-title mb-50">kegiatan dissenlek kormar</h3>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="container">
-                    <div class="gallery-tab-wrapper wow fadeInUp" data-wow-delay=".3s">
-                        <div class="gallery-tab-nav mb-65">
-                            <nav>
-                                <div class="nav nav-tabs masonary-menu">
-                                    <button class="nav-link active" data-filter=".c-1">ARMY</button>
-                                    <button class="nav-link" data-filter=".c-2">NAVY</button>
-                                    <button class="nav-link" data-filter=".c-3">POLICE</button>
-                                    <button class="nav-link" data-filter=".c-4">AIR FORCE</button>
-                                    <button class="nav-link" data-filter=".c-5">FIRE FIGHTER</button>
-                                </div>
-                            </nav>
-                        </div>
-                        <div class="gallery-tab-content">
-                            <div class="tab-content">
-                                <div class="">
-                                    <div class="grid gallery-wrapper row">
-                                        <div class="col-lg-4 col-md-6 grid-item c-1">
-                                            <div class="gallery-single mb-30">
-                                                <div class="gallery-thumb-wrapper">
-                                                    <div class="gallery-thumb">
-                                                        <img src="{{asset('armado')}}/assets/img/gallery/army/gallery1.jpg"
-                                                            alt="img not found">
-                                                        <div class="gallery-overlay"></div>
-                                                    </div>
-                                                    <div class="gallery-thumb-action">
-                                                        <a class="action-plus-btn popup-image"
-                                                            href="assets/img/gallery/army/gallery1.jpg"><i
-                                                                class="fa fa-plus"></i></a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-4 col-md-6 grid-item c-2">
-                                            <div class="gallery-single mb-30">
-                                                <div class="gallery-thumb-wrapper">
-                                                    <div class="gallery-thumb">
-                                                        <img src="{{asset('armado')}}/assets/img/gallery/navy/gallery1.jpg"
-                                                            alt="img not found">
-                                                        <div class="gallery-overlay"></div>
-                                                    </div>
-                                                    <div class="gallery-thumb-action">
-                                                        <a class="action-plus-btn popup-image"
-                                                            href="assets/img/gallery/navy/gallery1.jpg"><i
-                                                                class="fa fa-plus"></i></a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-4 col-md-6 grid-item c-3">
-                                            <div class="gallery-single mb-30">
-                                                <div class="gallery-thumb-wrapper">
-                                                    <div class="gallery-thumb">
-                                                        <img src="{{asset('armado')}}/assets/img/gallery/police/gallery1.jpg"
-                                                            alt="img not found">
-                                                        <div class="gallery-overlay"></div>
-                                                    </div>
-                                                    <div class="gallery-thumb-action">
-                                                        <a class="action-plus-btn popup-image"
-                                                            href="assets/img/gallery/police/gallery1.jpg"><i
-                                                                class="fa fa-plus"></i></a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-4 col-md-6 grid-item c-4">
-                                            <div class="gallery-single mb-30">
-                                                <div class="gallery-thumb-wrapper">
-                                                    <div class="gallery-thumb">
-                                                        <img src="{{asset('armado')}}/assets/img/gallery/air-force/gallery1.jpg"
-                                                            alt="img not found">
-                                                        <div class="gallery-overlay"></div>
-                                                    </div>
-                                                    <div class="gallery-thumb-action">
-                                                        <a class="action-plus-btn popup-image"
-                                                            href="assets/img/gallery/air-force/gallery1.jpg"><i
-                                                                class="fa fa-plus"></i></a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-4 col-md-6 grid-item c-5">
-                                            <div class="gallery-single mb-30">
-                                                <div class="gallery-thumb-wrapper">
-                                                    <div class="gallery-thumb">
-                                                        <img src="{{asset('armado')}}/assets/img/gallery/fire/gallery8.jpg"
-                                                            alt="img not found">
-                                                        <div class="gallery-overlay"></div>
-                                                    </div>
-                                                    <div class="gallery-thumb-action">
-                                                        <a class="action-plus-btn popup-image"
-                                                            href="assets/img/gallery/fire/gallery8.jpg"><i
-                                                                class="fa fa-plus"></i></a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="text-center gallery-btn mt-25 mb-30">
-                        <a href="javascript:void(0)" class="text-btn load-more-btn">Load More</a>
-                    </div>
-                </div>
-            </div>
-        </section> --}}
         <section id="jops" class="bg-white operations-area pt-80 pb-130 p-relative z-index-2"
-            style="background-image: url('{{ asset('armado/assets/img/bg/wall_about.png') }}');">
+            style="background-image: url('{{ asset('armado/assets/img/bg/wall5.jpg') }}');">
             <div class="container">
                 <div class="row justify-content-center wow fadeInUp" data-wow-delay=".3s">
                     <div class="col-lg-8">
@@ -801,7 +679,7 @@
 
     <!-- footer-area-start -->
     <footer id="footer" class="footer1-bg footer-sticky"
-        data-background="{{ 'armado/' }}assets/img/bg/footer2-bg.jpg">
+        data-background="{{ 'armado/' }}assets/img/bg/wall3.jpg">
         <div class="footer1-overlay"></div>
         <div class="contact-meta-area">
             <div class="container">
@@ -814,7 +692,7 @@
                                 </div>
                                 <div class="meta-item-content">
                                     <div class="meta-title">Emargency Call</div>
-                                    <p><a href="tel:+91036259003">+91 036 259 003</a></p>
+                                    <p><a href="tel:+91036259003">+62 836 259 003</a></p>
                                 </div>
                             </div>
                         </div>
@@ -825,7 +703,7 @@
                                 </div>
                                 <div class="meta-item-content">
                                     <div class="meta-title">Email Us</div>
-                                    <p><a href="mailto:info@gmail.com">info@gmail.com</a></p>
+                                    <p><a href="mailto:info@gmail.com">dissenlek_kormar@tnial.mil.id</a></p>
                                 </div>
                             </div>
                         </div>
@@ -836,7 +714,7 @@
                                 </div>
                                 <div class="meta-item-content">
                                     <div class="meta-title">Location</div>
-                                    <p>Potter road, AV 02, NYE</p>
+                                    <p>Jl. Prajurit KKO Usman dan Harun, Jakarta</p>
                                 </div>
                             </div>
                         </div>
@@ -876,12 +754,11 @@
                     <div class="col-xl-4 col-lg-6 col-md-12 col-sm-12">
                         <div class="mb-40 footer-widget footer1-widget footer1-widget1">
                             <div class="footer-logo footer1-logo">
-                                <a href="index.html"><img src="{{ 'armado/' }}assets/img/logo/logo-white.png"
+                                <a href="#home"><img src="{{ asset('storage/' . $about->logo) }}"
                                         alt="img not found"></a>
                             </div>
-                            <p class="mb-55">A security agency is a governmental organization which conducts
-                                intelligence activities for the internal security of a
-                                nation.</p>
+                            <p class="mb-55">"Menjadi Pusat Pembinaan Senjata dan Elektronika yang Modern, Handal, dan
+                                Terintegrasi guna Mewujudkan Kekuatan Korps Marinir yang Tangguh dan Profesional."</p>
                             <div class="newsletter-form">
                                 <form action="#">
                                     <div class="newsletter-input-wrapper">
@@ -900,11 +777,11 @@
                             </div>
                             <div class="footer-links">
                                 <ul>
-                                    <li><a href="index.html">Home</a></li>
-                                    <li><a href="services.html">Services</a></li>
-                                    <li><a href="about.html">About Us</a></li>
-                                    <li><a href="services.html">Features</a></li>
-                                    <li><a href="contact.html">Contacts</a></li>
+                                    <li><a href="#">Home</a></li>
+                                    <li><a href="#about">Profile</a></li>
+                                    <li><a href="#kadis">Leader</a></li>
+                                    <li><a href="team">Team</a></li>
+                                    <li><a href="jops">Activty</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -946,7 +823,7 @@
                     <div class="row align-items-center">
                         <div class="col-lg-12">
                             <div class="text-center copyright-text copyright-1-text">
-                                Copyright &copy; 2025 by <a href="#">Armado</a>. All rights reserved.
+                                Copyright &copy; 2025 by <a href="#">ytm</a>. Disinfolahta Kormar.
                             </div>
                         </div>
                     </div>
