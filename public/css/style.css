@@ -1,4 +1,3 @@
-
 .logo-custom {
     width: 3%;
     /* Atur lebar sesuai keinginan */
@@ -475,7 +474,8 @@
 /* Menyeragamkan ukuran gambar agar grid tetap presisi */
 .operations-area .gallery-thumb img {
     width: 100% !important;
-    height: 250px !important; /* Tinggi seragam untuk estetika profesional */
+    height: 250px !important;
+    /* Tinggi seragam untuk estetika profesional */
     object-fit: cover !important;
     border-radius: 12px;
     transition: transform 0.5s ease;
@@ -491,7 +491,7 @@
     position: relative;
     overflow: hidden;
     border-radius: 12px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 }
 
 /* Container Overlay */
@@ -503,13 +503,16 @@
     height: 100%;
     background: linear-gradient(to bottom, transparent 50%, rgba(0, 0, 0, 0.8) 100%);
     opacity: 0;
-    display: flex; /* Gunakan flexbox */
-    align-items: flex-end; /* Posisi di bawah */
-    justify-content: space-between; /* Judul kiri, tombol kanan */
+    display: flex;
+    /* Gunakan flexbox */
+    align-items: flex-end;
+    /* Posisi di bawah */
+    justify-content: space-between;
+    /* Judul kiri, tombol kanan */
     padding: 20px;
     transition: all 0.3s ease-in-out;
     z-index: 5;
-    
+
 }
 
 .gallery-overlay .gallery-content-info {
@@ -519,10 +522,10 @@
     margin: 0;
 }
 
-.gallery-overlay .gallery-content-info h5{
+.gallery-overlay .gallery-content-info h5 {
     color: #ffffff;
     font-size: 20px;
-    font-weight:400;
+    font-weight: 400;
     margin: 0;
 }
 
@@ -532,7 +535,8 @@
 
 /* Bagian Tombol Action */
 .operations-area .gallery-thumb-action {
-    z-index: 10; /* Pastikan paling atas */
+    z-index: 10;
+    /* Pastikan paling atas */
     display: flex;
 }
 
@@ -576,5 +580,14 @@
 }
 
 .grid-item.hidden {
-        display: none !important;
-    }
+    display: none !important;
+}
+
+.location-map-footer iframe {
+    width: 100% !important;
+    /* Memaksa peta memenuhi lebar kontainer */
+    height: 200px;
+    /* Anda bisa sesuaikan tingginya di sini */
+    border-radius: 10px;
+    /* Opsional: agar sudutnya melengkung */
+}

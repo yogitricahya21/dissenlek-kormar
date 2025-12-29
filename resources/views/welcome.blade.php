@@ -10,33 +10,24 @@
     <!-- Place favicon.ico in the root directory -->
     <link rel="shortcut icon" type="image/x-icon" href="{{ asset('storage/' . $about->logo) }}">
     <!-- CSS here -->
-    <link rel="stylesheet" href="{{ 'armado/assets/css/preloader.css' }}">
-    <link rel="stylesheet" href="{{ 'armado/assets/css/bootstrap.css' }}">
-    <link rel="stylesheet" href="{{ 'armado/assets/css/meanmenu.css' }}">
-    <link rel="stylesheet" href="{{ 'armado/assets/css/animate.min.css' }}">
-    <link rel="stylesheet" href="{{ 'armado/assets/css/swiper-bundle.css' }}">
-    <link rel="stylesheet" href="{{ 'armado/assets/css/backToTop.css' }}">
-    <link rel="stylesheet" href="{{ 'armado/assets/css/magnific-popup.css' }}">
-    <link rel="stylesheet" href="{{ 'armado/assets/css/nice-select.css' }}">
-    <link rel="stylesheet" href="{{ 'armado/assets/css/fontAwesome5Pro.css' }}">
-    <link rel="stylesheet" href="{{ 'armado/assets/css/flaticon.css' }}">
-    <link rel="stylesheet" href="{{ 'armado/assets/css/slick.css' }}">
-    <link rel="stylesheet" href="{{ 'armado/assets/css/odometer.css' }}">
-    <link rel="stylesheet" href="{{ 'armado/assets/css/default.css' }}">
-    <link rel="stylesheet" href="{{ 'armado/assets/css/style.css' }}">
-    <link rel="stylesheet" href="{{ 'css/style.css' }}">
+    <link rel="stylesheet" href="{{ asset('armado/assets/css/preloader.css') }}">
+    <link rel="stylesheet" href="{{ asset('armado/assets/css/bootstrap.css') }}">
+    <link rel="stylesheet" href="{{ asset('armado/assets/css/meanmenu.css') }}">
+    <link rel="stylesheet" href="{{ asset('armado/assets/css/animate.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('armado/assets/css/swiper-bundle.css') }}">
+    <link rel="stylesheet" href="{{ asset('armado/assets/css/backToTop.css') }}">
+    <link rel="stylesheet" href="{{ asset('armado/assets/css/magnific-popup.css') }}">
+    <link rel="stylesheet" href="{{ asset('armado/assets/css/nice-select.css') }}">
+    <link rel="stylesheet" href="{{ asset('armado/assets/css/fontAwesome5Pro.css') }}">
+    <link rel="stylesheet" href="{{ asset('armado/assets/css/flaticon.css') }}">
+    <link rel="stylesheet" href="{{ asset('armado/assets/css/slick.css') }}">
+    <link rel="stylesheet" href="{{ asset('armado/assets/css/odometer.css') }}">
+    <link rel="stylesheet" href="{{ asset('armado/assets/css/default.css') }}">
+    <link rel="stylesheet" href="{{ asset('armado/assets/css/style.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/style.css') }}">
 </head>
 
 <body>
-    <!-- Tips untuk kamu: Jika kamu ingin mengubah warnanya, cari kelas header-main1 di file CSS kamu. Jika ingin mengganti menu, cukup tambah/kurangi tag <li> di dalam <ul>. -->
-    <!-- [if lte IE 9]>
-    <p class="browserupgrade">
-        You are using an <strong>outdated</strong> browser. Please
-        <a href="https://browsehappy.com/">upgrade your browser</a> to improve
-        your experience and security.
-    </p>
-    <![endif] -->
-
     <div class="mouseCursor cursor-outer"></div>
     <div class="mouseCursor cursor-inner"><span>Drag</span></div>
 
@@ -49,9 +40,8 @@
                         <div class="header-main-content-wrapper">
                             <div class="header-main-left header-main-left-header1">
                                 <div class="header-logo header1-logo logo-wrapper">
-                                    <a href="#home" class="logo-white">
-                                        <img src="{{ asset('storage/' . $about->logo) }}" alt="logo-img">
-                                    </a>
+                                    <a href="#home" class="logo-white"><img
+                                            src="{{ asset('storage/' . $about->logo) }}" alt="logo-img"></a>
                                     <span class="logo-text">DISSENLEK <br> KORPS MARINIR</span>
                                 </div>
                             </div>
@@ -74,7 +64,7 @@
                                 <div class="menu-bar d-xl-none">
                                     <a class="side-toggle" href="#about">
                                         <div class="dot-icon">
-                                            <img src="{{ 'armado/' }}assets/img/icons/side-toggle.png"
+                                            <img src="{{ asset('armado/assets/img/icons/side-toggle.png') }}"
                                                 alt="img not found">
                                         </div>
                                     </a>
@@ -88,7 +78,7 @@
                                         </a>
                                         <div class="meta-item-content d-none d-xxl-inline-block">
                                             <div class="meta-title">Emargency Call</div>
-                                            <p><a href="tel:+91036259003">+91 036 259 003</a></p>
+                                            <p><a href="#0">+91 036 259 003</a></p>
                                         </div>
                                     </div>
                                 </div>
@@ -123,40 +113,31 @@
                 </div>
                 <div class="mobile-menu d-xl-none fix"></div>
                 <div class="offset-widget offset_searchbar mb-30">
-                    <form action="#" class="filter-search-input">
-                        <input type="text" placeholder="Search keyword">
-                        <button type="submit"><i class="fal fa-search"></i></button>
+                    <form action="#0" class="filter-search-input" onsubmit="return false;">
+                        <input type="text" id="global-search" placeholder="Cari kata kunci...">
+                        <button type="button" id="search-trigger"><i class="fal fa-search"></i></button>
                     </form>
                 </div>
                 <div class="offset-widget offset-support mb-30">
                     <div class="meta-item header-meta-item">
-                        <a href="tel:+91036259003">
+                        <a href="#0">
                             <div class="meta-item-icon">
                                 <i class="fas fa-phone-alt"></i>
                             </div>
                         </a>
                         <div class="meta-item-content">
                             <div class="meta-title"><span>Emargency</span> Call</div>
-                            <p><a href="tel:+91036259003">+91 036 259 003</a></p>
+                            <p><a href="#0">+91 036 259 003</a></p>
                         </div>
                     </div>
                 </div>
                 <div class="mb-0 offset-widget offset-social">
                     <div class="social-links">
                         <ul>
-                            <li><a href="https://facebook.com
-                                " target="_blank"><i
-                                        class="fab fa-facebook"></i></a></li>
-                            <li><a href="https://twitter.com
-                                " target="_blank"><i
-                                        class="fab fa-twitter"></i></a></li>
-                            <li>
-                                <a href="https://linkedin.com/" target="_blank"><i
-                                        class="fab fa-linkedin-in"></i></a>
-                            </li>
-                            <li><a href="https://youtube.com
-                                " target="_blank"><i
-                                        class="fab fa-youtube"></i></a></li>
+                            <li><a href="#0" target="_blank"><i class="fab fa-facebook"></i></a></li>
+                            <li><a href="#0" target="_blank"><i class="fab fa-twitter"></i></a></li>
+                            <li><a href="#0" target="_blank"><i class="fab fa-instagram"></i></a></li>
+                            <li><a href="#0" target="_blank"><i class="fab fa-youtube"></i></a></li>
                         </ul>
                     </div>
                 </div>
@@ -193,14 +174,12 @@
                                 @endif
                                 <div class="social-links bannner-3-social">
                                     <ul>
-                                        <li><a href="https://facebook.com" target="_blank"><i
-                                                    class="fab fa-facebook"></i></a></li>
-                                        <li><a href="https://twitter.com" target="_blank"><i
-                                                    class="fab fa-twitter"></i></a></li>
-                                        <li><a href="https://linkedin.com/" target="_blank"><i
-                                                    class="fab fa-linkedin-in"></i></a></li>
-                                        <li><a href="https://youtube.com" target="_blank"><i
-                                                    class="fab fa-youtube"></i></a></li>
+                                        <li><a href="" target="_blank"><i class="fab fa-facebook"></i></a>
+                                        </li>
+                                        <li><a href="" target="_blank"><i class="fab fa-twitter"></i></a></li>
+                                        <li><a href="" target="_blank"><i class="fab fa-instagram"></i></a>
+                                        </li>
+                                        <li><a href="" target="_blank"><i class="fab fa-youtube"></i></a></li>
                                     </ul>
                                 </div>
                                 <div class="armado-shape">
@@ -459,21 +438,11 @@
                                             <div class="team-card team-special">
                                                 <div class="team-thumb">
                                                     <div class="panel wow"></div>
-                                                    <div class="team-thumb-bg">
-                                                        <svg width="389" height="444" viewBox="0 0 389 444"
-                                                            fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                            <mask fill="white">
-                                                                <path
-                                                                    d="M150.006 24.9562L171.639 37.1185L193.272 49.2807L214.667 36.8026L236.063 24.3244L214.429 12.1622L192.796 0L171.401 12.4781L150.006 24.9562ZM86.6117 185.829L86.7702 210.47L86.9287 235.11L87.0872 259.75L87.2457 284.391L108.879 296.553L130.512 308.715L152.145 320.877L173.778 333.04L195.411 345.202L216.807 332.724L238.202 320.245L259.598 307.767L280.993 295.289L302.388 282.811L302.23 258.171L302.071 233.53L301.913 208.89L301.754 184.25L323.15 171.772L344.545 159.293L344.704 183.934L344.862 208.574L345.021 233.215L345.179 257.855L345.338 282.495L345.496 307.136L324.101 319.614L302.705 332.092L281.31 344.57L259.914 357.048L238.519 369.526L217.124 382.004L195.728 394.482L174.095 382.32L152.462 370.158L130.829 357.996L109.354 345.991L87.7211 333.829L66.088 321.667L44.4549 309.505L44.2964 284.864L44.1379 260.224L43.9794 235.584L43.8209 210.943L43.5832 186.145L43.4247 161.505L64.9786 173.588L86.6117 185.829ZM44.8511 358.785L66.4842 370.948L88.1173 383.11L109.75 395.272L131.384 407.434L153.017 419.597L174.65 431.759L196.283 443.921L217.678 431.443L239.074 418.965L260.469 406.487L281.865 394.009L303.26 381.53L324.655 369.052L346.051 356.574L367.446 344.096L388.842 331.618L388.683 306.978L388.525 282.337L388.366 257.697L388.208 233.057L388.049 208.416L387.891 183.776L387.732 159.136L387.574 134.495L387.415 109.855L365.782 97.6926L344.387 110.171L322.991 122.649L301.596 135.127L280.2 147.605L258.567 135.443L236.934 123.281L258.33 110.803L279.725 98.3244L301.12 85.8463L322.516 73.3682L300.883 61.206L279.25 49.0438L257.854 61.5219L236.459 74L215.063 86.4781L193.668 98.9563L171.956 86.4781L150.322 74.3159L128.689 62.1537L107.056 49.9915L85.6608 62.4696L64.2654 74.9477L85.8986 87.1099L107.532 99.2721L129.165 111.434L150.798 123.597L172.431 135.759L194.064 147.921L215.697 160.083L237.33 172.245L258.964 184.408L259.122 209.048L259.281 233.688L259.439 258.329L238.044 270.807L216.648 283.285L195.253 295.763L173.62 283.601L151.828 271.676L130.195 259.513L130.036 234.873L129.878 210.233L151.511 222.395L173.144 234.557L194.777 246.719L216.173 234.241L216.014 209.601L194.381 197.439L172.748 185.276L151.115 172.956L129.482 160.794L107.849 148.632L86.2155 136.47L64.5824 124.307L43.0285 112.145L21.3954 99.9829L0 112.461L0.158484 137.101L0.316969 161.742L0.475453 186.382L0.633938 211.022L0.792422 235.663L0.950907 260.303L1.26788 285.101L1.42636 309.742L1.58484 334.382L23.218 346.544L44.8511 358.785Z" />
-                                                            </mask>
-                                                            <path
-                                                                d="M150.006 24.9562L171.639 37.1185L193.272 49.2807L214.667 36.8026L236.063 24.3244L214.429 12.1622L192.796 0L171.401 12.4781L150.006 24.9562ZM86.6117 185.829L86.7702 210.47L86.9287 235.11L87.0872 259.75L87.2457 284.391L108.879 296.553L130.512 308.715L152.145 320.877L173.778 333.04L195.411 345.202L216.807 332.724L238.202 320.245L259.598 307.767L280.993 295.289L302.388 282.811L302.23 258.171L302.071 233.53L301.913 208.89L301.754 184.25L323.15 171.772L344.545 159.293L344.704 183.934L344.862 208.574L345.021 233.215L345.179 257.855L345.338 282.495L345.496 307.136L324.101 319.614L302.705 332.092L281.31 344.57L259.914 357.048L238.519 369.526L217.124 382.004L195.728 394.482L174.095 382.32L152.462 370.158L130.829 357.996L109.354 345.991L87.7211 333.829L66.088 321.667L44.4549 309.505L44.2964 284.864L44.1379 260.224L43.9794 235.584L43.8209 210.943L43.5832 186.145L43.4247 161.505L64.9786 173.588L86.6117 185.829ZM44.8511 358.785L66.4842 370.948L88.1173 383.11L109.75 395.272L131.384 407.434L153.017 419.597L174.65 431.759L196.283 443.921L217.678 431.443L239.074 418.965L260.469 406.487L281.865 394.009L303.26 381.53L324.655 369.052L346.051 356.574L367.446 344.096L388.842 331.618L388.683 306.978L388.525 282.337L388.366 257.697L388.208 233.057L388.049 208.416L387.891 183.776L387.732 159.136L387.574 134.495L387.415 109.855L365.782 97.6926L344.387 110.171L322.991 122.649L301.596 135.127L280.2 147.605L258.567 135.443L236.934 123.281L258.33 110.803L279.725 98.3244L301.12 85.8463L322.516 73.3682L300.883 61.206L279.25 49.0438L257.854 61.5219L236.459 74L215.063 86.4781L193.668 98.9563L171.956 86.4781L150.322 74.3159L128.689 62.1537L107.056 49.9915L85.6608 62.4696L64.2654 74.9477L85.8986 87.1099L107.532 99.2721L129.165 111.434L150.798 123.597L172.431 135.759L194.064 147.921L215.697 160.083L237.33 172.245L258.964 184.408L259.122 209.048L259.281 233.688L259.439 258.329L238.044 270.807L216.648 283.285L195.253 295.763L173.62 283.601L151.828 271.676L130.195 259.513L130.036 234.873L129.878 210.233L151.511 222.395L173.144 234.557L194.777 246.719L216.173 234.241L216.014 209.601L194.381 197.439L172.748 185.276L151.115 172.956L129.482 160.794L107.849 148.632L86.2155 136.47L64.5824 124.307L43.0285 112.145L21.3954 99.9829L0 112.461L0.158484 137.101L0.316969 161.742L0.475453 186.382L0.633938 211.022L0.792422 235.663L0.950907 260.303L1.26788 285.101L1.42636 309.742L1.58484 334.382L23.218 346.544L44.8511 358.785Z"
-                                                                stroke="#575757" stroke-width="4"
-                                                                mask="url(#path-1-inside-1_62_3102)" />
-                                                        </svg>
+                                                    <div class="team-thumb-bg svg-container">
+                                                        @include('components.pattern-svg')
                                                     </div>
                                                     <div style="max-width: 250px; margin-bottom: 30px;">
-                                                        <a href="#">
+                                                        <a href="#0">
                                                             <img src="{{ asset('storage/' . $leader->image) }}"
                                                                 alt="{{ $leader->name }}" class="img-pimpinan">
                                                         </a>
@@ -527,7 +496,7 @@
                                     <div class="team-card team-3">
                                         <div class="team-thumb">
                                             <div class="team-thumb-bg"></div>
-                                            <a href="#">
+                                            <a href="0#">
                                                 <img src="{{ asset('storage/' . $personnel->image) }}"
                                                     class="img-personel" alt="{{ $personnel->name }}">
                                             </a>
@@ -553,7 +522,7 @@
         <!-- personel area end  -->
 
         <!-- gallery kegiatan area start  -->
-        <section id="jops" class="bg-white operations-area pt-80 pb-130 p-relative z-index-2"
+        {{-- <section id="jops" class="bg-white operations-area pt-80 pb-130 p-relative z-index-2"
             style="background-image: url('{{ asset('armado/assets/img/bg/wall5.jpg') }}');">
             <div class="container">
                 <div class="row justify-content-center wow fadeInUp" data-wow-delay=".3s">
@@ -615,6 +584,72 @@
                     </div>
                 </div>
             </div>
+        </section> --}}
+        <section id="jops" class="bg-white operations-area pt-80 pb-130 p-relative z-index-2"
+            style="background-image: url('{{ asset('armado/assets/img/bg/wall5.jpg') }}');">
+            <div class="container">
+                <div class="row justify-content-center wow fadeInUp" data-wow-delay=".3s">
+                    <div class="col-lg-8">
+                        <div class="bd-section-title-wrapper centered-title operation-title">
+                            <div class="bd-section-subtitle st-b">
+                                <div class="subtitle-text">activities <span>gallery</span></div>
+                            </div>
+                            <h3 class="bd-section-title mb-50">kegiatan dissenlek kormar</h3>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="container">
+                    <div class="gallery-tab-wrapper wow fadeInUp" data-wow-delay=".3s">
+                        <div class="gallery-tab-nav mb-65">
+                            <nav>
+                                <div class="nav nav-tabs masonary-menu">
+                                    <button class="nav-link active" data-filter="*">ALL</button>
+                                    <button class="nav-link" data-filter=".duknis">DUKNIS</button>
+                                    <button class="nav-link" data-filter=".harsis">HARSIS</button>
+                                    <button class="nav-link" data-filter=".urtu">URTU</button>
+                                    <button class="nav-link" data-filter=".ren">REN</button>
+                                </div>
+                            </nav>
+                        </div>
+
+                        <div class="gallery-tab-content">
+                            <div class="tab-content">
+                                <div class="grid gallery-wrapper row">
+                                    @foreach ($activities as $index => $item)
+                                        <div class="col-lg-4 col-md-6 grid-item {{ strtolower($item->subdis) }}">
+                                            <div class="gallery-single mb-30">
+                                                <div class="gallery-thumb-wrapper">
+                                                    <div class="gallery-thumb">
+                                                        <img src="{{ asset('storage/' . $item->image) }}"
+                                                            alt="{{ $item->title }}">
+                                                        <div class="gallery-overlay">
+                                                            <div class="gallery-content-info">
+                                                                <h5 class="activity-title">{{ $item->title }}</h5>
+                                                                <span>{{ \Carbon\Carbon::parse($item->date)->translatedFormat('d M Y') }}</span>
+                                                            </div>
+                                                            <div class="gallery-thumb-action">
+                                                                <a class="action-plus-btn popup-image"
+                                                                    href="{{ asset('storage/' . $item->image) }}">
+                                                                    <i class="fa fa-plus"></i>
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    @endforeach
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="text-center gallery-btn mt-25 mb-30">
+                        <a href="javascript:void(0)" class="text-btn load-more-btn" id="btn-load-more">Load More</a>
+                    </div>
+                </div>
+            </div>
         </section>
         <!-- gallery kegiatan area end  -->
 
@@ -622,7 +657,7 @@
 
     <!-- footer-area-start -->
     <footer id="footer" class="footer1-bg footer-sticky"
-        data-background="{{ 'armado/' }}assets/img/bg/wall3.jpg">
+        data-background="{{ asset('armado/assets/img/bg/wall3.jpg') }}">
         <div class="footer1-overlay"></div>
         <div class="contact-meta-area">
             <div class="container">
@@ -635,7 +670,7 @@
                                 </div>
                                 <div class="meta-item-content">
                                     <div class="meta-title">Emargency Call</div>
-                                    <p><a href="tel:+91036259003">+62 836 259 003</a></p>
+                                    <p><a href="#0">+62 836 259 003</a></p>
                                 </div>
                             </div>
                         </div>
@@ -646,7 +681,7 @@
                                 </div>
                                 <div class="meta-item-content">
                                     <div class="meta-title">Email Us</div>
-                                    <p><a href="mailto:info@gmail.com">dissenlek_kormar@tnial.mil.id</a></p>
+                                    <p><a href="#0">dissenlek_kormar@tnial.mil.id</a></p>
                                 </div>
                             </div>
                         </div>
@@ -670,17 +705,14 @@
                                     <div class="meta-title">Social Links</div>
                                     <div class="social-links follow-us">
                                         <ul>
-                                            <li><a href="https://facebook.com
-                                    "
-                                                    target="_blank"><i class="fab fa-facebook"></i></a></li>
-                                            <li><a href="https://twitter.com
-                                    "
-                                                    target="_blank"><i class="fab fa-twitter"></i></a></li>
-                                            <li><a href="https://linkedin.com/" target="_blank"><i
-                                                        class="fab fa-linkedin-in"></i></a></li>
-                                            <li><a href="https://youtube.com
-                                    "
-                                                    target="_blank"><i class="fab fa-youtube"></i></a></li>
+                                            <li><a href="#0" target="_blank"><i class="fab fa-facebook"></i></a>
+                                            </li>
+                                            <li><a href="#0" target="_blank"><i class="fab fa-twitter"></i></a>
+                                            </li>
+                                            <li><a href="#0" target="_blank"><i
+                                                        class="fab fa-instagram"></i></a></li>
+                                            <li><a href="#0" target="_blank"><i class="fab fa-youtube"></i></a>
+                                            </li>
                                         </ul>
                                     </div>
                                 </div>
@@ -696,20 +728,11 @@
                     <div class="col-xl-4 col-lg-6 col-md-12 col-sm-12">
                         <div class="mb-40 footer-widget footer1-widget footer1-widget1">
                             <div class="footer-logo footer1-logo">
-                                <a href="#home"><img src="{{ asset('storage/' . $about->logo) }}"
+                                <a href="#"><img src="{{ asset('storage/' . $about->logo) }}"
                                         alt="img not found"></a>
                             </div>
                             <p class="mb-55">"Menjadi Pusat Pembinaan Senjata dan Elektronika yang Modern, Handal, dan
                                 Terintegrasi guna Mewujudkan Kekuatan Korps Marinir yang Tangguh dan Profesional."</p>
-                            <div class="newsletter-form">
-                                <form action="#">
-                                    <div class="newsletter-input-wrapper">
-                                        <input type="email" placeholder="Email address">
-                                        <button type="submit" class="fill-btn"><i
-                                                class="fab fa-telegram-plane"></i></button>
-                                    </div>
-                                </form>
-                            </div>
                         </div>
                     </div>
                     <div class="col-xl-2 col-lg-3 col-md-6 col-sm-6">
@@ -719,11 +742,11 @@
                             </div>
                             <div class="footer-links">
                                 <ul>
-                                    <li><a href="#">Home</a></li>
+                                    <li><a href="#home">Home</a></li>
                                     <li><a href="#about">Profile</a></li>
                                     <li><a href="#kadis">Leader</a></li>
-                                    <li><a href="team">Team</a></li>
-                                    <li><a href="jops">Activty</a></li>
+                                    <li><a href="#team">Team</a></li>
+                                    <li><a href="#jops">Activty</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -735,11 +758,11 @@
                             </div>
                             <div class="footer-links">
                                 <ul>
-                                    <li><a href="contact.html">Contact Us</a></li>
-                                    <li><a href="service-details.html">Ambulance Service</a></li>
-                                    <li><a href="service-details.html">Fire Investigation</a></li>
-                                    <li><a href="service-details.html">Community Safety</a></li>
-                                    <li><a href="blog-2.html">Blog Grid</a></li>
+                                    <li><a href="">Contact Us</a></li>
+                                    <li><a href="">Ambulance Service</a></li>
+                                    <li><a href="">Fire Investigation</a></li>
+                                    <li><a href="">Community Safety</a></li>
+                                    <li><a href="">Blog Grid</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -751,7 +774,9 @@
                             </div>
                             <div class="location-map-footer">
                                 <iframe
-                                    src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d6593.0772915468015!2d-73.99357413118337!3d40.7413618836947!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c259a6bd917da7%3A0x79997d3983197d7c!2sMadison%20Square%20Park!5e0!3m2!1sen!2sbd!4v1667729817880!5m2!1sen!2sbd"></iframe>
+                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.621651313296!2d106.83266382695312!3d-6.181366899999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f43427f8a3f9%3A0x311609e81501f3f5!2sMako%20Marinir!5e0!3m2!1sid!2sid!4v1767007211887!5m2!1sid!2sid"
+                                    width="100%" height="250" style="border:0;" allowfullscreen=""
+                                    loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                             </div>
                         </div>
                     </div>
@@ -764,7 +789,7 @@
                     <div class="row align-items-center">
                         <div class="col-lg-12">
                             <div class="text-center copyright-text copyright-1-text">
-                                Copyright &copy; 2025 by <a href="#">ytm</a>. Disinfolahta Kormar.
+                                Copyright &copy; 2025 by <a href="">ytm</a>. Disinfolahta Kormar.
                             </div>
                         </div>
                     </div>
@@ -849,21 +874,14 @@
     <script src="{{ asset('armado/assets/js/nice-select.min.js') }}"></script>
     <script src="{{ asset('armado/assets/js/ajax-form.js') }}"></script>
     <script src="{{ asset('armado/assets/js/wow.min.js') }}"></script>
-
     <script src="{{ asset('armado/assets/js/isotope.pkgd.min.js') }}"></script>
-
     <script src="{{ asset('armado/assets/js/imagesloaded.pkgd.min.js') }}"></script>
-    <script src="{{ asset('js/main.js') }}"></script>
-
     <script src="{{ asset('armado/assets/js/jquery.appear.js') }}"></script>
     <script src="{{ asset('armado/assets/js/jquery.odometer.min.js') }}"></script>
     <script src="{{ asset('armado/assets/js/slick.min.js') }}"></script>
     <script src="{{ asset('armado/assets/js/js_circle-progress.min.js') }}"></script>
-
     <script src="{{ asset('armado/assets/js/main.js') }}"></script>
-
-
-</body>
+    <script src="{{ asset('js/editing.js') }}"></script>
 </body>
 
 </html>
