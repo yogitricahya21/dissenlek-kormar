@@ -46,11 +46,7 @@
             <div class="container">
                 <div class="row align-items-center">
                     <div class="col-xl-12 col-lg-12">
-
-                        <!-- header main wrapper -->
                         <div class="header-main-content-wrapper">
-
-                            <!-- header left logo-->
                             <div class="header-main-left header-main-left-header1">
                                 <div class="header-logo header1-logo logo-wrapper">
                                     <a href="#home" class="logo-white">
@@ -59,12 +55,7 @@
                                     <span class="logo-text">DISSENLEK <br> KORPS MARINIR</span>
                                 </div>
                             </div>
-                            <!-- header left logo end-->
-
-                            <!-- header right main menu -->
                             <div class="header-main-right header-main-right-header1">
-
-                                <!-- menus -->
                                 <div class="main-menu main-menu1 d-none d-xl-block">
                                     <nav id="mobile-menu">
                                         <ul>
@@ -80,9 +71,6 @@
                                         </ul>
                                     </nav>
                                 </div>
-                                <!-- menus end -->
-
-                                <!-- mobile menu area start -->
                                 <div class="menu-bar d-xl-none">
                                     <a class="side-toggle" href="#about">
                                         <div class="dot-icon">
@@ -91,9 +79,6 @@
                                         </div>
                                     </a>
                                 </div>
-                                <!-- mobile menu area end -->
-
-                                <!--contact info-->
                                 <div class="meta-items meta-items-header1 d-none d-lg-inline-flex">
                                     <div class="meta-item header-meta-item">
                                         <a href="#footer">
@@ -107,12 +92,8 @@
                                         </div>
                                     </div>
                                 </div>
-                                <!--contact info end-->
-
                             </div>
-                            <!-- header right main menu end-->
                         </div>
-                        <!-- header main wrapper end-->
                     </div>
                 </div>
             </div>
@@ -188,7 +169,6 @@
 
     <!-- Add your site or application content here -->
     <main>
-
         <!-- home-area-start -->
         <div id="home" class="banner-area banner-area3 pos-rel z-index-2">
             <div class="swiper-container slider__active">
@@ -197,16 +177,12 @@
                         <div class="swiper-slide">
                             <div
                                 class="single-banner single-banner-3 banner-1080 p-relative d-flex align-items-center">
-
-                                {{-- 1. BAGIAN BACKGROUND (IMAGE / VIDEO) --}}
                                 @if ($banner->media_type == 'image')
-                                    {{-- HAPUS class d-none dan tambahkan style background-image langsung --}}
                                     <div class="banner-bg banner-bg3 banner-bg3-1"
                                         data-background="{{ asset('assets/img/banner/' . $banner->media_file) }}"
                                         style="background-image: url('{{ asset('assets/img/banner/' . $banner->media_file) }}');">
                                     </div>
                                 @else
-                                    {{-- Untuk Video --}}
                                     <div class="banner-bg banner-bg3 banner-bg3-1 d-none" data-background=""></div>
                                     <div class="video-wrapper p-relative">
                                         <video autoplay muted loop>
@@ -215,8 +191,6 @@
                                         </video>
                                     </div>
                                 @endif
-
-                                {{-- 2. SOSIAL MEDIA (STATIS SESUAI TEMPLATE) --}}
                                 <div class="social-links bannner-3-social">
                                     <ul>
                                         <li><a href="https://facebook.com" target="_blank"><i
@@ -229,13 +203,9 @@
                                                     class="fab fa-youtube"></i></a></li>
                                     </ul>
                                 </div>
-
-                                {{-- 3. TEXT BACKROUND (STROKE) --}}
                                 <div class="armado-shape">
                                     <span class="stroke-text">{{ $banner->stroke_text }}</span>
                                 </div>
-
-                                {{-- 4. ORNAMEN SHAPE (STATIS) --}}
                                 <div class="banner-shape-wrapper">
                                     <img class="banner-3-shape-a-1"
                                         src="{{ asset('armado/assets/img/shape/cube-shape-2.png') }}"
@@ -250,30 +220,21 @@
                                         src="{{ asset('armado/assets/img/shape/square-route.png') }}"
                                         alt="img not found">
                                 </div>
-
                                 <div class="container">
                                     <div class="banner-inner p-relative">
                                         <div class="row">
                                             <div class="col-12">
                                                 <div
                                                     class="text-center banner-content banner-content3 banner-content3-1">
-
-                                                    {{-- 5. EYEBROW TEXT (Teks kecil paling atas) --}}
                                                     @if ($banner->eyebrow_text)
                                                         <p class="mb-5">{{ $banner->eyebrow_text }}</p>
                                                     @endif
-
-                                                    {{-- 6. JUDUL UTAMA --}}
                                                     <h1 class="mb-10 banner-title">
                                                         {{ $banner->title }}
                                                     </h1>
-
-                                                    {{-- 7. SUBTITLE --}}
                                                     <div class="banner-meta-text">
                                                         <span>{{ $banner->subtitle }}</span>
                                                     </div>
-
-                                                    {{-- 8. TOMBOL-TOMBOL --}}
                                                     <div class="banner-btn justify-content-center mt-80">
                                                         <a href="{{ $banner->btn_fill_url }}"
                                                             class="fill-btn">{{ $banner->btn_fill_text }}</a>
@@ -407,7 +368,6 @@
                             </div>
                         </div>
                     </div>
-
                     <div class="col-xl-5 d-none d-xl-block">
                         <div class="about-thumb-1-area">
                             <div class="about-thumb-1-wrapper mb-100 p-relative z-index-1"
@@ -435,19 +395,16 @@
         <!-- kepala dinas area start  -->
         <section id="kadis" class="about-area pt-130 pb-65 section-kadis-custom"
             style="background-image: url('{{ asset('armado/assets/img/bg/wall.jpg') }}');">
-
             <div class="container">
                 @if ($kadis)
                     <div class="about-inner p-relative">
                         <div class="row align-items-center">
-
                             <div class="col-xl-5 kadis-desktop-column wow fadeInLeft" data-wow-delay=".3s"
                                 data-wow-duration="1.2s">
                                 <div class="about-thumb-3-1">
                                     <img src="{{ asset('storage/' . $kadis->image) }}" alt="Foto Kadis">
                                 </div>
                             </div>
-
                             <div class="col-xl-7">
                                 <div class="about-content-wrapper-3 mb-65 wow fadeInRight" data-wow-delay=".5s"
                                     data-wow-duration="1.2s">
@@ -460,21 +417,17 @@
                                             <span class="kadis-name-text">{{ $kadis->name }}</span>
                                         </div>
                                     </div>
-
                                     <div class="kadis-mobile-img wow fadeIn" data-wow-delay=".2s">
                                         <img src="{{ asset('storage/' . $kadis->image) }}" alt="Kadis Mobile">
                                     </div>
-
                                     <div class="about-sp kadis-quote-box">
                                         {!! $kadis->quote !!}
                                     </div>
                                     <div class="about-description">
                                         {!! $kadis->description !!}
                                     </div>
-
                                 </div>
                             </div>
-
                         </div>
                     </div>
                 @endif
@@ -501,14 +454,12 @@
                         <div class="team-wrapper">
                             <div class="team-slider swiper-container">
                                 <div class="swiper-wrapper">
-                                    {{-- Loop Data Leaders dari Database --}}
                                     @foreach ($leaders as $leader)
                                         <div class="swiper-slide">
                                             <div class="team-card team-special">
                                                 <div class="team-thumb">
                                                     <div class="panel wow"></div>
                                                     <div class="team-thumb-bg">
-                                                        {{-- SVG Frame Tetap Dipertahankan Sesuai Template --}}
                                                         <svg width="389" height="444" viewBox="0 0 389 444"
                                                             fill="none" xmlns="http://www.w3.org/2000/svg">
                                                             <mask fill="white">
@@ -521,7 +472,6 @@
                                                                 mask="url(#path-1-inside-1_62_3102)" />
                                                         </svg>
                                                     </div>
-                                                    {{-- Menampilkan Image dari Database --}}
                                                     <div style="max-width: 250px; margin-bottom: 30px;">
                                                         <a href="#">
                                                             <img src="{{ asset('storage/' . $leader->image) }}"
@@ -530,16 +480,12 @@
                                                     </div>
                                                 </div>
                                                 <div class="team-content">
-                                                    {{-- Menampilkan Nama Leader --}}
                                                     <h4 class="member-name"><a href="#">{{ $leader->name }}</a>
                                                     </h4>
-                                                    {{-- Menampilkan Rank (Pangkat) dan Period (Masa Jabatan) --}}
                                                     <span class="member-designation">{{ $leader->rank }}</span>
                                                     <p class="mt-2" style="color: #575757;">MASA JABATAN <br>
                                                         {{ $leader->period }}
                                                     </p>
-
-                                                    {{-- Menandai jika pimpinan saat ini --}}
                                                     @if ($leader->is_current)
                                                         <span class="text-white badge bg-primary">Pimpinan Saat
                                                             Ini</span>
@@ -620,7 +566,6 @@
                         </div>
                     </div>
                 </div>
-
                 <div class="container">
                     <div class="gallery-tab-wrapper wow fadeInUp" data-wow-delay=".3s">
                         <div class="gallery-tab-nav mb-65">
@@ -638,14 +583,12 @@
                             <div class="tab-content">
                                 <div class="grid gallery-wrapper row">
                                     @foreach ($activities as $index => $item)
-                                        {{-- Gunakan lowercase untuk class agar cocok dengan filter button --}}
                                         <div class="col-lg-4 col-md-6 grid-item {{ strtolower($item->subdis) }}">
                                             <div class="gallery-single mb-30">
                                                 <div class="gallery-thumb-wrapper">
                                                     <div class="gallery-thumb">
                                                         <img src="{{ asset('storage/' . $item->image) }}"
                                                             alt="{{ $item->title }}">
-
                                                         <div class="gallery-overlay">
                                                             <div class="gallery-content-info">
                                                                 <h5>{{ $item->title }}</h5>
@@ -747,7 +690,6 @@
                 </div>
             </div>
         </div>
-
         <section class="footer-area footer-area1 footer-area1-bg pt-65 pb-25">
             <div class="container">
                 <div class="row">
@@ -816,7 +758,6 @@
                 </div>
             </div>
         </section>
-
         <div class="copyright-area copyright-1-area">
             <div class="container">
                 <div class="copyright-1-inner">
@@ -912,6 +853,7 @@
     <script src="{{ asset('armado/assets/js/isotope.pkgd.min.js') }}"></script>
 
     <script src="{{ asset('armado/assets/js/imagesloaded.pkgd.min.js') }}"></script>
+    <script src="{{ asset('js/main.js') }}"></script>
 
     <script src="{{ asset('armado/assets/js/jquery.appear.js') }}"></script>
     <script src="{{ asset('armado/assets/js/jquery.odometer.min.js') }}"></script>
@@ -920,17 +862,6 @@
 
     <script src="{{ asset('armado/assets/js/main.js') }}"></script>
 
-    <script>
-        $(document).ready(function() {
-            $('.popup-image').magnificPopup({
-                type: 'image',
-                gallery: {
-                    enabled: true
-                },
-                mainClass: 'mfp-with-zoom', // Opsional: menambah animasi zoom
-            });
-        });
-    </script>
 
 </body>
 </body>
