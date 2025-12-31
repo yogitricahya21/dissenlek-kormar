@@ -43,30 +43,35 @@ class AuthenticatedSessionController extends Controller
             ]);
         }
 
-        // Validasi reCAPTCHA ke Google dengan proteksi kegagalan API
-        try {
-            /** @var \Illuminate\Http\Client\Response $response */
-            $response = Http::withoutVerifying()->asForm()->timeout(5)->post('https://www.google.com/recaptcha/api/siteverify', [
-                'secret' => config('services.recaptcha.secret') ?: env('RECAPTCHA_SECRET_KEY'),
-                'response' => $request->input('g-recaptcha-response'),
-                'remoteip' => $request->ip(),
-            ]);
 
-            // Tambahkan log untuk melihat respon asli Google di storage/logs/laravel.log
-            \Log::info('Google reCAPTCHA Response:', $response->json() ?? ['error' => 'No Response']);
+        
+        // Validasi reCAPTCHA
+try {
+    $secretKey = config('services.recaptcha.secret') ?? env('RECAPTCHA_SECRET_KEY');
+    /** @var \Illuminate\Http\Client\Response $response */
+    // Hapus withoutVerifying() agar lebih aman dan diterima Google
+    $response = Http::asForm()->timeout(10)->post('https://www.google.com/recaptcha/api/siteverify', [
+        'secret'   => $secretKey,
+        'response' => $request->input('g-recaptcha-response'),
+        'remoteip' => $request->ip(),
+    ]);
 
-            if ($response->failed() || !$response['success']) {
-                throw ValidationException::withMessages([
-                    'g-recaptcha-response' => 'Verifikasi bot gagal atau server Google tidak merespons.',
-                ]);
-            }
-        } catch (\Exception $e) {
-            // Jika API Google Down, log error-nya tapi beri tahu user dengan sopan
-            Log::error('reCAPTCHA Error: ' . $e->getMessage());
-            throw ValidationException::withMessages([
-                'g-recaptcha-response' => 'Terjadi kesalahan sistem pada verifikasi keamanan.',
-            ]);
-        }
+    $data = $response->json();
+
+    if ($response->failed() || !($data['success'] ?? false)) {
+        // Log detail kegagalan untuk debugging di storage/logs/laravel.log
+        Log::error('reCAPTCHA Failed:', $data ?? ['no_data']);
+        
+        throw ValidationException::withMessages([
+            'g-recaptcha-response' => 'Verifikasi reCAPTCHA gagal. Pastikan Anda mencentang box keamanan.',
+        ]);
+    }
+} catch (\Exception $e) {
+    Log::error('reCAPTCHA System Error: ' . $e->getMessage());
+    throw ValidationException::withMessages([
+        'g-recaptcha-response' => 'Server keamanan sedang sibuk, silakan coba beberapa saat lagi.',
+    ]);
+}
 
         
         // Proses Login
