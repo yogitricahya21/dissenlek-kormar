@@ -11,13 +11,17 @@ $(document).ready(function () {
     var revealCount = 6; // Jumlah awal
     var increment = 6;    // Jumlah tambahan tiap klik
 
+
+
+    
+
     // --- 2. FUNGSI VISIBILITAS (LOAD MORE & SHOW LESS) ---
     function updateVisibility() {
         var items = $grid.isotope('getItemElements');
         var $visibleItems = $(items);
 
         $visibleItems.each(function (i) {
-            if (i < revealCount) { $(this).show(); } 
+            if (i < revealCount) { $(this).show(); }
             else { $(this).hide(); }
         });
 
@@ -58,10 +62,14 @@ $(document).ready(function () {
         updateVisibility();
     });
 
-   // ---3. LOGIKA FILTER KATEGORI (DENGAN RESET ALL) ---
+
+
+
+
+    // ---3. LOGIKA FILTER KATEGORI (DENGAN RESET ALL) ---
     $('.masonary-menu').on('click', 'button', function () {
         var filterValue = $(this).attr('data-filter');
-        
+
         // Aktifkan state tombol
         $('.masonary-menu button').removeClass('active');
         $(this).addClass('active');
@@ -74,13 +82,13 @@ $(document).ready(function () {
         } else {
             // JIKA KLIK KATEGORI LAIN (Duknis, Harsis, dll)
             $grid.isotope({ filter: filterValue }); // Tampilkan semua di kategori itu
-            
+
             // Sembunyikan tombol Load More agar tidak mengganggu saat filter aktif
-            $('#btn-load-more').hide(); 
-            
+            $('#btn-load-more').hide();
+
             // Tampilkan semua item yang sesuai filter tanpa sembunyi (override visibility)
             var items = $grid.isotope('getItemElements');
-            $(items).each(function() {
+            $(items).each(function () {
                 var $this = $(this);
                 if ($this.is(filterValue)) {
                     $this.show();
@@ -90,13 +98,15 @@ $(document).ready(function () {
         }
     });
 
+
+
     // --- 4. INTEGRASI SEARCH KE GALERI ---
     // Logika ini membuat galeri tersaring saat Anda mengetik di Global Search
-    $('#global-search').on('keyup', function() {
+    $('#global-search').on('keyup', function () {
         var searchTerm = $(this).val().toLowerCase();
-        
+
         $grid.isotope({
-            filter: function() {
+            filter: function () {
                 var title = $(this).find('.activity-title').text().toLowerCase();
                 return title.indexOf(searchTerm) !== -1;
             }
@@ -109,17 +119,25 @@ $(document).ready(function () {
         }
     });
 
+
+
+
+
     // --- 5. LOGIKA POPUP IMAGE (SINKRON DENGAN FILTER) ---
     $('.popup-image').magnificPopup({
         type: 'image',
         gallery: { enabled: true },
         // Kunci utamanya di sini: Hanya item yang 'visible' yang masuk galeri popup
         callbacks: {
-            open: function() {
+            open: function () {
                 this.items = $(document).find('.grid-item:visible .popup-image');
             }
         }
     });
+
+
+
+
 
     // --- 6. LOGIKA SEARCH & SCROLL ---
     function performSearch() {
@@ -150,5 +168,56 @@ $(document).ready(function () {
     $('#search-trigger').on('click', performSearch);
     $('#global-search').on('keypress', function (e) {
         if (e.which == 13) performSearch();
+    });
+
+
+
+
+
+
+    // --- 7. LOGIKA URUTKAN KADIS BERDASARKAN TAHUN ---
+    var $swiperContainer = $('.team-slider');
+    var $wrapper = $swiperContainer.find('.swiper-wrapper');
+
+    // 1. Matikan swiper jika sudah inisialisasi otomatis oleh tema
+    if ($swiperContainer[0] && $swiperContainer[0].swiper) {
+        $swiperContainer[0].swiper.destroy(true, true);
+    }
+
+    // 2. Ambil semua slide lalu cabut dari DOM
+    var $slides = $wrapper.find('.swiper-slide').detach();
+
+    // 3. Proses Pengurutan berdasarkan data-year
+    $slides.sort(function (a, b) {
+        var yearA = parseInt($(a).attr('data-year')) || 0;
+        var yearB = parseInt($(b).attr('data-year')) || 0;
+        return yearA - yearB; // Mengurutkan terkecil ke terbesar
+    });
+
+    // 4. Bersihkan wrapper dan masukkan slide yang sudah urut
+    $wrapper.empty().append($slides);
+
+    // 5. Inisialisasi ulang Swiper
+    new Swiper('.team-slider', {
+        slidesPerView: 3,
+        spaceBetween: 30,
+        loop: true,
+        observer: true,
+        observeParents: true,
+        autoplay: {           
+            delay: 3000,
+            disableOnInteraction: false,
+        },
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+        breakpoints: {
+            '1200': { slidesPerView: 3 },
+            '992': { slidesPerView: 2 },
+            '768': { slidesPerView: 2 },
+            '576': { slidesPerView: 1 },
+            '0': { slidesPerView: 1 },
+        },
     });
 });

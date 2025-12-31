@@ -8,6 +8,7 @@ use App\Http\Controllers\LeaderController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\ActivityController;
 use App\Http\Controllers\ComplaintController;
+use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\PersonnelController;
 use App\Http\Controllers\Admin\BannerController;
 
@@ -15,10 +16,6 @@ use App\Http\Controllers\Admin\BannerController;
 Route::get('/', [MainController::class, 'index'])->name('home');
 // Route untuk publik kirim aduan
 Route::post('/kirim-pengaduan', [App\Http\Controllers\MainController::class, 'storeComplaint'])->name('public.complaint.store');
-
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth', 'verified'])->name('dashboard');
 
 Route::middleware('auth')->group(function () {
     // Rute Profil
@@ -36,6 +33,8 @@ Route::middleware('auth')->group(function () {
         Route::get('/about', [AboutController::class, 'index'])->name('about.index');
         Route::get('kadis', [KadisController::class, 'index'])->name('kadis.index');
         Route::post('kadis', [KadisController::class, 'store'])->name('kadis.store');
+        Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
+        Route::delete('/admin/logs/delete', [DashboardController::class, 'destroyAll'])->name('logs.destroy');
     });
 });
 

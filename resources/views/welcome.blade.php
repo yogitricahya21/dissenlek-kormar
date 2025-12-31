@@ -434,7 +434,13 @@
                             <div class="team-slider swiper-container">
                                 <div class="swiper-wrapper">
                                     @foreach ($leaders as $leader)
-                                        <div class="swiper-slide">
+                                        @php
+                                            // Mengambil semua angka saja dari teks period (misal: "2019-2022" -> "20192022")
+                                            $cleanNumber = preg_replace('/[^0-9]/', '', $leader->period);
+                                            // Ambil 4 digit pertama (2019)
+                                            $yearValue = substr($cleanNumber, 0, 4);
+                                        @endphp
+                                        <div class="swiper-slide" data-year="{{ $yearValue }}">
                                             <div class="team-card team-special">
                                                 <div class="team-thumb">
                                                     <div class="panel wow"></div>
@@ -656,63 +662,69 @@
     </main>
 
     <!-- footer-area-start -->
-    <footer id="footer" class="footer1-bg footer-sticky"
+    <footer id="footer" class="footer1-bg footer-sticky bg-edit"
         data-background="{{ asset('armado/assets/img/bg/wall3.jpg') }}">
         <div class="footer1-overlay"></div>
         <div class="contact-meta-area">
             <div class="container">
-                <div class="contact-meta-wrapper">
+                <div class="contact-meta-wrapper mt-minus-50">
                     <div class="row">
                         <div class="col-xxl-3 col-xl-6 col-lg-6 col-md-6">
                             <div class="meta-item contact-meta mb-30">
-                                <div class="meta-item-icon">
-                                    <i class="fas fa-phone-alt"></i>
-                                </div>
+                                <div class="meta-item-icon"><i class="fas fa-phone-alt"></i></div>
                                 <div class="meta-item-content">
-                                    <div class="meta-title">Emargency Call</div>
-                                    <p><a href="#0">+62 836 259 003</a></p>
+                                    <div class="meta-title">Hubungi Kami</div>
+                                    <p>
+                                        <a href="https://wa.me/628124114601?text=Halo%20Admin%20Dissenlek"
+                                            target="_blank">+62 812 4114 601</a><br>
+                                    </p>
                                 </div>
                             </div>
                         </div>
+
                         <div class="col-xxl-3 col-xl-6 col-lg-6 col-md-6">
                             <div class="meta-item contact-meta mb-30">
-                                <div class="meta-item-icon">
-                                    <i class="fas fa-envelope"></i>
-                                </div>
+                                <div class="meta-item-icon"><i class="fas fa-envelope"></i></div>
                                 <div class="meta-item-content">
-                                    <div class="meta-title">Email Us</div>
-                                    <p><a href="#0">dissenlek_kormar@tnial.mil.id</a></p>
+                                    <div class="meta-title">Email Resmi</div>
+                                    <p>
+                                        <a
+                                            href="mailto:yogitricahyam@gmail.com?subject=Pertanyaan%20Layanan%20Dissenlek">
+                                            dissenlek_kormar@tnial.mil.id
+                                        </a>
+                                    </p>
                                 </div>
                             </div>
                         </div>
+
                         <div class="col-xxl-3 col-xl-6 col-lg-6 col-md-6">
                             <div class="meta-item contact-meta mb-30">
-                                <div class="meta-item-icon">
-                                    <i class="fas fa-map-marker-alt"></i>
-                                </div>
+                                <div class="meta-item-icon"><i class="fas fa-map-marker-alt"></i></div>
                                 <div class="meta-item-content">
-                                    <div class="meta-title">Location</div>
-                                    <p>Jl. Prajurit KKO Usman dan Harun, Jakarta</p>
+                                    <div class="meta-title">Lokasi Kantor</div>
+                                    <p>
+                                        <a href="https://www.google.com/maps/dir/?api=1&destination=Markas+Komando+Korps+Marinir"
+                                            target="_blank">
+                                            Cek Rute Navigasi
+                                        </a>
+                                    </p>
                                 </div>
                             </div>
                         </div>
+
                         <div class="col-xxl-3 col-xl-6 col-lg-6 col-md-6">
                             <div class="meta-item contact-meta mb-30">
-                                <div class="meta-item-icon">
-                                    <i class="fad fa-share-alt"></i>
-                                </div>
+                                <div class="meta-item-icon"><i class="fas fa-share-alt"></i></div>
                                 <div class="meta-item-content">
-                                    <div class="meta-title">Social Links</div>
+                                    <div class="meta-title">Media Sosial</div>
                                     <div class="social-links follow-us">
-                                        <ul>
-                                            <li><a href="#0" target="_blank"><i class="fab fa-facebook"></i></a>
-                                            </li>
-                                            <li><a href="#0" target="_blank"><i class="fab fa-twitter"></i></a>
-                                            </li>
-                                            <li><a href="#0" target="_blank"><i
-                                                        class="fab fa-instagram"></i></a></li>
-                                            <li><a href="#0" target="_blank"><i class="fab fa-youtube"></i></a>
-                                            </li>
+                                        <ul class="gap-2 d-flex">
+                                            <li><a href="https://facebook.com/kormar" target="_blank"><i
+                                                        class="fab fa-facebook"></i></a></li>
+                                            <li><a href="https://instagram.com/korps_marinir_tni_al"
+                                                    target="_blank"><i class="fab fa-instagram"></i></a></li>
+                                            <li><a href="https://youtube.com/@Kormar" target="_blank"><i
+                                                        class="fab fa-youtube"></i></a></li>
                                         </ul>
                                     </div>
                                 </div>
@@ -725,7 +737,7 @@
         <section class="footer-area footer-area1 footer-area1-bg pt-65 pb-25">
             <div class="container">
                 <div class="row">
-                    <div class="col-xl-4 col-lg-6 col-md-12 col-sm-12">
+                    <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12">
                         <div class="mb-40 footer-widget footer1-widget footer1-widget1">
                             <div class="footer-logo footer1-logo">
                                 <a href="#"><img src="{{ asset('storage/' . $about->logo) }}"
@@ -751,22 +763,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-xl-2 col-lg-3 col-md-6 col-sm-6">
-                        <div class="mb-40 footer-widget footer1-widget footer1-widget3 ">
-                            <div class="footer-widget-title">
-                                <h4>More Links</h4>
-                            </div>
-                            <div class="footer-links">
-                                <ul>
-                                    <li><a href="">Contact Us</a></li>
-                                    <li><a href="">Ambulance Service</a></li>
-                                    <li><a href="">Fire Investigation</a></li>
-                                    <li><a href="">Community Safety</a></li>
-                                    <li><a href="">Blog Grid</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
+
                     <div class="col-xl-4 col-lg-12 col-md-12 col-sm-12">
                         <div class="mb-40 footer-widget footer1-widget footer1-widget4 ">
                             <div class="footer-widget-title">
@@ -789,7 +786,8 @@
                     <div class="row align-items-center">
                         <div class="col-lg-12">
                             <div class="text-center copyright-text copyright-1-text">
-                                Copyright &copy; 2025 by <a href="">ytm</a>. Disinfolahta Kormar.
+                                Copyright &copy; 2025 by <a href="">ytm</a>. Disinfolahta Kormar. All Rights
+                                Reserved.
                             </div>
                         </div>
                     </div>
